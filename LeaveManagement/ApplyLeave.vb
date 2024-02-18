@@ -9,7 +9,9 @@ Public Class ApplyLeave
     End Sub
 
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
-        Dim query As String = "select * from requests where approver_email = @email and status = 'pending'"
+        Dim query As String = "SELECT * FROM requests " _
+                              & "WHERE approver_email = @email AND status = 'pending' " _
+                              & "ORDER BY applied_date DESC"
 
         Dim connectionString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=leave_management;sslmode=none"
 

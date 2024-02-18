@@ -42,6 +42,8 @@ Partial Class RequestInfo
         Me.Button2 = New System.Windows.Forms.Button()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
         Me.SuspendLayout()
         '
         'Label1
@@ -161,7 +163,7 @@ Partial Class RequestInfo
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(22, 363)
+        Me.Label9.Location = New System.Drawing.Point(22, 354)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(57, 17)
         Me.Label9.TabIndex = 0
@@ -169,7 +171,7 @@ Partial Class RequestInfo
         '
         'TextBox9
         '
-        Me.TextBox9.Location = New System.Drawing.Point(145, 363)
+        Me.TextBox9.Location = New System.Drawing.Point(145, 351)
         Me.TextBox9.Multiline = True
         Me.TextBox9.Name = "TextBox9"
         Me.TextBox9.Size = New System.Drawing.Size(559, 176)
@@ -177,7 +179,7 @@ Partial Class RequestInfo
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(181, 591)
+        Me.Button1.Location = New System.Drawing.Point(181, 609)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(185, 53)
         Me.Button1.TabIndex = 2
@@ -187,7 +189,7 @@ Partial Class RequestInfo
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(372, 591)
+        Me.Button2.Location = New System.Drawing.Point(372, 609)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(185, 53)
         Me.Button2.TabIndex = 2
@@ -209,12 +211,29 @@ Partial Class RequestInfo
         Me.DateTimePicker2.Size = New System.Drawing.Size(178, 22)
         Me.DateTimePicker2.TabIndex = 3
         '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(22, 560)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(89, 17)
+        Me.Label10.TabIndex = 0
+        Me.Label10.Text = "Applied Date"
+        '
+        'DateTimePicker3
+        '
+        Me.DateTimePicker3.Location = New System.Drawing.Point(145, 560)
+        Me.DateTimePicker3.Name = "DateTimePicker3"
+        Me.DateTimePicker3.Size = New System.Drawing.Size(178, 22)
+        Me.DateTimePicker3.TabIndex = 3
+        '
         'RequestInfo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(759, 686)
         Me.Controls.Add(Me.DateTimePicker2)
+        Me.Controls.Add(Me.DateTimePicker3)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -222,6 +241,7 @@ Partial Class RequestInfo
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.TextBox5)
         Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.TextBox6)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label7)
@@ -260,4 +280,6 @@ Partial Class RequestInfo
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
     Friend WithEvents DateTimePicker2 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents DateTimePicker3 As System.Windows.Forms.DateTimePicker
 End Class

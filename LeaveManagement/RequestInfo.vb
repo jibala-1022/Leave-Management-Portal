@@ -24,11 +24,11 @@ Public Class RequestInfo
             Dim reader As MySqlDataReader = command.ExecuteReader()
             If reader.Read() Then
                 applicant_email = reader.GetString("applicant_email")
-                Console.WriteLine(applicant_email)
 
                 TextBox6.Text = reader.GetString("type")
                 DateTimePicker1.Value = reader.GetDateTime("from_date")
                 DateTimePicker2.Value = reader.GetDateTime("to_date")
+                DateTimePicker3.Value = reader.GetDateTime("applied_date")
                 TextBox9.Text = reader.GetString("reason")
             End If
             reader.Close()
@@ -65,7 +65,7 @@ Public Class RequestInfo
 
             command.Connection = connection
 
-            Dim query As String = "UPDATE requests SET status = @status WHERE application_id = @applicationId"
+            Dim query As String = "UPDATE requests SET status = @status, reply_date = CURRENT_TIMESTAMP WHERE application_id = @applicationId"
             command.CommandText = query
             command.Parameters.AddWithValue("@status", Status)
             command.Parameters.AddWithValue("@applicationId", application_id)
