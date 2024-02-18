@@ -73,6 +73,18 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplyLeave.Designer.vb">
+      <DependentUpon>ApplyLeave.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ApplyLeave.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RequestInfo.Designer.vb">
+      <DependentUpon>RequestInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RequestInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Login.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +115,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ApplyLeave.resx">
+      <DependentUpon>ApplyLeave.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RequestInfo.resx">
+      <DependentUpon>RequestInfo.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
