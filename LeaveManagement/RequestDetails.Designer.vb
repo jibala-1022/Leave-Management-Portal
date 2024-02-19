@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class RequestInfo
+Partial Class RequestDetails
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -179,23 +179,25 @@ Partial Class RequestInfo
         '
         'Button1
         '
+        Me.Button1.BackColor = System.Drawing.Color.LimeGreen
         Me.Button1.Location = New System.Drawing.Point(181, 609)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(185, 53)
         Me.Button1.TabIndex = 2
         Me.Button1.Tag = "approved"
         Me.Button1.Text = "Approve"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Button2
         '
+        Me.Button2.BackColor = System.Drawing.Color.OrangeRed
         Me.Button2.Location = New System.Drawing.Point(372, 609)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(185, 53)
         Me.Button2.TabIndex = 2
         Me.Button2.Tag = "rejected"
         Me.Button2.Text = "Reject"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'DateTimePicker1
         '
@@ -227,7 +229,7 @@ Partial Class RequestInfo
         Me.DateTimePicker3.Size = New System.Drawing.Size(178, 22)
         Me.DateTimePicker3.TabIndex = 3
         '
-        'RequestInfo
+        'RequestDetails
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -254,7 +256,7 @@ Partial Class RequestInfo
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "RequestInfo"
+        Me.Name = "RequestDetails"
         Me.Text = "RequestInfo"
         Me.ResumeLayout(False)
         Me.PerformLayout()

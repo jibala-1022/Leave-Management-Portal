@@ -1,16 +1,11 @@
-﻿Imports MySql.Data.MySqlClient
-
-Public Class RequestInfo
+﻿Public Class RequestDetails
     Public application_id As Integer
     Dim applicant_email As String
 
-    Dim connectionString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=leave_management;sslmode=none"
-
     Private Sub RequestInfo_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        
-        Dim connection As New MySqlConnection(connectionString)
-        Dim command As New MySqlCommand()
 
+        Dim connection As New MySqlConnection(My.Settings.connectionString)
+        Dim command As New MySqlCommand()
 
         Try
             connection.Open()
@@ -57,7 +52,7 @@ Public Class RequestInfo
         Dim button As Button = sender
         Dim Status As String = button.Tag
 
-        Dim connection As New MySqlConnection(connectionString)
+        Dim connection As New MySqlConnection(My.Settings.connectionString)
         Dim command As New MySqlCommand()
 
         Try

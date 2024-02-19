@@ -1,49 +1,47 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Public Class ApplyLeave
 
-Public Class ApplyLeave
+    Private Sub Button7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button7.Click
 
-    Dim email As String = "dupccse@iitg.ac.in"
+        Dim Conn As New MySqlConnection(My.Settings.connectionString)
+        Dim cmd As New MySqlCommand()
+
+        Try
+            Conn.Open()
+            cmd.Connection = Conn
+
+            cmd.CommandText = "INSERT INTO requests(applicant_email, approver_email, type, from_date, to_date, reason) " &
+                "VALUES (@applicant_email, @approver_email, @type, @from_date, @to_date, @reason)"
+            Dim applicant_email As String = Environment.GetEnvironmentVariable("userEmail")
+            Dim approver_email As String = "dupccse@iitg.ac.in"
+            Dim type As String = TextBox1.Text
+            Dim from_date As Date = DateTimePicker1.Value
+            Dim to_date As Date = DateTimePicker2.Value
+            Dim reason As String = TextBox4.Text
+
+            cmd.Parameters.AddWithValue("@applicant_email", applicant_email)
+            cmd.Parameters.AddWithValue("@approver_email", approver_email)
+            cmd.Parameters.AddWithValue("@type", type)
+            cmd.Parameters.AddWithValue("@from_date", from_date)
+            cmd.Parameters.AddWithValue("@to_date", to_date)
+            cmd.Parameters.AddWithValue("@reason", reason)
+            cmd.ExecuteNonQuery()
+
+            MessageBox.Show("Applied Succesfully")
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Private Sub GroupBox3_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
 
     Private Sub ApplyLeave_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
-    End Sub
-
-    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
-        Dim query As String = "SELECT * FROM requests " _
-                              & "WHERE approver_email = @email AND status = 'pending' " _
-                              & "ORDER BY applied_date DESC"
-
-        Dim connectionString As String = "server=172.16.114.244;userid=admin;Password=nimda;database=leave_management;sslmode=none"
-
-        Using connection As New MySqlConnection(connectionString)
-            Try
-                connection.Open()
-
-                Dim SDA As New MySqlDataAdapter
-                Dim dbDataset As New DataTable
-
-                Dim command As New MySqlCommand(query, connection)
-                command.Parameters.AddWithValue("@email", email)
-
-                SDA.SelectCommand = command
-                SDA.Fill(dbDataset)
-                DataGridView1.DataSource = dbDataset
-
-            Catch ex As Exception
-                MessageBox.Show("Error: " & ex.Message)
-            End Try
-        End Using
-    End Sub
-
-    Private Sub DataGridView1_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-        If e.RowIndex < 0 Then
-            Return
-        End If
-
-        Dim row As DataGridViewRow = DataGridView1.Rows(e.RowIndex)
-
-        RequestInfo.application_id = CInt(row.Cells("application_id").Value.ToString())
-        RequestInfo.Show()
 
     End Sub
 End Class
