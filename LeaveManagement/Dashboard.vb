@@ -1,8 +1,8 @@
 ﻿Public Class Dashboard
 
-    Private UserEmail As String = Environment.GetEnvironmentVariable("userEmail")
+    Private Sub Dashboard_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-    Private Sub dashboardPanel_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Dim UserEmail As String = Environment.GetEnvironmentVariable("userEmail")
 
         Using connection As New MySqlConnection(My.Settings.connectionString)
             Try

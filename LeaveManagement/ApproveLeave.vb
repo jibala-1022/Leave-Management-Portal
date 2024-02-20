@@ -1,5 +1,5 @@
 ﻿Public Class ApproveLeave
-    Dim email As String = "dupccse@iitg.ac.in"
+    Dim email As String = Environment.GetEnvironmentVariable("userEmail")
 
 
     Private Sub ApplyLeavePanel_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load

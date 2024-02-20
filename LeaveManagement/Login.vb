@@ -7,17 +7,19 @@
             Try
                 connection.Open()
 
-                Dim query As String = "SELECT COUNT(*) FROM authentication " &
+                Dim query As String = "SELECT role FROM authentication " &
                     "WHERE email = @email AND passwd = SHA2(CONCAT(@email, @password), 256)"
 
                 Dim command As New MySqlCommand(query, connection)
                 command.Parameters.AddWithValue("@email", TextBox1.Text)
                 command.Parameters.AddWithValue("@password", TextBox2.Text)
 
-                Dim count As Integer = Convert.ToInt32(command.ExecuteScalar())
-                If count > 0 Then
+                Dim role As String = Convert.ToString(command.ExecuteScalar())
+                Console.WriteLine(role)
+                If role <> "" Then
                     Dim mainApp As New MainApplication()
                     Environment.SetEnvironmentVariable("userEmail", userEmail)
+                    Environment.SetEnvironmentVariable("role", role)
                     mainApp.Show()
                     Me.Hide()
                 Else
@@ -35,4 +37,7 @@
         Application.Exit()
     End Sub
 
+    Private Sub Login_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class
