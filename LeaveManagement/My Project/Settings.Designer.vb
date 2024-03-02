@@ -56,8 +56,8 @@ Namespace My
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("server=172.16.114.244;userid=admin;Password=nimda;database=leave_management;sslmo"& _ 
-            "de=none")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("server=localhost;userid=admin;Password=nimda;database=leave_management;sslmode=no"& _ 
+            "ne")>  _
         Public ReadOnly Property connectionString() As String
             Get
                 Return CType(Me("connectionString"),String)

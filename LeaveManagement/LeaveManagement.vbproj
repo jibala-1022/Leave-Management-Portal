@@ -90,6 +90,12 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin.Designer.vb">
+      <DependentUpon>Admin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ApplyLeave.Designer.vb">
       <DependentUpon>ApplyLeave.vb</DependentUpon>
     </Compile>
@@ -106,6 +112,12 @@
       <DependentUpon>ChangePassword.vb</DependentUpon>
     </Compile>
     <Compile Include="ChangePassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hostel.Designer.vb">
+      <DependentUpon>Hostel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Hostel.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UserProfile.Designer.vb">
@@ -162,6 +174,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ApplyLeave.resx">
       <DependentUpon>ApplyLeave.vb</DependentUpon>
     </EmbeddedResource>
@@ -170,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChangePassword.resx">
       <DependentUpon>ChangePassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hostel.resx">
+      <DependentUpon>Hostel.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainApplication.resx">
       <DependentUpon>MainApplication.vb</DependentUpon>

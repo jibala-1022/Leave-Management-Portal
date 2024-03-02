@@ -33,6 +33,7 @@
 
         Using connection As New MySqlConnection(My.Settings.connectionString)
             Try
+                connection.Open()
 
                 Dim query As String = "SELECT * FROM requests WHERE applicant_email = @email AND status = 'pending'"
 

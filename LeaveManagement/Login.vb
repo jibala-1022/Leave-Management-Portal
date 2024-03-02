@@ -16,19 +16,132 @@
 
                 Dim role As String = Convert.ToString(command.ExecuteScalar())
                 Console.WriteLine(role)
-                If role <> "" Then
-                    Dim mainApp As New MainApplication()
-                    Environment.SetEnvironmentVariable("userEmail", userEmail)
-                    Environment.SetEnvironmentVariable("role", role)
-                    mainApp.Show()
-                    Me.Hide()
-                Else
+
+                If role = "" Then
                     MessageBox.Show("Invalid email or password. Please try again.", "Authentication Failed", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    Return
                 End If
+
+                Dim approver As String
+
+                If role = "B.Tech" Then
+                    If approver = "" Then
+                        command.CommandText = "select email from dupc " &
+                        "where department = (select department from students where students.email = @email) and " &
+                        "(select on_leave from faculty where faculty.email = dupc.faculty_email) = 0"
+                        approver = Convert.ToString(command.ExecuteScalar())
+                    End If
+
+                    If approver = "" Then
+                        command.CommandText = "select email from hod " &
+                        "where department = (select department from students where students.email = @email) and " &
+                        "(select on_leave from faculty where faculty.email = hod.faculty_email) = 0"
+                        approver = Convert.ToString(command.ExecuteScalar())
+                    End If
+
+                    If approver = "" Then
+                        command.CommandText = "select email from dean " &
+                        "where role = 'dosa' and " &
+                        "(select on_leave from faculty where faculty.email = dean.faculty_email) = 0"
+                        approver = Convert.ToString(command.ExecuteScalar())
+                    End If
+
+                    If approver = "" Then
+                        command.CommandText = "select email from director " &
+                        "where on_leave = 0"
+                        approver = Convert.ToString(command.ExecuteScalar())
+                    End If
+
+                    If approver = "" Then
+                        approver = "admin@iitg.ac.in"
+                    End If
+
+                    Console.WriteLine(approver)
+                    Environment.SetEnvironmentVariable("approverEmail", approver)
+                End If
+
+                If role = "M.Tech" Or role = "Ph.D" Then
+                    If approver = "" Then
+                        command.CommandText = "select faculty_email from supervisors " &
+                        "where student_email = @email and " &
+                        "(select on_leave from faculty where faculty.email = supervisors.faculty_email) = 0"
+                        approver = Convert.ToString(command.ExecuteScalar())
+                    End If
+
+                    If approver = "" Then
+                        command.CommandText = "select email from dppc " &
+                        "where department = (select department from students where students.email = @email) and " &
+                        "(select on_leave from faculty where faculty.email = dppc.faculty_email) = 0"
+                        approver = Convert.ToString(command.ExecuteScalar())
+                    End If
+
+                    If approver = "" Then
+                        command.CommandText = "select email from hod " &
+                        "where department = (select department from students where students.email = @email) and " &
+                        "(select on_leave from faculty where faculty.email = hod.faculty_email) = 0"
+                        approver = Convert.ToString(command.ExecuteScalar())
+                    End If
+
+                    If approver = "" Then
+                        command.CommandText = "select email from dean " &
+                        "where role = 'dosa' and " &
+                        "(select on_leave from faculty where faculty.email = dean.faculty_email) = 0"
+                        approver = Convert.ToString(command.ExecuteScalar())
+                    End If
+
+                    If approver = "" Then
+                        command.CommandText = "select email from director " &
+                        "where on_leave = 0"
+                        approver = Convert.ToString(command.ExecuteScalar())
+                    End If
+
+                    If approver = "" Then
+                        approver = "admin@iitg.ac.in"
+                    End If
+
+                    Console.WriteLine(approver)
+                    Environment.SetEnvironmentVariable("approverEmail", approver)
+                End If
+
+                If role = "Faculty" Then
+
+                    If approver = "" Then
+                        command.CommandText = "select email from hod " &
+                        "where department = (select department from faculty where faculty.email = @email) and " &
+                        "(select on_leave from faculty where faculty.email = hod.faculty_email) = 0"
+                        approver = Convert.ToString(command.ExecuteScalar())
+                    End If
+
+                    If approver = "" Then
+                        command.CommandText = "select email from dean " &
+                        "where role = 'dofa' and " &
+                        "(select on_leave from faculty where faculty.email = dean.faculty_email) = 0"
+                        approver = Convert.ToString(command.ExecuteScalar())
+                    End If
+
+                    If approver = "" Then
+                        command.CommandText = "select email from director " &
+                        "where on_leave = 0"
+                        approver = Convert.ToString(command.ExecuteScalar())
+                    End If
+
+                    If approver = "" Then
+                        approver = "admin@iitg.ac.in"
+                    End If
+
+                    Console.WriteLine(approver)
+                    Environment.SetEnvironmentVariable("approverEmail", approver)
+                End If
+
+
+                Dim mainApp As New MainApplication()
+                Environment.SetEnvironmentVariable("userEmail", userEmail)
+                Environment.SetEnvironmentVariable("role", role)
+                mainApp.Show()
+                Me.Hide()
+
             Catch ex As Exception
                 MessageBox.Show("Error: " & ex.Message)
-            Finally
-                connection.Close()
             End Try
         End Using
     End Sub

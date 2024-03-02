@@ -26,3 +26,5 @@ C:\Users\Balaji\OneDrive - Indian Institute of Technology Guwahati\Desktop\SoftE
 C:\Users\Balaji\OneDrive - Indian Institute of Technology Guwahati\Desktop\SoftEngg\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.RequestDetails.resources
 C:\Users\Balaji\OneDrive - Indian Institute of Technology Guwahati\Desktop\SoftEngg\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.UserProfile.resources
 C:\Users\Balaji\OneDrive - Indian Institute of Technology Guwahati\Desktop\SoftEngg\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.ChangePassword.resources
+C:\Users\Balaji\OneDrive - Indian Institute of Technology Guwahati\Desktop\SoftEngg\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.Admin.resources
+C:\Users\Balaji\OneDrive - Indian Institute of Technology Guwahati\Desktop\SoftEngg\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.Hostel.resources
