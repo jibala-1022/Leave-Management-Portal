@@ -36,26 +36,33 @@ Partial Class UserProfile
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(150, 161)
+        Me.TextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox4.Location = New System.Drawing.Point(137, 146)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(192, 22)
+        Me.TextBox4.ReadOnly = True
+        Me.TextBox4.Size = New System.Drawing.Size(192, 15)
         Me.TextBox4.TabIndex = 9
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(150, 119)
+        Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox3.Location = New System.Drawing.Point(137, 104)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(192, 22)
+        Me.TextBox3.ReadOnly = True
+        Me.TextBox3.Size = New System.Drawing.Size(192, 15)
         Me.TextBox3.TabIndex = 11
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(27, 161)
+        Me.Label4.Location = New System.Drawing.Point(14, 146)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(53, 17)
         Me.Label4.TabIndex = 5
@@ -63,15 +70,17 @@ Partial Class UserProfile
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(150, 77)
+        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox2.Location = New System.Drawing.Point(137, 62)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(192, 22)
+        Me.TextBox2.ReadOnly = True
+        Me.TextBox2.Size = New System.Drawing.Size(192, 15)
         Me.TextBox2.TabIndex = 10
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(27, 119)
+        Me.Label3.Location = New System.Drawing.Point(14, 104)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(42, 17)
         Me.Label3.TabIndex = 3
@@ -79,15 +88,17 @@ Partial Class UserProfile
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(150, 36)
+        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox1.Location = New System.Drawing.Point(137, 21)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(192, 22)
+        Me.TextBox1.ReadOnly = True
+        Me.TextBox1.Size = New System.Drawing.Size(192, 15)
         Me.TextBox1.TabIndex = 7
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(27, 77)
+        Me.Label2.Location = New System.Drawing.Point(14, 62)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(86, 17)
         Me.Label2.TabIndex = 4
@@ -96,7 +107,7 @@ Partial Class UserProfile
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(27, 36)
+        Me.Label1.Location = New System.Drawing.Point(14, 21)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(45, 17)
         Me.Label1.TabIndex = 2
@@ -105,7 +116,7 @@ Partial Class UserProfile
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(27, 201)
+        Me.Label5.Location = New System.Drawing.Point(14, 186)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(82, 17)
         Me.Label5.TabIndex = 5
@@ -113,15 +124,17 @@ Partial Class UserProfile
         '
         'TextBox5
         '
-        Me.TextBox5.Location = New System.Drawing.Point(150, 201)
+        Me.TextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox5.Location = New System.Drawing.Point(137, 186)
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(192, 22)
+        Me.TextBox5.ReadOnly = True
+        Me.TextBox5.Size = New System.Drawing.Size(192, 15)
         Me.TextBox5.TabIndex = 9
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(27, 245)
+        Me.Label6.Location = New System.Drawing.Point(14, 230)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(103, 17)
         Me.Label6.TabIndex = 5
@@ -129,7 +142,7 @@ Partial Class UserProfile
         '
         'TextBox6
         '
-        Me.TextBox6.Location = New System.Drawing.Point(150, 245)
+        Me.TextBox6.Location = New System.Drawing.Point(137, 230)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(192, 22)
         Me.TextBox6.TabIndex = 9
@@ -137,7 +150,11 @@ Partial Class UserProfile
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Button1.Location = New System.Drawing.Point(368, 238)
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(355, 223)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(107, 31)
         Me.Button1.TabIndex = 12
@@ -146,37 +163,65 @@ Partial Class UserProfile
         '
         'Button2
         '
-        Me.Button2.BackColor = System.Drawing.Color.LightCoral
-        Me.Button2.Location = New System.Drawing.Point(30, 343)
+        Me.Button2.BackColor = System.Drawing.Color.Crimson
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Location = New System.Drawing.Point(135, 327)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(258, 47)
+        Me.Button2.Size = New System.Drawing.Size(194, 38)
         Me.Button2.TabIndex = 13
         Me.Button2.Text = "Change Password"
         Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.Button3)
+        Me.Panel1.Controls.Add(Me.Button2)
+        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.TextBox6)
+        Me.Panel1.Controls.Add(Me.TextBox5)
+        Me.Panel1.Controls.Add(Me.Label6)
+        Me.Panel1.Controls.Add(Me.TextBox4)
+        Me.Panel1.Controls.Add(Me.Label5)
+        Me.Panel1.Controls.Add(Me.TextBox3)
+        Me.Panel1.Controls.Add(Me.Label4)
+        Me.Panel1.Controls.Add(Me.TextBox2)
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.TextBox1)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Location = New System.Drawing.Point(3, 7)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(870, 422)
+        Me.Panel1.TabIndex = 14
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.Crimson
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.Color.White
+        Me.Button3.Location = New System.Drawing.Point(355, 16)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(107, 31)
+        Me.Button3.TabIndex = 14
+        Me.Button3.Text = "Go Back"
+        Me.Button3.UseVisualStyleBackColor = False
         '
         'UserProfile
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(710, 662)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox6)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.ClientSize = New System.Drawing.Size(879, 436)
+        Me.Controls.Add(Me.Panel1)
         Me.Name = "UserProfile"
         Me.Text = "Form1"
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
@@ -193,4 +238,6 @@ Partial Class UserProfile
     Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents Button3 As System.Windows.Forms.Button
 End Class

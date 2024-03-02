@@ -94,11 +94,14 @@ Partial Class ApplyLeave
         'Button7
         '
         Me.Button7.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button7.Location = New System.Drawing.Point(355, 375)
+        Me.Button7.FlatAppearance.BorderSize = 0
+        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button7.Location = New System.Drawing.Point(355, 353)
         Me.Button7.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(67, 37)
+        Me.Button7.Size = New System.Drawing.Size(129, 41)
         Me.Button7.TabIndex = 12
         Me.Button7.Text = "Apply"
         Me.Button7.UseVisualStyleBackColor = False
@@ -121,6 +124,7 @@ Partial Class ApplyLeave
         '
         'Panel1
         '
+        Me.Panel1.BackColor = System.Drawing.SystemColors.Control
         Me.Panel1.Controls.Add(Me.DateTimePicker2)
         Me.Panel1.Controls.Add(Me.TextBox1)
         Me.Panel1.Controls.Add(Me.DateTimePicker1)
@@ -133,14 +137,14 @@ Partial Class ApplyLeave
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(940, 529)
+        Me.Panel1.Size = New System.Drawing.Size(894, 467)
         Me.Panel1.TabIndex = 15
         '
         'ApplyLeave
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(940, 529)
+        Me.ClientSize = New System.Drawing.Size(894, 467)
         Me.Controls.Add(Me.Panel1)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "ApplyLeave"

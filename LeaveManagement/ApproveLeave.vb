@@ -37,4 +37,6 @@
         RequestDetails.application_id = CInt(row.Cells("application_id").Value.ToString())
         RequestDetails.Show()
     End Sub
+
+
 End Class
