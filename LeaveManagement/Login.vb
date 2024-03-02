@@ -120,6 +120,7 @@
                         If approver = "" Then
                             command.CommandText = "select email from hod " &
                             "where department = (select department from faculty where faculty.email = @email) and " &
+                            "faculty_email <> @email and " &
                             "(select on_leave from faculty where faculty.email = hod.faculty_email) = 0"
                             approver = Convert.ToString(command.ExecuteScalar())
                         End If
@@ -127,6 +128,7 @@
                         If approver = "" Then
                             command.CommandText = "select email from dean " &
                             "where role = 'dofa' and " &
+                            "faculty_email <> @email and " &
                             "(select on_leave from faculty where faculty.email = dean.faculty_email) = 0"
                             approver = Convert.ToString(command.ExecuteScalar())
                         End If
@@ -144,11 +146,18 @@
                         Console.WriteLine(approver)
                         Environment.SetEnvironmentVariable("approverEmail", approver)
                     End If
-                    Dim mainApp As New MainApplication()
                     Environment.SetEnvironmentVariable("userEmail", userEmail)
                     Environment.SetEnvironmentVariable("role", role)
-                    mainApp.Show()
-                    Me.Hide()
+
+                    If role = "DUPC" Or role = "DPPC" Or role = "DOSA" Or role = "DOFA" Or role = "HOD" Then
+                        switchPanel(authority)
+                    ElseIf role = "Director" Then
+                        switchPanel(Director)
+                    ElseIf role = "Faculty" Then
+                        switchPanel(faculty)
+                    Else
+                        switchPanel(student)
+                    End If
                 Else
                     MessageBox.Show("Invalid email or password. Please try again.", "Authentication Failed", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
@@ -175,7 +184,9 @@
         Application.Exit()
     End Sub
 
-    Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
-
+    Sub switchPanel(ByVal mainApp As Form)
+        mainApp.Show()
+        Me.Hide()
     End Sub
+
 End Class
