@@ -26,3 +26,23 @@ C:\Users\Balaji\OneDrive - Indian Institute of Technology Guwahati\Desktop\SoftE
 C:\Users\Balaji\OneDrive - Indian Institute of Technology Guwahati\Desktop\SoftEngg\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.RequestDetails.resources
 C:\Users\Balaji\OneDrive - Indian Institute of Technology Guwahati\Desktop\SoftEngg\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.UserProfile.resources
 C:\Users\Balaji\OneDrive - Indian Institute of Technology Guwahati\Desktop\SoftEngg\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.ChangePassword.resources
+C:\Users\AYUSH ANAND SINGH\Documents\GitHub\LeaveManagement\LeaveManagement\bin\Debug\LeaveManagement.exe.config
+C:\Users\AYUSH ANAND SINGH\Documents\GitHub\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.exe
+C:\Users\AYUSH ANAND SINGH\Documents\GitHub\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.xml
+C:\Users\AYUSH ANAND SINGH\Documents\GitHub\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.pdb
+C:\Users\AYUSH ANAND SINGH\Documents\GitHub\LeaveManagement\LeaveManagement\bin\Debug\LeaveManagement.exe
+C:\Users\AYUSH ANAND SINGH\Documents\GitHub\LeaveManagement\LeaveManagement\bin\Debug\LeaveManagement.pdb
+C:\Users\AYUSH ANAND SINGH\Documents\GitHub\LeaveManagement\LeaveManagement\bin\Debug\LeaveManagement.xml
+C:\Users\AYUSH ANAND SINGH\Documents\GitHub\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.ApplyLeave.resources
+C:\Users\AYUSH ANAND SINGH\Documents\GitHub\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.ApproveLeave.resources
+C:\Users\AYUSH ANAND SINGH\Documents\GitHub\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.ChangePassword.resources
+C:\Users\AYUSH ANAND SINGH\Documents\GitHub\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.MainApplication.resources
+C:\Users\AYUSH ANAND SINGH\Documents\GitHub\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.Dashboard.resources
+C:\Users\AYUSH ANAND SINGH\Documents\GitHub\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.MyLeaves.resources
+C:\Users\AYUSH ANAND SINGH\Documents\GitHub\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.RequestDetails.resources
+C:\Users\AYUSH ANAND SINGH\Documents\GitHub\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.Login.resources
+C:\Users\AYUSH ANAND SINGH\Documents\GitHub\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.Resources.resources
+C:\Users\AYUSH ANAND SINGH\Documents\GitHub\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.UserProfile.resources
+C:\Users\AYUSH ANAND SINGH\Documents\GitHub\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.vbproj.GenerateResource.Cache
+C:\Users\AYUSH ANAND SINGH\Documents\GitHub\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.StaffProfile.resources
+C:\Users\AYUSH ANAND SINGH\Documents\GitHub\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.FacultyProfile.resources

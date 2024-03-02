@@ -13,7 +13,7 @@
                 "VALUES (@applicant_email, @approver_email, @type, @from_date, @to_date, @reason)"
             Dim applicant_email As String = Environment.GetEnvironmentVariable("userEmail")
             Dim approver_email As String = "dupccse@iitg.ac.in"
-            Dim type As String = TextBox1.Text
+            Dim type As String = ComboBox1.Text
             Dim from_date As Date = DateTimePicker1.Value
             Dim to_date As Date = DateTimePicker2.Value
             Dim reason As String = TextBox4.Text
