@@ -114,6 +114,30 @@
     <Compile Include="ChangePassword.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Dashboard_authority.Designer.vb">
+      <DependentUpon>Dashboard_authority.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard_authority.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Director.Designer.vb">
+      <DependentUpon>Director.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Director.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="authority.Designer.vb">
+      <DependentUpon>authority.vb</DependentUpon>
+    </Compile>
+    <Compile Include="authority.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="faculty.Designer.vb">
+      <DependentUpon>faculty.vb</DependentUpon>
+    </Compile>
+    <Compile Include="faculty.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FacultyProfile.Designer.vb">
       <DependentUpon>FacultyProfile.vb</DependentUpon>
     </Compile>
@@ -126,10 +150,22 @@
     <Compile Include="ForgotPassword.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Hostel.Designer.vb">
+      <DependentUpon>Hostel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Hostel.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="StaffProfile.Designer.vb">
       <DependentUpon>StaffProfile.vb</DependentUpon>
     </Compile>
     <Compile Include="StaffProfile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="student.Designer.vb">
+      <DependentUpon>student.vb</DependentUpon>
+    </Compile>
+    <Compile Include="student.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UserProfile.Designer.vb">
@@ -198,11 +234,26 @@
     <EmbeddedResource Include="ChangePassword.resx">
       <DependentUpon>ChangePassword.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard_authority.resx">
+      <DependentUpon>Dashboard_authority.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Director.resx">
+      <DependentUpon>Director.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="authority.resx">
+      <DependentUpon>authority.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="faculty.resx">
+      <DependentUpon>faculty.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FacultyProfile.resx">
       <DependentUpon>FacultyProfile.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ForgotPassword.resx">
       <DependentUpon>ForgotPassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hostel.resx">
+      <DependentUpon>Hostel.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainApplication.resx">
       <DependentUpon>MainApplication.vb</DependentUpon>
@@ -227,6 +278,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StaffProfile.resx">
       <DependentUpon>StaffProfile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="student.resx">
+      <DependentUpon>student.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserProfile.resx">
       <DependentUpon>UserProfile.vb</DependentUpon>
