@@ -22,7 +22,6 @@ Partial Class ApplyLeave
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -32,16 +31,9 @@ Partial Class ApplyLeave
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(263, 44)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(498, 22)
-        Me.TextBox1.TabIndex = 0
         '
         'Label1
         '
@@ -125,8 +117,8 @@ Partial Class ApplyLeave
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.Control
+        Me.Panel1.Controls.Add(Me.ComboBox1)
         Me.Panel1.Controls.Add(Me.DateTimePicker2)
-        Me.Panel1.Controls.Add(Me.TextBox1)
         Me.Panel1.Controls.Add(Me.DateTimePicker1)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.Button7)
@@ -139,6 +131,15 @@ Partial Class ApplyLeave
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(894, 467)
         Me.Panel1.TabIndex = 15
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Casual", "Medical", "Academic", "On Duty", "Maternity"})
+        Me.ComboBox1.Location = New System.Drawing.Point(214, 44)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(159, 24)
+        Me.ComboBox1.TabIndex = 15
         '
         'ApplyLeave
         '
@@ -154,7 +155,6 @@ Partial Class ApplyLeave
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
@@ -164,4 +164,5 @@ Partial Class ApplyLeave
     Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
     Friend WithEvents DateTimePicker2 As System.Windows.Forms.DateTimePicker
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
 End Class

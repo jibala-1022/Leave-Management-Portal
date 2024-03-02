@@ -43,35 +43,59 @@
         End Using
     End Function
 
-    Public Function LeavesLeft() As Integer
-
+    Public Function LeavesLeft(ByVal leaveType As String) As Integer
         Dim applicant_email As String = Environment.GetEnvironmentVariable("userEmail")
+        Dim leaveColumn As String = ""
 
-        ' Query to check for overlapping requests
-        Dim query As String = "SELECT COUNT(*) FROM students WHERE email = @applicant_email"
+        ' Set the appropriate column based on the leave type
+        Select Case leaveType
+            Case "Medical"
+                leaveColumn = "medical"
+            Case "Casual"
+                leaveColumn = "casual"
+            Case "Academic"
+                leaveColumn = "academic"
+            Case "On Duty"
+                leaveColumn = "on_duty"
+            Case "Maternity"
+                leaveColumn = "maternity"
+            Case Else
+                ' Handle other cases if necessary
+        End Select
 
-        Using connection As New MySqlConnection(My.Settings.connectionString)
-            Using cmd As New MySqlCommand(query, connection)
-                ' Add parameters to the query
-                cmd.Parameters.AddWithValue("@applicant_email", applicant_email)
+        ' Query to check for the number of leaves left
+        Dim query As String = "SELECT " & leaveColumn & " FROM students WHERE email = @applicant_email"
+
+        Try
+            Using connection As New MySqlConnection(My.Settings.connectionString)
                 connection.Open()
+                Using cmd As New MySqlCommand(query, connection)
+                    ' Add parameters to the query
+                    ' cmd.Parameters.AddWithValue("@leavetype", leaveColumn)
+                    cmd.Parameters.AddWithValue("@applicant_email", applicant_email)
+                    Console.WriteLine(leaveColumn)
+                    Console.WriteLine(applicant_email)
+                    Console.WriteLine(leaveType)
+                    ' Execute the query
+                    Dim leaves_Left As Integer = Convert.ToInt32(cmd.ExecuteScalar())
 
-                ' Execute the query
-                Dim Leaves_left As Integer = Convert.ToInt32(cmd.ExecuteScalar())
-
-                ' Return number of leaves left
-                Return Leaves_left
+                    ' Return the number of leaves left
+                    Return leaves_Left
+                End Using
             End Using
-        End Using
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Function
 
+
     Private Sub Button7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button7.Click
-        Dim type As String = TextBox1.Text
+        Dim type As String = ComboBox1.Text
         Dim reason As String = TextBox4.Text
         Dim from_date As Date = DateTimePicker1.Value
         Dim to_date As Date = DateTimePicker2.Value
         Dim numberOfLeaves As Integer = CountWeekdays(from_date, to_date)
-        Dim leaves_left As Integer = LeavesLeft()
+        Dim leaves_left As Integer = LeavesLeft(type)
 
         ' check if any fields are empty
         If String.IsNullOrEmpty(type) Or String.IsNullOrEmpty(reason) Then
@@ -95,48 +119,40 @@
             Return
         End If
 
-        If numberOfLeaves > LeavesLeft() Then
-            MessageBox.Show("Insufficient number of leaves!" & Environment.NewLine & "Leaves left : " & leaves_left)
-        ElseIf leaves_left <= 10 Then
-            MessageBox.Show("Warning: Only " & LeavesLeft() & " leaves are left!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        If numberOfLeaves > leaves_left Then
+            MessageBox.Show("WARNING : Insufficient number of leaves!" & Environment.NewLine & "Leaves left : " & leaves_left, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
 
-        Dim Conn As New MySqlConnection(My.Settings.connectionString)
-        Dim cmd As New MySqlCommand()
-        Try
-            Conn.Open()
-            cmd.Connection = Conn
-            cmd.CommandText = "INSERT INTO requests(applicant_email, approver_email, type, from_date, to_date, reason) " &
-                "VALUES (@applicant_email, @approver_email, @type, @from_date, @to_date, @reason)"
-            Dim applicant_email As String = Environment.GetEnvironmentVariable("userEmail")
-            Dim approver_email As String = "dupccse@iitg.ac.in"
+        Using Conn As New MySqlConnection(My.Settings.connectionString)
+            Dim cmd As New MySqlCommand()
+            Try
+                Conn.Open()
+                cmd.Connection = Conn
+                Dim applicant_email As String = Environment.GetEnvironmentVariable("userEmail")
+                Dim approver_email As String = Environment.GetEnvironmentVariable("approverEmail")
 
-            cmd.Parameters.AddWithValue("@applicant_email", applicant_email)
-            cmd.Parameters.AddWithValue("@approver_email", approver_email)
-            cmd.Parameters.AddWithValue("@type", type)
-            cmd.Parameters.AddWithValue("@from_date", from_date)
-            cmd.Parameters.AddWithValue("@to_date", to_date)
-            cmd.Parameters.AddWithValue("@reason", reason)
-            cmd.ExecuteNonQuery()
+                cmd.CommandText = "SELECT hostel FROM students WHERE email = @applicant_email"
+                cmd.Parameters.AddWithValue("@applicant_email", applicant_email)
 
-            MessageBox.Show("Leave Applied Succesfully")
+                Dim hostel As String = Convert.ToString(cmd.ExecuteScalar())
 
-        Catch ex As Exception
+                cmd.CommandText = "INSERT INTO requests(applicant_email, approver_email, type, from_date, to_date, reason, hostel) " &
+                    "VALUES (@applicant_email, @approver_email, @type, @from_date, @to_date, @reason, @hostel)"
 
-        End Try
+                cmd.Parameters.AddWithValue("@approver_email", approver_email)
+                cmd.Parameters.AddWithValue("@type", type)
+                cmd.Parameters.AddWithValue("@from_date", from_date)
+                cmd.Parameters.AddWithValue("@to_date", to_date)
+                cmd.Parameters.AddWithValue("@reason", reason)
+                cmd.Parameters.AddWithValue("@hostel", hostel)
+                cmd.ExecuteNonQuery()
+
+                MessageBox.Show("Leave Applied Succesfully")
+
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+        End Using
     End Sub
-
-    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
-    End Sub
-
-    Private Sub GroupBox3_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
-    End Sub
-
-    Private Sub ApplyLeave_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
-    End Sub
-
 
 End Class
