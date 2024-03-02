@@ -47,6 +47,7 @@ Partial Class Login
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(193, 23)
         Me.TextBox1.TabIndex = 0
+        Me.TextBox1.Text = "s.baddigam@iitg.ac.in"
         '
         'TextBox2
         '
@@ -57,6 +58,7 @@ Partial Class Login
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(193, 23)
         Me.TextBox2.TabIndex = 1
+        Me.TextBox2.Text = "1234"
         '
         'Label1
         '
@@ -100,7 +102,7 @@ Partial Class Login
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(72, 24)
         Me.Button1.TabIndex = 4
-        Me.Button1.Text = "ENTER"
+        Me.Button1.Text = "LOGIN"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'CheckBox1
@@ -109,6 +111,8 @@ Partial Class Login
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.BackColor = System.Drawing.Color.Transparent
         Me.CheckBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.CheckBox1.Checked = True
+        Me.CheckBox1.CheckState = System.Windows.Forms.CheckState.Checked
         Me.CheckBox1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.CheckBox1.Font = New System.Drawing.Font("Microsoft YaHei", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox1.ForeColor = System.Drawing.SystemColors.Highlight
@@ -196,6 +200,7 @@ Partial Class Login
         '
         'Login
         '
+        Me.AcceptButton = Me.Button1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
