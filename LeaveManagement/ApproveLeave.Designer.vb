@@ -32,6 +32,7 @@ Partial Class ApproveLeave
         '
         'Panel1
         '
+        Me.Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Panel1.Controls.Add(Me.DataGridView2)
         Me.Panel1.Controls.Add(Me.DataGridView1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
@@ -71,6 +72,7 @@ Partial Class ApproveLeave
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Name = "ApproveLeave"
         Me.Text = "ApplyLeavePanel"
+        Me.TransparencyKey = System.Drawing.SystemColors.Control
         Me.Panel1.ResumeLayout(False)
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()

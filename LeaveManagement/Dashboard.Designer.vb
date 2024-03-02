@@ -23,16 +23,17 @@ Partial Class Dashboard
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.label_leaves_left = New System.Windows.Forms.Label()
         Me.data_active_requests = New System.Windows.Forms.DataGridView()
         Me.active_requests = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         CType(Me.data_active_requests, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
+        Me.Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Panel1.Controls.Add(Me.TextBox1)
         Me.Panel1.Controls.Add(Me.label_leaves_left)
         Me.Panel1.Controls.Add(Me.data_active_requests)
@@ -42,6 +43,13 @@ Partial Class Dashboard
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(773, 420)
         Me.Panel1.TabIndex = 15
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(167, 197)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(62, 22)
+        Me.TextBox1.TabIndex = 6
         '
         'label_leaves_left
         '
@@ -73,13 +81,6 @@ Partial Class Dashboard
         Me.active_requests.Size = New System.Drawing.Size(279, 32)
         Me.active_requests.TabIndex = 3
         Me.active_requests.Text = "Active Leave Requests"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(167, 197)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(62, 22)
-        Me.TextBox1.TabIndex = 6
         '
         'Dashboard
         '

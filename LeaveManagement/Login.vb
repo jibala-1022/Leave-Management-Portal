@@ -1,7 +1,16 @@
 ﻿Public Class Login
 
+    Private Sub Login_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'Panel1.BackColor = Color.FromArgb(255, 255, 255, 255)
+    End Sub
+
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         Dim userEmail As String = TextBox1.Text
+
+        If String.IsNullOrEmpty(TextBox1.Text) Or String.IsNullOrEmpty(TextBox2.Text) Then
+            MessageBox.Show("Please enter email and password to login")
+            Return
+        End If
 
         Using connection As New MySqlConnection(My.Settings.connectionString)
             Try
@@ -31,8 +40,22 @@
         End Using
     End Sub
 
+    Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBox1.CheckedChanged
+        TextBox2.UseSystemPasswordChar = CheckBox1.Checked
+    End Sub
+
+    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
+        Dim userEmail As String = TextBox1.Text
+        Environment.SetEnvironmentVariable("userEmail", userEmail)
+        Dim forgotpassword As ForgotPassword = New ForgotPassword()
+        forgotpassword.Show()
+    End Sub
+
     Private Sub MyLeaves_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
         Application.Exit()
     End Sub
 
+    Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
 End Class

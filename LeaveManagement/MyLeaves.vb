@@ -1,6 +1,14 @@
 ﻿Public Class MyLeaves
 
-    Private Sub leaves_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    Public Sub leaves_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        loadForm()
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+    End Sub
+
+    Private Sub loadForm()
         Try
             ' Establish a connection to the MySQL database
             Using connection As New MySqlConnection(My.Settings.connectionString)
@@ -55,7 +63,19 @@
         End Try
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+    Public Function GetPanelComponents() As Control()
+        loadForm()
+        Dim components As New List(Of Control)
 
-    End Sub
+        For Each ctrl As Control In Panel1.Controls
+            components.Add(ctrl)
+        Next
+
+        Return components.ToArray()
+    End Function
+
+
+    Public Function GetPanel() As Panel
+        Return Panel1
+    End Function
 End Class

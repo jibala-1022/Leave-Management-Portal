@@ -1,6 +1,11 @@
 ﻿Public Class MainApplication
 
     Private Sub Dashboard_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        ' Iterate through each control in the panel
+        For Each ctrl As Control In Panel2.Controls
+            ' Set the Anchor property to None
+            ctrl.Anchor = AnchorStyles.None
+        Next
 
         Dim userEmail As String = Environment.GetEnvironmentVariable("userEmail")
 
@@ -36,7 +41,7 @@
                 connection.Open()
 
                 Dim query As String = "SELECT * FROM requests WHERE applicant_email = @email AND status = 'pending'"
-                
+
                 Dim command As New MySqlCommand(query, connection)
                 command.Parameters.AddWithValue("@email", userEmail)
 
@@ -93,15 +98,41 @@
         switchPanel(Dashboard)
     End Sub
 
+    Private Sub user_profile_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles user_profile.Click
+        Button3.BackColor = Color.SteelBlue
+        Button6.BackColor = Color.SteelBlue
+        Button2.BackColor = Color.SteelBlue
+        Button4.BackColor = Color.SteelBlue
+        'Dim userProfile As New UserProfile()
+        'userProfile.Show()
+        switchPanel(userProfile)
+    End Sub
+
+    Private Sub Form1_Resize(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Resize
+        ' Calculate the new location of the panel when the form is resized
+        Panel2.Location = New Point((Me.ClientSize.Width - Panel2.Width) \ 2, (Me.ClientSize.Height - Panel2.Height) \ 2)
+    End Sub
+
     Private Sub Dashboard_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
         Application.Exit()
     End Sub
 
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        ' Ask for confirmation before logging out
+        Dim result As DialogResult = MessageBox.Show("Are you sure you want to logout?", "Logout Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
-    Private Sub user_profile_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles user_profile.Click
-        Dim userProfile As New UserProfile()
-        userProfile.Show()
+        ' Check if the user confirmed the logout
+        If result = DialogResult.Yes Then
+            ' Close the main application form
+            Me.Hide()
 
+            ' Open the login form
+            Dim loginForm As New Login()
+            loginForm.Show()
+        End If
     End Sub
 
+    Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
 End Class
