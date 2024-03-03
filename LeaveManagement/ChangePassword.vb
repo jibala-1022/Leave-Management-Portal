@@ -1,7 +1,5 @@
 ﻿Public Class ChangePassword
 
-
-
     'a function that verifies if there is any upper case alphabet in the entered password
     Function ContainsUpperCase(ByVal inputString As String) As Boolean
         'iterating through whole input string entered

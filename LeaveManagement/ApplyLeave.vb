@@ -1,5 +1,9 @@
 ﻿Public Class ApplyLeave
 
+    Public applicant_email As String = Environment.GetEnvironmentVariable("userEmail")
+    Public approver_email As String = Environment.GetEnvironmentVariable("approverEmail")
+    Public role As String = Environment.GetEnvironmentVariable("role")
+
     ' Function to check if a date is not in the past
     Private Function IsDateValid(ByVal dateToCheck As DateTime) As Boolean
         Return dateToCheck >= DateTime.Today
@@ -20,32 +24,51 @@
         Return count
     End Function
 
+    'Function to check if applicant has any overlapping requests
     Private Function HasOverlappingRequests(ByVal fromDate As Date, ByVal toDate As Date) As Boolean
+
         ' Query to check for overlapping requests
-        Dim query As String = "SELECT COUNT(*) FROM requests WHERE status = 'pending' AND " &
-                              "((from_date <= @to_date AND to_date >= @from_date) OR " &
+        Dim query As String = "SELECT COUNT(*) FROM requests WHERE status = 'pending' AND applicant_email = @applicant_email " &
+                              "AND ((from_date <= @to_date AND to_date >= @from_date) OR " &
                               "(from_date >= @from_date AND to_date <= @to_date))"
 
-        Using connection As New MySqlConnection(My.Settings.connectionString)
-            Using cmd As New MySqlCommand(query, connection)
-                ' Add parameters to the query
-                cmd.Parameters.AddWithValue("@from_date", fromDate)
-                cmd.Parameters.AddWithValue("@to_date", toDate)
-
+        Try
+            Using connection As New MySqlConnection(My.Settings.connectionString)
                 connection.Open()
+                Using cmd As New MySqlCommand(query, connection)
+                    ' Add parameters to the query
+                    cmd.Parameters.AddWithValue("@from_date", fromDate)
+                    cmd.Parameters.AddWithValue("@to_date", toDate)
+                    cmd.Parameters.AddWithValue("@applicant_email", applicant_email)
 
-                ' Execute the query
-                Dim overlappingRequestsCount As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+                    ' Execute the query
+                    Dim overlappingRequestsCount As Integer = Convert.ToInt32(cmd.ExecuteScalar())
 
-                ' Return true if there are overlapping requests, false otherwise
-                Return overlappingRequestsCount > 0
+                    ' Return true if there are overlapping requests, false otherwise
+                    Return overlappingRequestsCount > 0
+                End Using
             End Using
-        End Using
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Function
 
     Public Function LeavesLeft(ByVal leaveType As String) As Integer
-        Dim applicant_email As String = Environment.GetEnvironmentVariable("userEmail")
         Dim leaveColumn As String = ""
+        Dim table As String = ""
+
+        'set the appropiate credential tables based on role
+        Select Case role
+            Case "Director"
+                table = "director"
+            Case "Staff"
+                table = "staff"
+            Case "Faculty"
+                table = "faculty"
+            Case Else
+                table = "students"
+                ' Handle other cases if necessary
+        End Select
 
         ' Set the appropriate column based on the leave type
         Select Case leaveType
@@ -64,7 +87,7 @@
         End Select
 
         ' Query to check for the number of leaves left
-        Dim query As String = "SELECT " & leaveColumn & " FROM students WHERE email = @applicant_email"
+        Dim query As String = "SELECT " & leaveColumn & " FROM " & table & " WHERE email = @applicant_email "
 
         Try
             Using connection As New MySqlConnection(My.Settings.connectionString)
@@ -120,7 +143,7 @@
         End If
 
         If numberOfLeaves > leaves_left Then
-            MessageBox.Show("WARNING : Insufficient number of leaves!" & Environment.NewLine & "Leaves left : " & leaves_left, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            MessageBox.Show("WARNING : Insufficient number of leaves!" & Environment.NewLine & type & " Leaves left : " & leaves_left, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
 
         Using Conn As New MySqlConnection(My.Settings.connectionString)
@@ -128,13 +151,13 @@
             Try
                 Conn.Open()
                 cmd.Connection = Conn
-                Dim applicant_email As String = Environment.GetEnvironmentVariable("userEmail")
-                Dim approver_email As String = Environment.GetEnvironmentVariable("approverEmail")
+                Dim hostel As String = ""
 
-                cmd.CommandText = "SELECT hostel FROM students WHERE email = @applicant_email"
-                cmd.Parameters.AddWithValue("@applicant_email", applicant_email)
-
-                Dim hostel As String = Convert.ToString(cmd.ExecuteScalar())
+                If role = "B.Tech" Or role = "M.Tech" Or role = "Ph.D" Then
+                    cmd.CommandText = "SELECT hostel FROM students WHERE email = @applicant_email"
+                    cmd.Parameters.AddWithValue("@applicant_email", applicant_email)
+                    hostel = Convert.ToString(cmd.ExecuteScalar())
+                End If
 
                 cmd.CommandText = "INSERT INTO requests(applicant_email, approver_email, type, from_date, to_date, reason, hostel) " &
                     "VALUES (@applicant_email, @approver_email, @type, @from_date, @to_date, @reason, @hostel)"
@@ -155,4 +178,7 @@
         End Using
     End Sub
 
+    Private Sub ApplyLeave_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

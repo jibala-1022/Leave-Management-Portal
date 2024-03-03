@@ -1,7 +1,8 @@
 ﻿Public Class Login
+    Private originalControls As New List(Of Control)
 
     Private Sub Login_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        'Panel1.BackColor = Color.FromArgb(255, 255, 255, 255)
+        Button3.Hide()
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -150,14 +151,15 @@
                     Environment.SetEnvironmentVariable("role", role)
 
                     If role = "DUPC" Or role = "DPPC" Or role = "DOSA" Or role = "DOFA" Or role = "HOD" Then
-                        switchPanel(authority)
+                        authority.Show()
                     ElseIf role = "Director" Then
-                        switchPanel(Director)
+                        Director.Show()
                     ElseIf role = "Faculty" Then
-                        switchPanel(faculty)
+                        faculty.Show()
                     Else
-                        switchPanel(student)
+                        student.Show()
                     End If
+                    Me.Hide()
                 Else
                     MessageBox.Show("Invalid email or password. Please try again.", "Authentication Failed", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
@@ -176,17 +178,51 @@
     Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
         Dim userEmail As String = TextBox1.Text
         Environment.SetEnvironmentVariable("userEmail", userEmail)
-        Dim forgotpassword As ForgotPassword = New ForgotPassword()
-        forgotpassword.Show()
+        Dim ForgotPassword As ForgotPassword = New ForgotPassword()
+        switchPanel(ForgotPassword)
+        'Dim forgotpassword As ForgotPassword = New ForgotPassword()
+        'forgotpassword.Show()
     End Sub
 
     Private Sub MyLeaves_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
         Application.Exit()
     End Sub
 
-    Sub switchPanel(ByVal mainApp As Form)
-        mainApp.Show()
-        Me.Hide()
+    Sub switchPanel(ByVal panel As Form)
+        ' Store references to the original controls
+        For Each ctrl As Control In Panel1.Controls
+            originalControls.Add(ctrl)
+        Next
+
+        Panel1.Controls.Clear()
+        panel.TopLevel = False
+        panel.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        Panel1.Controls.Add(panel)
+        panel.Show()
+
+        ' Add the original button to the panel
+        Panel1.Controls.Add(Button3)
+        Button3.Visible = True
+        ' Bring the original button to the front
+        Button3.BringToFront()
     End Sub
 
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+        ' Ask for confirmation before logging out
+        Dim result As DialogResult = MessageBox.Show("Do you sure want to exit?", "Exit Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+        ' Check if the user confirmed the logout
+        If result = DialogResult.Yes Then
+            ' Clear the panel's controls
+            Panel1.Controls.Clear()
+            Button3.Hide()
+            ' Show original controls
+            For Each ctrl As Control In originalControls
+                Panel1.Controls.Add(ctrl)
+            Next
+
+            ' Clear the list of original controls
+            originalControls.Clear()
+        End If
+    End Sub
 End Class

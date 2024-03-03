@@ -2,10 +2,15 @@
 Imports System.Net.Mail
 
 Public Class ForgotPassword
+
     'Dim userEmail As String = Environment.GetEnvironmentVariable("userEmail")
     Dim randomCode As String
     Dim elapsedTime As Integer = 0 ' Track elapsed time in seconds
     Dim WithEvents timer As New Timer()
+
+    Private Sub ForgotPassword_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Label2.Hide()
+    End Sub
 
     Public Function IsEmailPresent(ByVal email As String) As Boolean
         Dim isPresent As Boolean = False
@@ -37,8 +42,16 @@ Public Class ForgotPassword
         Return isPresent
     End Function
 
+    Sub switchPanel(ByVal panel As Form)
+        Panel1.Controls.Clear()
+        panel.TopLevel = False
+        panel.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        Panel1.Controls.Add(panel)
+        panel.Show()
+    End Sub
+
     ' Timer tick event handler to track elapsed time
-    Private Sub Timer_Tick(ByVal sender As Object, ByVal e As EventArgs) Handles Timer.Tick
+    Private Sub Timer_Tick(ByVal sender As Object, ByVal e As EventArgs) Handles timer.Tick
         elapsedTime += 1 ' Increment elapsed time by 1 second
         Dim timeLeft As Integer = 60 - elapsedTime
         TimeLeftLabel.Text = "Time Left: " & timeLeft.ToString() & " seconds"
@@ -48,46 +61,25 @@ Public Class ForgotPassword
         End If
     End Sub
 
-    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
-        If String.IsNullOrEmpty(TextBox1.Text) Then
-            MessageBox.Show("Please enter the code to proceed!")
-            Return
-        End If
-
-        If elapsedTime < 60 Then ' Check if the elapsed time is less than 60 seconds
-            If TextBox1.Text.Equals(randomCode) Then
-                timer.Stop()
-                Dim resetPassword As New ChangePassword()
-                resetPassword.Show()
-                Me.Hide()
-            Else
-                Label2.Text = "Incorrect code."
-                Label2.ForeColor = Color.Red
-                MessageBox.Show("Incorrect code.")
-            End If
-        Else
-            Label2.Text = "Verification code has expired. Please request a new one."
-            Label2.ForeColor = Color.Red
-            MessageBox.Show("Verification code has expired. Please request a new one.")
-        End If
-    End Sub
-
-    Private Sub ForgotPassword_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Label2.Hide()
-    End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        Label2.Hide()
+        Label2.Visible = True
+        Label2.Text = "Sending code....."
+        Label2.ForeColor = Color.YellowGreen
+
         Dim userEmail As String = TextBox2.Text
 
         If String.IsNullOrEmpty(userEmail) Then
             MessageBox.Show("Please enter your Email to send code")
+            Label2.Hide()
             Return
         End If
 
         If Not IsEmailPresent(userEmail) Then
+            Label2.Hide()
             Return
         End If
+
 
         Dim rand As New Random()
         randomCode = (rand.Next(999999)).ToString()
@@ -107,17 +99,17 @@ Public Class ForgotPassword
             SmtpServer.EnableSsl = True
 
             Try
-                MessageBox.Show("Please check your Email for the verification code and enter it below!")
                 SmtpServer.Send(mail)
+                MessageBox.Show("Please check your Email for the verification code and enter it below!")
                 timer.Start() ' Start the timer
             Catch ex As Exception
-                Label2.Visible = True
+                'Label2.Visible = True
                 Label2.Text = "Unexpected Error occured!! Please click on send code again!"
                 Label2.ForeColor = Color.Red
                 MessageBox.Show("Error occured sending code :", ex.Message)
             End Try
 
-            Label2.Visible = True
+            'Label2.Visible = True
             Label2.Text = "Code sent!" & Environment.NewLine & "Please check your Email for the code and enter it below!"
             Label2.ForeColor = Color.Green
 
@@ -126,7 +118,32 @@ Public Class ForgotPassword
         End Try
     End Sub
 
-    Private Sub ForgotPassword_Load_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        If String.IsNullOrEmpty(TextBox1.Text) Then
+            MessageBox.Show("Please enter the code to proceed!")
+            Return
+        End If
 
+        If elapsedTime < 60 Then ' Check if the elapsed time is less than 60 seconds
+            If TextBox1.Text.Equals(randomCode) Then
+                timer.Stop()
+                switchPanel(ChangePassword)
+                'Dim resetPassword As New ChangePassword()
+                'resetPassword.Show()
+                'Me.Hide()
+            ElseIf elapsedTime = 0 Then
+                MessageBox.Show("Please click on send code to get a code")
+                Return
+            Else
+                Label2.Text = "Incorrect code."
+                Label2.ForeColor = Color.Red
+                MessageBox.Show("Incorrect code.")
+            End If
+        Else
+            Label2.Text = "Verification code has expired. Please request a new one."
+            Label2.ForeColor = Color.Red
+            MessageBox.Show("Verification code has expired. Please request a new one.")
+        End If
     End Sub
+
 End Class

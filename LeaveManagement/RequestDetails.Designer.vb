@@ -180,6 +180,7 @@ Partial Class RequestDetails
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.LimeGreen
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Location = New System.Drawing.Point(181, 609)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(185, 53)
@@ -191,6 +192,7 @@ Partial Class RequestDetails
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.Color.OrangeRed
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Location = New System.Drawing.Point(372, 609)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(185, 53)

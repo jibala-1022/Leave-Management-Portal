@@ -1,6 +1,11 @@
-﻿Public Class RequestDetails
+﻿Imports System.Net
+Imports System.Net.Mail
+
+Public Class RequestDetails
     Public application_id As Integer
     Dim applicant_email As String
+    Dim from_date As Date
+    Dim to_date As Date
 
     Private Sub RequestInfo_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
@@ -25,6 +30,8 @@
                 DateTimePicker2.Value = reader.GetDateTime("to_date")
                 DateTimePicker3.Value = reader.GetDateTime("applied_date")
                 TextBox9.Text = reader.GetString("reason")
+                from_date = DateTimePicker1.Value
+                to_date = DateTimePicker2.Value
             End If
             reader.Close()
 
@@ -66,6 +73,35 @@
             command.Parameters.AddWithValue("@applicationId", application_id)
 
             command.ExecuteNonQuery()
+
+            Try
+                Dim mail As New MailMessage()
+                Dim SmtpServer As New SmtpClient("smtp.gmail.com")
+
+                mail.From = New MailAddress("LeaveManagementPortalIITG@gmail.com")
+                mail.To.Add(applicant_email)
+                If Status = "approved" Then
+                    mail.Subject = "LEAVE APPROVED"
+                    mail.Body = "Your leave request from " & from_date.ToString() & " to " & to_date.ToString() & " has been approved."
+                Else
+                    mail.Subject = "LEAVE REJECTED"
+                    mail.Body = "Your leave request from " & from_date.ToString() & " to " & to_date.ToString() & " has been rejected."
+                End If
+
+                SmtpServer.Port = 587
+                SmtpServer.Credentials = New NetworkCredential("LeaveManagementPortalIITG@gmail.com", "gkltiiturdskigmm")
+                SmtpServer.EnableSsl = True
+
+                Try
+                    SmtpServer.Send(mail)
+                    MessageBox.Show("Mail sent to respective student")
+                Catch ex As Exception
+                    MessageBox.Show("Error occured sending code :", ex.Message)
+                End Try
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+
 
             Me.Close()
 
