@@ -180,6 +180,10 @@
                         Environment.SetEnvironmentVariable("approverEmail", approver)
                     End If
 
+                    If role = "Director" Then
+                        Environment.SetEnvironmentVariable("approverEmail", "admin@iitg.ac.in")
+                    End If
+
                     Environment.SetEnvironmentVariable("userEmail", userEmail)
                     Environment.SetEnvironmentVariable("role", role)
 

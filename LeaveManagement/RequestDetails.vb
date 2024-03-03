@@ -108,9 +108,13 @@ Public Class RequestDetails
                 command.Parameters.AddWithValue("@from_date", from_date)
                 command.Parameters.AddWithValue("@to_date", to_date)
                 command.Parameters.AddWithValue("@applicant_email", applicant_email)
+                command.ExecuteNonQuery()
             End If
 
-            command.ExecuteNonQuery()
+            If Status = "cancelled" Then
+                command.CommandText = "DELETE from requests WHERE application_id = @applicationId"
+                command.ExecuteNonQuery()
+            End If
 
             Try
                 Dim mail As New MailMessage()

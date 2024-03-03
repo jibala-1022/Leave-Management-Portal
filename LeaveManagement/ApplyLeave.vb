@@ -158,10 +158,10 @@
                 Conn.Open()
                 cmd.Connection = Conn
                 Dim hostel As String = ""
+                cmd.CommandText = "SELECT hostel FROM students WHERE email = @applicant_email"
+                cmd.Parameters.AddWithValue("@applicant_email", applicant_email)
 
                 If role = "B.Tech" Or role = "M.Tech" Or role = "Ph.D" Then
-                    cmd.CommandText = "SELECT hostel FROM students WHERE email = @applicant_email"
-                    cmd.Parameters.AddWithValue("@applicant_email", applicant_email)
                     hostel = Convert.ToString(cmd.ExecuteScalar())
                 End If
 

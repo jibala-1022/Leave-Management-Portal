@@ -21,6 +21,13 @@
                                       "WHERE applicant_email = @UserEmail AND status IN ('approved', 'rejected')" &
                                       "ORDER BY reply_date DESC"
 
+                Dim role As String = Environment.GetEnvironmentVariable("role")
+                If role = "Director" Then
+                    query = "SELECT application_id, type as Nature, from_date, to_date, reason, status, reply_date " &
+                                      "FROM requests " &
+                                      "WHERE applicant_email = @UserEmail " & 
+                                      "ORDER BY reply_date DESC"
+                End If
 
                 ' Create a MySqlCommand object to execute the query
                 Using cmd As New MySqlCommand(query, connection)

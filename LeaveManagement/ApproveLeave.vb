@@ -3,7 +3,7 @@
 
 
     Private Sub ApplyLeavePanel_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Dim query As String = "SELECT * FROM requests " _
+        Dim query As String = "SELECT application_id, applicant_email, type, from_date, to_date FROM requests " _
                       & "WHERE approver_email = @email AND status = 'pending' " _
                       & "ORDER BY applied_date DESC"
 
@@ -69,9 +69,9 @@
         RequestDetails.Button2.Visible = True
         Dim role As String = Environment.GetEnvironmentVariable("role")
         If role = "Faculty" Then
-            faculty.switchPanel(RequestDetails)
+            RequestDetails.Show()
         Else
-            authority.switchPanel(RequestDetails)
+            RequestDetails.Show()
         End If
     End Sub
 
