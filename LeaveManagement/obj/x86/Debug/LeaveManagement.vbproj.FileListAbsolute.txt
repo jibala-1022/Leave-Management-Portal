@@ -92,3 +92,5 @@ C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\Le
 C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.exe
 C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.xml
 C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.pdb
+S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.faculty_registration.resources
+S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.student_registration.resources
