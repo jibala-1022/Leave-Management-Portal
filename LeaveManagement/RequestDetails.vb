@@ -80,9 +80,13 @@ Public Class RequestDetails
 
                 mail.From = New MailAddress("LeaveManagementPortalIITG@gmail.com")
                 mail.To.Add(applicant_email)
+
                 If Status = "approved" Then
                     mail.Subject = "LEAVE APPROVED"
                     mail.Body = "Your leave request from " & from_date.ToString() & " to " & to_date.ToString() & " has been approved."
+                ElseIf Status = "canceled" Then
+                    mail.Subject = "LEAVE CANCELLED"
+                    mail.Body = "You have cancelled your leave request from" & from_date.ToString() & " to " & to_date.ToString() & " successfully"
                 Else
                     mail.Subject = "LEAVE REJECTED"
                     mail.Body = "Your leave request from " & from_date.ToString() & " to " & to_date.ToString() & " has been rejected."
