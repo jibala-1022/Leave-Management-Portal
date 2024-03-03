@@ -118,7 +118,7 @@ Partial Class Admin
         Me.Change.Name = "Change"
         Me.Change.Size = New System.Drawing.Size(171, 46)
         Me.Change.TabIndex = 2
-        Me.Change.Text = "Change"
+        Me.Change.Text = "Update"
         Me.Change.UseVisualStyleBackColor = True
         '
         'groupHOD
