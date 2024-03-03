@@ -26,3 +26,23 @@ C:\Users\Balaji\OneDrive - Indian Institute of Technology Guwahati\Desktop\SoftE
 C:\Users\Balaji\OneDrive - Indian Institute of Technology Guwahati\Desktop\SoftEngg\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.RequestDetails.resources
 C:\Users\Balaji\OneDrive - Indian Institute of Technology Guwahati\Desktop\SoftEngg\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.UserProfile.resources
 C:\Users\Balaji\OneDrive - Indian Institute of Technology Guwahati\Desktop\SoftEngg\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.ChangePassword.resources
+C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\bin\Debug\LeaveManagement.exe.config
+C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.exe
+C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.xml
+C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.pdb
+C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\bin\Debug\LeaveManagement.exe
+C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\bin\Debug\LeaveManagement.pdb
+C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\bin\Debug\LeaveManagement.xml
+C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.ApplyLeave.resources
+C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.ApproveLeave.resources
+C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.ChangePassword.resources
+C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.Form1.resources
+C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.Form2.resources
+C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.MainApplication.resources
+C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.Dashboard.resources
+C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.MyLeaves.resources
+C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.RequestDetails.resources
+C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.Login.resources
+C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.Resources.resources
+C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.UserProfile.resources
+C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.vbproj.GenerateResource.Cache
