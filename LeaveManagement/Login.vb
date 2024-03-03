@@ -147,6 +147,36 @@
                         Console.WriteLine(approver)
                         Environment.SetEnvironmentVariable("approverEmail", approver)
                     End If
+
+                    If role = "Staff" Then
+                        If approver = "" Then
+                            command.CommandText = "select email from hod " &
+                            "where department = (select department from staff where staff.email = @email) and " &
+                            "(select on_leave from faculty where faculty.email = hod.faculty_email) = 0"
+                            approver = Convert.ToString(command.ExecuteScalar())
+                        End If
+
+                        If approver = "" Then
+                            command.CommandText = "select email from dean " &
+                            "where role = 'dofa' and " &
+                            "(select on_leave from faculty where faculty.email = hod.faculty_email) = 0"
+                            approver = Convert.ToString(command.ExecuteScalar())
+                        End If
+
+                        If approver = "" Then
+                            command.CommandText = "select email from director " &
+                            "where on_leave = 0"
+                            approver = Convert.ToString(command.ExecuteScalar())
+                        End If
+
+                        If approver = "" Then
+                            approver = "admin@iitg.ac.in"
+                        End If
+
+                        Console.WriteLine(approver)
+                        Environment.SetEnvironmentVariable("approverEmail", approver)
+                    End If
+
                     Environment.SetEnvironmentVariable("userEmail", userEmail)
                     Environment.SetEnvironmentVariable("role", role)
 

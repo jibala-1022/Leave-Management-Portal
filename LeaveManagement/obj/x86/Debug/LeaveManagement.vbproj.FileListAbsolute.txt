@@ -86,3 +86,5 @@ C:\Users\Balaji\OneDrive - Indian Institute of Technology Guwahati\Desktop\SoftE
 S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.AdminPage.resources
 S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.HostelPage.resources
 S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.Remarks.resources
+C:\Users\Balaji\OneDrive - Indian Institute of Technology Guwahati\Desktop\SoftEngg\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.AdminPage.resources
+C:\Users\Balaji\OneDrive - Indian Institute of Technology Guwahati\Desktop\SoftEngg\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.HostelPage.resources
