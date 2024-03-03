@@ -44,6 +44,7 @@
                 DataGridView1.RowHeadersVisible = False
                 DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
                 DataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
+
                 DataGridView1.ScrollBars = ScrollBars.Vertical
                 Dim newRowValues() As String = {casual.ToString, academic.ToString, medical.ToString, on_duty.ToString, maternal.ToString}
                 DataGridView1.Rows.Add(newRowValues)

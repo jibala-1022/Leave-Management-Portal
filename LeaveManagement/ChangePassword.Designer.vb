@@ -37,33 +37,37 @@ Partial Class ChangePassword
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(40, 105)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(100, 17)
+        Me.Label1.Size = New System.Drawing.Size(128, 23)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "New Password"
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(184, 100)
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(215, 102)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(183, 22)
+        Me.TextBox1.Size = New System.Drawing.Size(183, 30)
         Me.TextBox1.TabIndex = 1
         '
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(40, 149)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(118, 17)
+        Me.Label2.Size = New System.Drawing.Size(148, 23)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Retype Password"
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(184, 144)
+        Me.TextBox2.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.Location = New System.Drawing.Point(215, 146)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(183, 22)
+        Me.TextBox2.Size = New System.Drawing.Size(183, 30)
         Me.TextBox2.TabIndex = 1
         '
         'Button1
@@ -71,7 +75,7 @@ Partial Class ChangePassword
         Me.Button1.BackColor = System.Drawing.Color.LimeGreen
         Me.Button1.FlatAppearance.BorderSize = 0
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.Location = New System.Drawing.Point(124, 218)
         Me.Button1.Name = "Button1"

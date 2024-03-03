@@ -23,63 +23,33 @@ Partial Class Dashboard
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.label_leaves_left = New System.Windows.Forms.Label()
-        Me.data_active_requests = New System.Windows.Forms.DataGridView()
-        Me.active_requests = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Casual = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Academic = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Medical = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.On_Duty = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Maternal = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.data_active_requests = New System.Windows.Forms.DataGridView()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
-        CType(Me.data_active_requests, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.data_active_requests, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.Label11)
         Me.Panel1.Controls.Add(Me.DataGridView1)
-        Me.Panel1.Controls.Add(Me.label_leaves_left)
         Me.Panel1.Controls.Add(Me.data_active_requests)
-        Me.Panel1.Controls.Add(Me.active_requests)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(580, 341)
+        Me.Panel1.Size = New System.Drawing.Size(773, 420)
         Me.Panel1.TabIndex = 15
-        '
-        'label_leaves_left
-        '
-        Me.label_leaves_left.AutoSize = True
-        Me.label_leaves_left.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label_leaves_left.Location = New System.Drawing.Point(16, 252)
-        Me.label_leaves_left.Name = "label_leaves_left"
-        Me.label_leaves_left.Size = New System.Drawing.Size(94, 21)
-        Me.label_leaves_left.TabIndex = 5
-        Me.label_leaves_left.Text = "Leaves Left"
-        '
-        'data_active_requests
-        '
-        Me.data_active_requests.BackgroundColor = System.Drawing.SystemColors.Control
-        Me.data_active_requests.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.data_active_requests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.data_active_requests.Location = New System.Drawing.Point(20, 58)
-        Me.data_active_requests.Name = "data_active_requests"
-        Me.data_active_requests.Size = New System.Drawing.Size(535, 191)
-        Me.data_active_requests.TabIndex = 4
-        '
-        'active_requests
-        '
-        Me.active_requests.AutoSize = True
-        Me.active_requests.Font = New System.Drawing.Font("Microsoft YaHei", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.active_requests.Location = New System.Drawing.Point(18, 20)
-        Me.active_requests.Name = "active_requests"
-        Me.active_requests.Size = New System.Drawing.Size(221, 27)
-        Me.active_requests.TabIndex = 3
-        Me.active_requests.Text = "Active Leave Requests"
         '
         'DataGridView1
         '
@@ -87,9 +57,10 @@ Partial Class Dashboard
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Casual, Me.Academic, Me.Medical, Me.On_Duty, Me.Maternal})
-        Me.DataGridView1.Location = New System.Drawing.Point(20, 276)
+        Me.DataGridView1.Location = New System.Drawing.Point(27, 340)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(535, 53)
+        Me.DataGridView1.Size = New System.Drawing.Size(713, 65)
         Me.DataGridView1.TabIndex = 16
         '
         'Casual
@@ -122,31 +93,68 @@ Partial Class Dashboard
         Me.Maternal.Name = "Maternal"
         Me.Maternal.ReadOnly = True
         '
+        'data_active_requests
+        '
+        Me.data_active_requests.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.data_active_requests.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.data_active_requests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.data_active_requests.Location = New System.Drawing.Point(27, 71)
+        Me.data_active_requests.Margin = New System.Windows.Forms.Padding(4)
+        Me.data_active_requests.Name = "data_active_requests"
+        Me.data_active_requests.Size = New System.Drawing.Size(713, 235)
+        Me.data_active_requests.TabIndex = 4
+        '
+        'Label11
+        '
+        Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label11.AutoSize = True
+        Me.Label11.BackColor = System.Drawing.Color.Transparent
+        Me.Label11.Font = New System.Drawing.Font("Microsoft YaHei", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.Label11.Location = New System.Drawing.Point(20, 28)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(296, 30)
+        Me.Label11.TabIndex = 41
+        Me.Label11.Text = "ACTIVE LEAVE REQUESTS"
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Microsoft YaHei", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.Label1.Location = New System.Drawing.Point(21, 303)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(155, 30)
+        Me.Label1.TabIndex = 42
+        Me.Label1.Text = "LEAVES LEFT"
+        '
         'Dashboard
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(580, 341)
+        Me.ClientSize = New System.Drawing.Size(773, 420)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Dashboard"
         Me.Text = "dashboardPanel"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.data_active_requests, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.data_active_requests, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents label_leaves_left As System.Windows.Forms.Label
     Friend WithEvents data_active_requests As System.Windows.Forms.DataGridView
-    Friend WithEvents active_requests As System.Windows.Forms.Label
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents Casual As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Academic As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Medical As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents On_Duty As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Maternal As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label11 As System.Windows.Forms.Label
 End Class

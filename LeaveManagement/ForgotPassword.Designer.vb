@@ -23,15 +23,15 @@ Partial Class ForgotPassword
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TimeLeftLabel = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -52,22 +52,61 @@ Partial Class ForgotPassword
         Me.Panel1.Size = New System.Drawing.Size(605, 445)
         Me.Panel1.TabIndex = 7
         '
+        'Label11
+        '
+        Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label11.AutoSize = True
+        Me.Label11.BackColor = System.Drawing.Color.Transparent
+        Me.Label11.Font = New System.Drawing.Font("Microsoft YaHei", 17.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.Label11.Location = New System.Drawing.Point(120, 21)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(300, 39)
+        Me.Label11.TabIndex = 40
+        Me.Label11.Text = "OTP VERIFICATION"
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Microsoft YaHei", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.Label1.Location = New System.Drawing.Point(102, 90)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(57, 24)
+        Me.Label1.TabIndex = 39
+        Me.Label1.Text = "Email"
+        '
+        'Label14
+        '
+        Me.Label14.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label14.AutoSize = True
+        Me.Label14.BackColor = System.Drawing.Color.Transparent
+        Me.Label14.Font = New System.Drawing.Font("Microsoft YaHei", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.Label14.Location = New System.Drawing.Point(113, 301)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(46, 24)
+        Me.Label14.TabIndex = 38
+        Me.Label14.Text = "OTP"
+        '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(102, 187)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(0, 24)
+        Me.Label2.Size = New System.Drawing.Size(0, 26)
         Me.Label2.TabIndex = 13
         '
         'TimeLeftLabel
         '
         Me.TimeLeftLabel.AutoSize = True
-        Me.TimeLeftLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TimeLeftLabel.Font = New System.Drawing.Font("Microsoft YaHei", 13.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TimeLeftLabel.Location = New System.Drawing.Point(160, 243)
         Me.TimeLeftLabel.Name = "TimeLeftLabel"
-        Me.TimeLeftLabel.Size = New System.Drawing.Size(132, 26)
+        Me.TimeLeftLabel.Size = New System.Drawing.Size(144, 31)
         Me.TimeLeftLabel.TabIndex = 12
         Me.TimeLeftLabel.Text = "Time Left : "
         '
@@ -92,7 +131,7 @@ Partial Class ForgotPassword
         Me.Button2.BackColor = System.Drawing.Color.LimeGreen
         Me.Button2.FlatAppearance.BorderSize = 0
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.White
         Me.Button2.Location = New System.Drawing.Point(204, 345)
         Me.Button2.Name = "Button2"
@@ -106,7 +145,7 @@ Partial Class ForgotPassword
         Me.Button1.BackColor = System.Drawing.Color.LimeGreen
         Me.Button1.FlatAppearance.BorderSize = 0
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.Location = New System.Drawing.Point(204, 135)
         Me.Button1.Name = "Button1"
@@ -114,45 +153,6 @@ Partial Class ForgotPassword
         Me.Button1.TabIndex = 7
         Me.Button1.Text = "SEND CODE"
         Me.Button1.UseVisualStyleBackColor = False
-        '
-        'Label14
-        '
-        Me.Label14.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label14.AutoSize = True
-        Me.Label14.BackColor = System.Drawing.Color.Transparent
-        Me.Label14.Font = New System.Drawing.Font("Microsoft YaHei", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label14.Location = New System.Drawing.Point(113, 301)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(46, 24)
-        Me.Label14.TabIndex = 38
-        Me.Label14.Text = "OTP"
-        '
-        'Label1
-        '
-        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Microsoft YaHei", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label1.Location = New System.Drawing.Point(102, 90)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(57, 24)
-        Me.Label1.TabIndex = 39
-        Me.Label1.Text = "Email"
-        '
-        'Label11
-        '
-        Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label11.AutoSize = True
-        Me.Label11.BackColor = System.Drawing.Color.Transparent
-        Me.Label11.Font = New System.Drawing.Font("Microsoft YaHei", 17.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label11.Location = New System.Drawing.Point(120, 21)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(300, 39)
-        Me.Label11.TabIndex = 40
-        Me.Label11.Text = "OTP VERIFICATION"
         '
         'ForgotPassword
         '

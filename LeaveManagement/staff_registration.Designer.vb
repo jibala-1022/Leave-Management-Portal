@@ -94,7 +94,7 @@ Partial Class staff_registration
         Me.Button4.BackColor = System.Drawing.Color.LimeGreen
         Me.Button4.FlatAppearance.BorderSize = 0
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.ForeColor = System.Drawing.Color.White
         Me.Button4.Location = New System.Drawing.Point(146, 351)
         Me.Button4.Name = "Button4"
@@ -127,19 +127,19 @@ Partial Class staff_registration
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Font = New System.Drawing.Font("Microsoft YaHei", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.Location = New System.Drawing.Point(120, 150)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(0, 24)
+        Me.Label12.Size = New System.Drawing.Size(0, 20)
         Me.Label12.TabIndex = 35
         '
         'TimeLeftLabel
         '
         Me.TimeLeftLabel.AutoSize = True
-        Me.TimeLeftLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TimeLeftLabel.Font = New System.Drawing.Font("Microsoft YaHei", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TimeLeftLabel.Location = New System.Drawing.Point(98, 207)
         Me.TimeLeftLabel.Name = "TimeLeftLabel"
-        Me.TimeLeftLabel.Size = New System.Drawing.Size(132, 26)
+        Me.TimeLeftLabel.Size = New System.Drawing.Size(136, 30)
         Me.TimeLeftLabel.TabIndex = 34
         Me.TimeLeftLabel.Text = "Time Left : "
         '
@@ -148,7 +148,7 @@ Partial Class staff_registration
         Me.Button5.BackColor = System.Drawing.Color.LimeGreen
         Me.Button5.FlatAppearance.BorderSize = 0
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.Font = New System.Drawing.Font("Microsoft YaHei", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button5.ForeColor = System.Drawing.Color.White
         Me.Button5.Location = New System.Drawing.Point(152, 100)
         Me.Button5.Name = "Button5"

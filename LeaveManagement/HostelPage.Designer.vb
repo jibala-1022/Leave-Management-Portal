@@ -77,9 +77,9 @@ Partial Class HostelPage
         Me.Button1.BackColor = System.Drawing.Color.DodgerBlue
         Me.Button1.FlatAppearance.BorderSize = 0
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(815, 38)
+        Me.Button1.Location = New System.Drawing.Point(815, 42)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(133, 28)
         Me.Button1.TabIndex = 14
@@ -89,57 +89,63 @@ Partial Class HostelPage
         'Label4
         '
         Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(299, 45)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(84, 17)
+        Me.Label4.Size = New System.Drawing.Size(104, 23)
         Me.Label4.TabIndex = 11
         Me.Label4.Text = "Date Range"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(571, 45)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(40, 17)
+        Me.Label3.Size = New System.Drawing.Size(50, 23)
         Me.Label3.TabIndex = 10
         Me.Label3.Text = "Type"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(66, 45)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(48, 17)
+        Me.Label1.Size = New System.Drawing.Size(59, 23)
         Me.Label1.TabIndex = 13
         Me.Label1.Text = "Status"
         '
         'comboType
         '
+        Me.comboType.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.comboType.FormattingEnabled = True
         Me.comboType.Items.AddRange(New Object() {"All", "Casual Leave", "Medical Leave", "Academic Leave", "On Duty Leave", "Maternity Leave"})
         Me.comboType.Location = New System.Drawing.Point(642, 42)
         Me.comboType.Name = "comboType"
-        Me.comboType.Size = New System.Drawing.Size(139, 24)
+        Me.comboType.Size = New System.Drawing.Size(139, 31)
         Me.comboType.TabIndex = 7
         Me.comboType.Text = "All"
         '
         'comboDateRange
         '
+        Me.comboDateRange.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.comboDateRange.FormattingEnabled = True
         Me.comboDateRange.Items.AddRange(New Object() {"All", "Today", "This Week", "This Month", "This Year"})
         Me.comboDateRange.Location = New System.Drawing.Point(398, 42)
         Me.comboDateRange.Name = "comboDateRange"
-        Me.comboDateRange.Size = New System.Drawing.Size(142, 24)
+        Me.comboDateRange.Size = New System.Drawing.Size(142, 31)
         Me.comboDateRange.TabIndex = 6
         Me.comboDateRange.Text = "All"
         '
         'comboStatus
         '
+        Me.comboStatus.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.comboStatus.FormattingEnabled = True
         Me.comboStatus.Items.AddRange(New Object() {"All", "Pending", "Approved", "Rejected"})
         Me.comboStatus.Location = New System.Drawing.Point(131, 42)
         Me.comboStatus.Name = "comboStatus"
-        Me.comboStatus.Size = New System.Drawing.Size(139, 24)
+        Me.comboStatus.Size = New System.Drawing.Size(139, 31)
         Me.comboStatus.TabIndex = 9
         Me.comboStatus.Text = "All"
         '

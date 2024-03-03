@@ -62,7 +62,7 @@ Partial Class Admin
         '
         Me.txtDosa.Location = New System.Drawing.Point(102, 18)
         Me.txtDosa.Name = "txtDosa"
-        Me.txtDosa.Size = New System.Drawing.Size(184, 22)
+        Me.txtDosa.Size = New System.Drawing.Size(184, 25)
         Me.txtDosa.TabIndex = 1
         Me.txtDosa.Tag = "DOSA"
         '
@@ -80,7 +80,7 @@ Partial Class Admin
         '
         Me.txtDofa.Location = New System.Drawing.Point(102, 55)
         Me.txtDofa.Name = "txtDofa"
-        Me.txtDofa.Size = New System.Drawing.Size(184, 22)
+        Me.txtDofa.Size = New System.Drawing.Size(184, 25)
         Me.txtDofa.TabIndex = 1
         Me.txtDofa.Tag = "DOFA"
         '
@@ -108,7 +108,7 @@ Partial Class Admin
         '
         Me.txtHodCse.Location = New System.Drawing.Point(118, 46)
         Me.txtHodCse.Name = "txtHodCse"
-        Me.txtHodCse.Size = New System.Drawing.Size(184, 22)
+        Me.txtHodCse.Size = New System.Drawing.Size(184, 25)
         Me.txtHodCse.TabIndex = 1
         Me.txtHodCse.Tag = "CSE"
         '
@@ -117,7 +117,7 @@ Partial Class Admin
         Me.Change.BackColor = System.Drawing.Color.LimeGreen
         Me.Change.FlatAppearance.BorderSize = 0
         Me.Change.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Change.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Change.Font = New System.Drawing.Font("Microsoft YaHei", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Change.ForeColor = System.Drawing.Color.White
         Me.Change.Location = New System.Drawing.Point(277, 476)
         Me.Change.Name = "Change"
@@ -144,6 +144,7 @@ Partial Class Admin
         Me.groupDean.Controls.Add(Me.Label2)
         Me.groupDean.Controls.Add(Me.txtDosa)
         Me.groupDean.Controls.Add(Me.Label1)
+        Me.groupDean.Font = New System.Drawing.Font("Microsoft YaHei", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.groupDean.Location = New System.Drawing.Point(38, 12)
         Me.groupDean.Name = "groupDean"
         Me.groupDean.Size = New System.Drawing.Size(331, 94)
@@ -166,7 +167,7 @@ Partial Class Admin
         '
         Me.TextBox1.Location = New System.Drawing.Point(118, 46)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(184, 22)
+        Me.TextBox1.Size = New System.Drawing.Size(184, 25)
         Me.TextBox1.TabIndex = 1
         Me.TextBox1.Tag = "CSE"
         '
@@ -206,7 +207,7 @@ Partial Class Admin
         '
         Me.TextBox2.Location = New System.Drawing.Point(118, 46)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(184, 22)
+        Me.TextBox2.Size = New System.Drawing.Size(184, 25)
         Me.TextBox2.TabIndex = 1
         Me.TextBox2.Tag = "CSE"
         '
@@ -235,6 +236,7 @@ Partial Class Admin
         Me.groupDept.Controls.Add(Me.groupDPPC)
         Me.groupDept.Controls.Add(Me.groupDUPC)
         Me.groupDept.Controls.Add(Me.groupHOD)
+        Me.groupDept.Font = New System.Drawing.Font("Microsoft YaHei", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.groupDept.Location = New System.Drawing.Point(27, 122)
         Me.groupDept.Name = "groupDept"
         Me.groupDept.Size = New System.Drawing.Size(636, 320)

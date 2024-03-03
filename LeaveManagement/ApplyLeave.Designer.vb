@@ -38,45 +38,51 @@ Partial Class ApplyLeave
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft YaHei", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.Highlight
         Me.Label1.Location = New System.Drawing.Point(36, 46)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(46, 18)
+        Me.Label1.Size = New System.Drawing.Size(56, 25)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "TYPE"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Microsoft YaHei", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.Highlight
         Me.Label3.Location = New System.Drawing.Point(36, 98)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(96, 18)
+        Me.Label3.Size = New System.Drawing.Size(122, 25)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "FROM DATE"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Microsoft YaHei", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.SystemColors.Highlight
         Me.Label4.Location = New System.Drawing.Point(451, 96)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(72, 18)
+        Me.Label4.Size = New System.Drawing.Size(92, 25)
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "TO DATE"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft YaHei", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.SystemColors.Highlight
         Me.Label5.Location = New System.Drawing.Point(36, 155)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(66, 17)
+        Me.Label5.Size = New System.Drawing.Size(88, 25)
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "REASON"
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(263, 153)
+        Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox4.Location = New System.Drawing.Point(195, 152)
         Me.TextBox4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox4.Multiline = True
         Me.TextBox4.Name = "TextBox4"
@@ -85,33 +91,35 @@ Partial Class ApplyLeave
         '
         'Button7
         '
-        Me.Button7.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button7.BackColor = System.Drawing.Color.LimeGreen
         Me.Button7.FlatAppearance.BorderSize = 0
         Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button7.Location = New System.Drawing.Point(355, 353)
+        Me.Button7.Location = New System.Drawing.Point(284, 283)
         Me.Button7.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(129, 41)
+        Me.Button7.Size = New System.Drawing.Size(144, 41)
         Me.Button7.TabIndex = 12
         Me.Button7.Text = "Apply"
         Me.Button7.UseVisualStyleBackColor = False
         '
         'DateTimePicker1
         '
+        Me.DateTimePicker1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimePicker1.Location = New System.Drawing.Point(195, 94)
         Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(177, 22)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(177, 26)
         Me.DateTimePicker1.TabIndex = 13
         '
         'DateTimePicker2
         '
+        Me.DateTimePicker2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimePicker2.Location = New System.Drawing.Point(583, 94)
         Me.DateTimePicker2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(177, 22)
+        Me.DateTimePicker2.Size = New System.Drawing.Size(177, 26)
         Me.DateTimePicker2.TabIndex = 14
         '
         'Panel1
@@ -135,12 +143,13 @@ Partial Class ApplyLeave
         '
         'ComboBox1
         '
+        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Casual", "Medical", "Academic", "On Duty", "Maternity"})
-        Me.ComboBox1.Location = New System.Drawing.Point(213, 44)
+        Me.ComboBox1.Location = New System.Drawing.Point(195, 45)
         Me.ComboBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(159, 24)
+        Me.ComboBox1.Size = New System.Drawing.Size(159, 28)
         Me.ComboBox1.TabIndex = 15
         '
         'ApplyLeave

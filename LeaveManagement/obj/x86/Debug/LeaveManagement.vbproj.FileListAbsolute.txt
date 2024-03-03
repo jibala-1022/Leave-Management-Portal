@@ -101,3 +101,6 @@ C:\Users\sidda\OneDrive - Indian Institute of Technology Guwahati\Documents\Soft
 C:\Users\sidda\OneDrive - Indian Institute of Technology Guwahati\Documents\Software Engineering Lab\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.student_registration.resources
 C:\Users\Balaji\OneDrive - Indian Institute of Technology Guwahati\Desktop\SoftEngg\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.faculty_registration.resources
 C:\Users\Balaji\OneDrive - Indian Institute of Technology Guwahati\Desktop\SoftEngg\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.student_registration.resources
+S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.addPassword.resources
+S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.RegisterDialog.resources
+S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.staff_registration.resources

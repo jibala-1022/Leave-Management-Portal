@@ -41,7 +41,7 @@ Partial Class RegisterDialog
         Me.TableLayoutPanel1.Controls.Add(Me.OK_Button, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Cancel_Button, 1, 0)
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(247, 197)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -51,42 +51,52 @@ Partial Class RegisterDialog
         'OK_Button
         '
         Me.OK_Button.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.OK_Button.BackColor = System.Drawing.Color.LimeGreen
+        Me.OK_Button.FlatAppearance.BorderSize = 0
+        Me.OK_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.OK_Button.ForeColor = System.Drawing.Color.White
         Me.OK_Button.Location = New System.Drawing.Point(4, 4)
-        Me.OK_Button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.OK_Button.Margin = New System.Windows.Forms.Padding(4)
         Me.OK_Button.Name = "OK_Button"
         Me.OK_Button.Size = New System.Drawing.Size(89, 28)
         Me.OK_Button.TabIndex = 0
         Me.OK_Button.Text = "OK"
+        Me.OK_Button.UseVisualStyleBackColor = False
         '
         'Cancel_Button
         '
         Me.Cancel_Button.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Cancel_Button.BackColor = System.Drawing.Color.Crimson
         Me.Cancel_Button.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.Cancel_Button.FlatAppearance.BorderSize = 0
+        Me.Cancel_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Cancel_Button.ForeColor = System.Drawing.Color.White
         Me.Cancel_Button.Location = New System.Drawing.Point(101, 4)
-        Me.Cancel_Button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Cancel_Button.Margin = New System.Windows.Forms.Padding(4)
         Me.Cancel_Button.Name = "Cancel_Button"
         Me.Cancel_Button.Size = New System.Drawing.Size(89, 28)
         Me.Cancel_Button.TabIndex = 1
         Me.Cancel_Button.Text = "Cancel"
+        Me.Cancel_Button.UseVisualStyleBackColor = False
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.Highlight
         Me.Label1.Location = New System.Drawing.Point(42, 27)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(133, 25)
+        Me.Label1.Size = New System.Drawing.Size(126, 27)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Register as :"
         '
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton1.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RadioButton1.Location = New System.Drawing.Point(73, 65)
         Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(102, 28)
+        Me.RadioButton1.Size = New System.Drawing.Size(107, 31)
         Me.RadioButton1.TabIndex = 2
         Me.RadioButton1.TabStop = True
         Me.RadioButton1.Text = "Student"
@@ -95,10 +105,10 @@ Partial Class RegisterDialog
         'RadioButton2
         '
         Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton2.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RadioButton2.Location = New System.Drawing.Point(73, 103)
         Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(98, 28)
+        Me.RadioButton2.Size = New System.Drawing.Size(100, 31)
         Me.RadioButton2.TabIndex = 3
         Me.RadioButton2.TabStop = True
         Me.RadioButton2.Text = "Faculty"
@@ -107,10 +117,10 @@ Partial Class RegisterDialog
         'RadioButton3
         '
         Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton3.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RadioButton3.Location = New System.Drawing.Point(73, 144)
         Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(70, 28)
+        Me.RadioButton3.Size = New System.Drawing.Size(77, 31)
         Me.RadioButton3.TabIndex = 4
         Me.RadioButton3.TabStop = True
         Me.RadioButton3.Text = "Staff"
@@ -129,7 +139,7 @@ Partial Class RegisterDialog
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "RegisterDialog"
