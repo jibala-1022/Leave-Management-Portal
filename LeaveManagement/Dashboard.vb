@@ -38,11 +38,13 @@
                     maternal = reader.GetUInt32("maternity")
                 End If
                 reader.Close()
-                Label2.Text = casual.ToString
-                Label4.Text = academic.ToString
-                Label6.Text = medical.ToString
-                Label8.Text = on_duty.ToString
-                Label9.Text = maternal.ToString
+                DataGridView1.AllowUserToAddRows = False
+                DataGridView1.RowHeadersVisible = False
+                DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+                DataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
+                DataGridView1.ScrollBars = ScrollBars.Vertical
+                Dim newRowValues() As String = {casual.ToString, academic.ToString, medical.ToString, on_duty.ToString, maternal.ToString}
+                DataGridView1.Rows.Add(newRowValues)
 
             Catch ex As MySqlException
                 connection.Close()

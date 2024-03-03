@@ -122,6 +122,10 @@
         Dim numberOfLeaves As Integer = CountWeekdays(from_date, to_date)
         Dim leaves_left As Integer = LeavesLeft(type)
 
+        If type = "On Duty" Then
+            type = "on_duty"
+        End If
+
         ' check if any fields are empty
         If String.IsNullOrEmpty(type) Or String.IsNullOrEmpty(reason) Then
             MessageBox.Show("Please enter the details to proceed!")
