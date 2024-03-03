@@ -88,3 +88,7 @@ S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManage
 S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.Remarks.resources
 C:\Users\Balaji\OneDrive - Indian Institute of Technology Guwahati\Desktop\SoftEngg\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.AdminPage.resources
 C:\Users\Balaji\OneDrive - Indian Institute of Technology Guwahati\Desktop\SoftEngg\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.HostelPage.resources
+C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\bin\Debug\LeaveManagement.exe.config
+C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.exe
+C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.xml
+C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.pdb
