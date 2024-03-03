@@ -42,27 +42,31 @@
                         If approver = "" Then
                             command.CommandText = "select email from dupc " &
                             "where department = (select department from students where students.email = @email) and " &
-                            "(select on_leave from faculty where faculty.email = dupc.faculty_email) = 0"
+                            "( (select on_leave from faculty where faculty.email = dupc.faculty_email) = 0 or " &
+                            "(select count(*) from requests where applicant_email = dupc.faculty_email and status = 'approved' and CURDATE() between from_date and to_date) = 0 )"
                             approver = Convert.ToString(command.ExecuteScalar())
                         End If
 
                         If approver = "" Then
                             command.CommandText = "select email from hod " &
                             "where department = (select department from students where students.email = @email) and " &
-                            "(select on_leave from faculty where faculty.email = hod.faculty_email) = 0"
+                            "( (select on_leave from faculty where faculty.email = hod.faculty_email) = 0 or " &
+                            "(select count(*) from requests where applicant_email = hod.faculty_email and status = 'approved' and CURDATE() between from_date and to_date) = 0)"
                             approver = Convert.ToString(command.ExecuteScalar())
                         End If
 
                         If approver = "" Then
                             command.CommandText = "select email from dean " &
                             "where role = 'dosa' and " &
-                            "(select on_leave from faculty where faculty.email = dean.faculty_email) = 0"
+                            "( (select on_leave from faculty where faculty.email = dean.faculty_email) = 0 or " &
+                            "(select count(*) from requests where applicant_email = dean.faculty_email and status = 'approved' and CURDATE() between from_date and to_date) = 0)"
                             approver = Convert.ToString(command.ExecuteScalar())
                         End If
 
                         If approver = "" Then
                             command.CommandText = "select email from director " &
-                            "where on_leave = 0"
+                            "where on_leave = 0 or " &
+                            "(select count(*) from requests where applicant_email = director.email and status = 'approved' and CURDATE() between from_date and to_date) = 0"
                             approver = Convert.ToString(command.ExecuteScalar())
                         End If
 
@@ -78,34 +82,39 @@
                         If approver = "" Then
                             command.CommandText = "select faculty_email from supervisors " &
                             "where student_email = @email and " &
-                            "(select on_leave from faculty where faculty.email = supervisors.faculty_email) = 0"
+                            "( (select on_leave from faculty where faculty.email = supervisors.faculty_email) = 0 or " &
+                            "(select count(*) from requests where applicant_email = supervisors.faculty_email and status = 'approved' and CURDATE() between from_date and to_date) = 0)"
                             approver = Convert.ToString(command.ExecuteScalar())
                         End If
 
                         If approver = "" Then
                             command.CommandText = "select email from dppc " &
                             "where department = (select department from students where students.email = @email) and " &
-                            "(select on_leave from faculty where faculty.email = dppc.faculty_email) = 0"
+                            "( (select on_leave from faculty where faculty.email = dppc.faculty_email) = 0 or " &
+                            "(select count(*) from requests where applicant_email = dppc.faculty_email and status = 'approved' and CURDATE() between from_date and to_date) = 0)"
                             approver = Convert.ToString(command.ExecuteScalar())
                         End If
 
                         If approver = "" Then
                             command.CommandText = "select email from hod " &
                             "where department = (select department from students where students.email = @email) and " &
-                            "(select on_leave from faculty where faculty.email = hod.faculty_email) = 0"
+                            "( (select on_leave from faculty where faculty.email = hod.faculty_email) = 0 or " &
+                            "(select count(*) from requests where applicant_email = hod.faculty_email and status = 'approved' and CURDATE() between from_date and to_date) = 0)"
                             approver = Convert.ToString(command.ExecuteScalar())
                         End If
 
                         If approver = "" Then
                             command.CommandText = "select email from dean " &
                             "where role = 'dosa' and " &
-                            "(select on_leave from faculty where faculty.email = dean.faculty_email) = 0"
+                            "( (select on_leave from faculty where faculty.email = dean.faculty_email) = 0 or " &
+                            "(select count(*) from requests where applicant_email = dean.faculty_email and status = 'approved' and CURDATE() between from_date and to_date) = 0)"
                             approver = Convert.ToString(command.ExecuteScalar())
                         End If
 
                         If approver = "" Then
                             command.CommandText = "select email from director " &
-                            "where on_leave = 0"
+                            "where on_leave = 0 or " &
+                            "(select count(*) from requests where applicant_email = director.email and status = 'approved' and CURDATE() between from_date and to_date) = 0"
                             approver = Convert.ToString(command.ExecuteScalar())
                         End If
 
@@ -124,7 +133,8 @@
                             "where department = (select department from faculty where faculty.email = @email) and " &
                             "faculty_email <> @email and " &
                             "(select count(*) from dean where dean.faculty_email = @email) = 0 and " &
-                            "(select on_leave from faculty where faculty.email = hod.faculty_email) = 0"
+                            "( (select on_leave from faculty where faculty.email = hod.faculty_email) = 0 or " &
+                            "(select count(*) from requests where applicant_email = hod.faculty_email and status = 'approved' and CURDATE() between from_date and to_date) = 0)"
                             approver = Convert.ToString(command.ExecuteScalar())
                         End If
 
@@ -133,13 +143,15 @@
                             "where role = 'dofa' and " &
                             "faculty_email <> @email and " &
                             "(select count(*) from dean where dean.faculty_email = @email) = 0 and " &
-                            "(select on_leave from faculty where faculty.email = dean.faculty_email) = 0"
+                            "( (select on_leave from faculty where faculty.email = dean.faculty_email) = 0 or " &
+                            "(select count(*) from requests where applicant_email = dean.faculty_email and status = 'approved' and CURDATE() between from_date and to_date) = 0)"
                             approver = Convert.ToString(command.ExecuteScalar())
                         End If
 
                         If approver = "" Then
                             command.CommandText = "select email from director " &
-                            "where on_leave = 0"
+                            "where on_leave = 0 or " &
+                            "(select count(*) from requests where applicant_email = director.email and status = 'approved' and CURDATE() between from_date and to_date) = 0"
                             approver = Convert.ToString(command.ExecuteScalar())
                         End If
 
@@ -155,20 +167,23 @@
                         If approver = "" Then
                             command.CommandText = "select email from hod " &
                             "where department = (select department from staff where staff.email = @email) and " &
-                            "(select on_leave from faculty where faculty.email = hod.faculty_email) = 0"
+                            "( (select on_leave from faculty where faculty.email = hod.faculty_email) = 0 or " &
+                            "(select count(*) from requests where applicant_email = hod.faculty_email and status = 'approved' and CURDATE() between from_date and to_date) = 0)"
                             approver = Convert.ToString(command.ExecuteScalar())
                         End If
 
                         If approver = "" Then
                             command.CommandText = "select email from dean " &
                             "where role = 'dofa' and " &
-                            "(select on_leave from faculty where faculty.email = hod.faculty_email) = 0"
+                            "( (select on_leave from faculty where faculty.email = dean.faculty_email) = 0 or " &
+                            "(select count(*) from requests where applicant_email = dean.faculty_email and status = 'approved' and CURDATE() between from_date and to_date) = 0)"
                             approver = Convert.ToString(command.ExecuteScalar())
                         End If
 
                         If approver = "" Then
                             command.CommandText = "select email from director " &
-                            "where on_leave = 0"
+                            "where on_leave = 0 or " &
+                            "(select count(*) from requests where applicant_email = director.email and status = 'approved' and CURDATE() between from_date and to_date) = 0"
                             approver = Convert.ToString(command.ExecuteScalar())
                         End If
 
@@ -192,16 +207,16 @@
                         authority.Show()
                     ElseIf role = "Director" Then
                         Dim director As Director = New Director()
-                        Director.Show()
+                        director.Show()
                     ElseIf role = "Faculty" Then
                         Dim faculty As faculty = New faculty()
                         faculty.Show()
                     ElseIf role = "Admin" Then
                         Dim Adminpage As AdminPage = New AdminPage()
-                        AdminPage.Show()
+                        Adminpage.Show()
                     ElseIf role = "Hostel" Then
                         Dim Hostelpage As HostelPage = New HostelPage()
-                        HostelPage.Show()
+                        Hostelpage.Show()
                     Else
                         Dim student As student = New student()
                         student.Show()
