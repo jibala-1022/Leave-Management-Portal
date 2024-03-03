@@ -69,18 +69,10 @@
                 dataAdapter.Fill(dataTable)
                 data_active_requests.DataSource = dataTable
                 If dataTable.Rows.Count = 0 Then
-                    Dim nodatalabel As New Label()
-                    nodatalabel.Text = "No Pending Leaves!!"
-                    nodatalabel.AutoSize = True
-                    nodatalabel.ForeColor = Color.Green
-                    nodatalabel.Font = New Font(nodatalabel.Font.FontFamily, 10)
-                    nodatalabel.Padding = New Padding(5)
-                    nodatalabel.TextAlign = ContentAlignment.MiddleCenter
-                    data_active_requests.Visible = True
-                    Me.Controls.Add(nodatalabel)
-                    nodatalabel.Top = Panel1.Top + 30
-                    nodatalabel.Left = data_active_requests.Left
+                    data_active_requests.Visible = False
+                    Label2.Visible = True
                 Else
+                    Label2.Visible = False
                     ' Display the fetched data in the GroupBox
                     data_active_requests.DataSource = dataTable
                     'DisplayRequestsInGroupBox(dataTable)

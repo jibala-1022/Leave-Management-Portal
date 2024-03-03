@@ -23,6 +23,8 @@ Partial Class Dashboard
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Casual = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Academic = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -30,8 +32,7 @@ Partial Class Dashboard
         Me.On_Duty = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Maternal = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.data_active_requests = New System.Windows.Forms.DataGridView()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.data_active_requests, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -40,6 +41,7 @@ Partial Class Dashboard
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.Label11)
         Me.Panel1.Controls.Add(Me.DataGridView1)
@@ -50,6 +52,32 @@ Partial Class Dashboard
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(773, 420)
         Me.Panel1.TabIndex = 15
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Microsoft YaHei", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.Label1.Location = New System.Drawing.Point(21, 303)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(155, 30)
+        Me.Label1.TabIndex = 42
+        Me.Label1.Text = "LEAVES LEFT"
+        '
+        'Label11
+        '
+        Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label11.AutoSize = True
+        Me.Label11.BackColor = System.Drawing.Color.Transparent
+        Me.Label11.Font = New System.Drawing.Font("Microsoft YaHei", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.Label11.Location = New System.Drawing.Point(20, 28)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(296, 30)
+        Me.Label11.TabIndex = 41
+        Me.Label11.Text = "ACTIVE LEAVE REQUESTS"
         '
         'DataGridView1
         '
@@ -104,31 +132,15 @@ Partial Class Dashboard
         Me.data_active_requests.Size = New System.Drawing.Size(713, 235)
         Me.data_active_requests.TabIndex = 4
         '
-        'Label11
+        'Label2
         '
-        Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label11.AutoSize = True
-        Me.Label11.BackColor = System.Drawing.Color.Transparent
-        Me.Label11.Font = New System.Drawing.Font("Microsoft YaHei", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label11.Location = New System.Drawing.Point(20, 28)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(296, 30)
-        Me.Label11.TabIndex = 41
-        Me.Label11.Text = "ACTIVE LEAVE REQUESTS"
-        '
-        'Label1
-        '
-        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Microsoft YaHei", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label1.Location = New System.Drawing.Point(21, 303)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(155, 30)
-        Me.Label1.TabIndex = 42
-        Me.Label1.Text = "LEAVES LEFT"
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(27, 71)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(135, 17)
+        Me.Label2.TabIndex = 43
+        Me.Label2.Text = "No Pending Leaves!"
+        Me.Label2.Visible = False
         '
         'Dashboard
         '
@@ -157,4 +169,5 @@ Partial Class Dashboard
     Friend WithEvents Maternal As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 End Class

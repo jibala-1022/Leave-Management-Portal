@@ -103,9 +103,16 @@ Public Class RequestDetails
             command.ExecuteNonQuery()
 
             If Status = "approved" Then
-                command.CommandText = "UPDATE students " &
-                    "SET " & leave_type & " = (" & leave_type & " - DATEDIFF(@to_date, @from_date) + 1) " &
-                    "WHERE email = @applicant_email"
+                command.CommandText =
+                    "UPDATE students " &
+                    "SET " & leave_type & " = (" & leave_type & " - DATEDIFF(@to_date, @from_date) - 1) " &
+                    "WHERE email = @applicant_email; " &
+                    "UPDATE faculty " &
+                    "SET " & leave_type & " = (" & leave_type & " - DATEDIFF(@to_date, @from_date) - 1) " &
+                    "WHERE email = @applicant_email; " &
+                    "UPDATE staff " &
+                    "SET " & leave_type & " = (" & leave_type & " - DATEDIFF(@to_date, @from_date) - 1) " &
+                    "WHERE email = @applicant_email; "
                 command.Parameters.AddWithValue("@from_date", from_date)
                 command.Parameters.AddWithValue("@to_date", to_date)
                 command.Parameters.AddWithValue("@applicant_email", applicant_email)
