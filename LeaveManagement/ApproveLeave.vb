@@ -3,7 +3,7 @@
 
 
     Private Sub ApplyLeavePanel_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Dim query As String = "SELECT application_id, applicant_email, type, from_date, to_date FROM requests " _
+        Dim query As String = "SELECT application_id as ID, type as Nature, from_date as 'From Date', to_date as 'To Date'  FROM requests " _
                       & "WHERE approver_email = @email AND status = 'pending' " _
                       & "ORDER BY applied_date DESC"
 

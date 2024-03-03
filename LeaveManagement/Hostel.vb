@@ -19,7 +19,7 @@
                 Dim command As New MySqlCommand()
                 command.Connection = connection
 
-                command.CommandText = "SELECT * FROM requests "
+                command.CommandText = "SELECT application_id as ID, applicant_email as Applicant, approver_email as Approver, from_date as 'From Date', to_date as 'To Date', applied_date as 'Applied On', reply_date as 'Replied On'  FROM requests "
 
                 Dim hostel = comboHostel.Text
                 Dim status = comboStatus.Text
@@ -103,7 +103,7 @@
                 DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
                 DataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
                 DataGridView1.ScrollBars = ScrollBars.Vertical
-
+                DataGridView1.Height = (DataGridView1.RowCount + 1) * DataGridView1.RowTemplate.Height
             Catch ex As MySqlException
                 MessageBox.Show("Error: " & ex.Message)
             End Try
@@ -123,7 +123,7 @@
         e.Graphics.DrawImage(imagebmp, 0, 0)
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+    Private Sub DataGridView1_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs)
 
     End Sub
 End Class

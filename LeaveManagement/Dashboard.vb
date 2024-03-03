@@ -58,7 +58,7 @@
         Using connection As New MySqlConnection(My.Settings.connectionString)
             Try
 
-                Dim query As String = "SELECT application_id, type as Nature, from_date, to_date, reason, status FROM requests WHERE applicant_email = @email AND status = 'pending'"
+                Dim query As String = "SELECT application_id as 'ID', type as Nature, from_date as 'From Date' , to_date as 'To Date', reason as Reason, status as Status FROM requests WHERE applicant_email = @email AND status = 'pending'"
 
                 Dim command As New MySqlCommand(query, connection)
                 command.Parameters.AddWithValue("@email", UserEmail)

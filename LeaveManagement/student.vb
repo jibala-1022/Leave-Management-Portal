@@ -77,8 +77,10 @@
         'userProfile.Show()
         Dim role As String = Environment.GetEnvironmentVariable("role")
         If role = "Staff" Then
+            Dim StaffProfile As StaffProfile = New StaffProfile()
             switchPanel(StaffProfile)
         Else
+            Dim UserProfile As UserProfile = New UserProfile()
             switchPanel(UserProfile)
         End If
     End Sub
