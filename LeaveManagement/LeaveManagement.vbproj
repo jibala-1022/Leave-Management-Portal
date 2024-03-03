@@ -156,6 +156,12 @@
     <Compile Include="Hostel.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Remarks.Designer.vb">
+      <DependentUpon>Remarks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Remarks.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="StaffProfile.Designer.vb">
       <DependentUpon>StaffProfile.vb</DependentUpon>
     </Compile>
@@ -263,6 +269,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyLeaves.resx">
       <DependentUpon>MyLeaves.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Remarks.resx">
+      <DependentUpon>Remarks.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RequestDetails.resx">
       <DependentUpon>RequestDetails.vb</DependentUpon>
