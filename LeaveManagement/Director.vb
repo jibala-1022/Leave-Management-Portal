@@ -12,44 +12,44 @@
         panel.Show()
     End Sub
 
-    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
-        Button3.BackColor = Color.SteelBlue
-        Button6.BackColor = Color.DodgerBlue
-        Button2.BackColor = Color.SteelBlue
-        Button4.BackColor = Color.SteelBlue
+    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles my_leaves.Click
+        dashboard_but.BackColor = Color.SteelBlue
+        my_leaves.BackColor = Color.DodgerBlue
+        approve_leave.BackColor = Color.SteelBlue
+        apply_leave.BackColor = Color.SteelBlue
         switchPanel(MyLeaves)
     End Sub
 
-    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles approve_leave.Click
 
-        Button3.BackColor = Color.SteelBlue
-        Button6.BackColor = Color.SteelBlue
-        Button2.BackColor = Color.DodgerBlue
-        Button4.BackColor = Color.SteelBlue
+        dashboard_but.BackColor = Color.SteelBlue
+        my_leaves.BackColor = Color.SteelBlue
+        approve_leave.BackColor = Color.DodgerBlue
+        apply_leave.BackColor = Color.SteelBlue
         switchPanel(ApproveLeave)
     End Sub
 
-    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
-        Button3.BackColor = Color.SteelBlue
-        Button6.BackColor = Color.SteelBlue
-        Button2.BackColor = Color.SteelBlue
-        Button4.BackColor = Color.DodgerBlue
+    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles apply_leave.Click
+        dashboard_but.BackColor = Color.SteelBlue
+        my_leaves.BackColor = Color.SteelBlue
+        approve_leave.BackColor = Color.SteelBlue
+        apply_leave.BackColor = Color.DodgerBlue
         switchPanel(ApplyLeave)
     End Sub
 
-    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
-        Button3.BackColor = Color.DodgerBlue
-        Button6.BackColor = Color.SteelBlue
-        Button2.BackColor = Color.SteelBlue
-        Button4.BackColor = Color.SteelBlue
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles dashboard_but.Click
+        dashboard_but.BackColor = Color.DodgerBlue
+        my_leaves.BackColor = Color.SteelBlue
+        approve_leave.BackColor = Color.SteelBlue
+        apply_leave.BackColor = Color.SteelBlue
         switchPanel(Dashboard)
     End Sub
 
     Private Sub user_profile_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles user_profile.Click
-        Button3.BackColor = Color.SteelBlue
-        Button6.BackColor = Color.SteelBlue
-        Button2.BackColor = Color.SteelBlue
-        Button4.BackColor = Color.SteelBlue
+        dashboard_but.BackColor = Color.SteelBlue
+        my_leaves.BackColor = Color.SteelBlue
+        approve_leave.BackColor = Color.SteelBlue
+        apply_leave.BackColor = Color.SteelBlue
         'Dim userProfile As New UserProfile()
         'userProfile.Show()
         switchPanel(UserProfile)
@@ -59,7 +59,7 @@
         Application.Exit()
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles logut.Click
         ' Ask for confirmation before logging out
         Dim result As DialogResult = MessageBox.Show("Are you sure you want to logout?", "Logout Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 

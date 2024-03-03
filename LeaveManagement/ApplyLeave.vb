@@ -51,6 +51,7 @@
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
+        Return -1
     End Function
 
     Public Function LeavesLeft(ByVal leaveType As String) As Integer
@@ -109,6 +110,7 @@
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
+        Return -1
     End Function
 
 

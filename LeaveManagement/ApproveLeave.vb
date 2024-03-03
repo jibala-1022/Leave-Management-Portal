@@ -67,7 +67,12 @@
         RequestDetails.application_id = CInt(row.Cells("application_id").Value.ToString())
         RequestDetails.Button1.Visible = True
         RequestDetails.Button2.Visible = True
-        faculty.switchPanel(RequestDetails)
+        Dim role As String = Environment.GetEnvironmentVariable("role")
+        If role = "Faculty" Then
+            faculty.switchPanel(RequestDetails)
+        Else
+            authority.switchPanel(RequestDetails)
+        End If
     End Sub
 
 

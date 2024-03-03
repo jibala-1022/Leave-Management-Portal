@@ -26,11 +26,11 @@ Partial Class Director
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.my_leaves = New System.Windows.Forms.Button()
+        Me.dashboard_but = New System.Windows.Forms.Button()
+        Me.logut = New System.Windows.Forms.Button()
+        Me.apply_leave = New System.Windows.Forms.Button()
+        Me.approve_leave = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.user_profile = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -62,11 +62,11 @@ Partial Class Director
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.SystemColors.Control
-        Me.GroupBox2.Controls.Add(Me.Button6)
-        Me.GroupBox2.Controls.Add(Me.Button3)
-        Me.GroupBox2.Controls.Add(Me.Button1)
-        Me.GroupBox2.Controls.Add(Me.Button4)
-        Me.GroupBox2.Controls.Add(Me.Button2)
+        Me.GroupBox2.Controls.Add(Me.my_leaves)
+        Me.GroupBox2.Controls.Add(Me.dashboard_but)
+        Me.GroupBox2.Controls.Add(Me.logut)
+        Me.GroupBox2.Controls.Add(Me.apply_leave)
+        Me.GroupBox2.Controls.Add(Me.approve_leave)
         Me.GroupBox2.Location = New System.Drawing.Point(19, 73)
         Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.GroupBox2.Name = "GroupBox2"
@@ -75,85 +75,85 @@ Partial Class Director
         Me.GroupBox2.TabIndex = 31
         Me.GroupBox2.TabStop = False
         '
-        'Button6
+        'my_leaves
         '
-        Me.Button6.BackColor = System.Drawing.Color.SteelBlue
-        Me.Button6.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button6.FlatAppearance.BorderSize = 0
-        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.ForeColor = System.Drawing.Color.White
-        Me.Button6.Location = New System.Drawing.Point(4, 154)
-        Me.Button6.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(161, 29)
-        Me.Button6.TabIndex = 15
-        Me.Button6.Text = "My Leaves"
-        Me.Button6.UseVisualStyleBackColor = False
+        Me.my_leaves.BackColor = System.Drawing.Color.SteelBlue
+        Me.my_leaves.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.my_leaves.FlatAppearance.BorderSize = 0
+        Me.my_leaves.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.my_leaves.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.my_leaves.ForeColor = System.Drawing.Color.White
+        Me.my_leaves.Location = New System.Drawing.Point(4, 154)
+        Me.my_leaves.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.my_leaves.Name = "my_leaves"
+        Me.my_leaves.Size = New System.Drawing.Size(161, 29)
+        Me.my_leaves.TabIndex = 15
+        Me.my_leaves.Text = "My Leaves"
+        Me.my_leaves.UseVisualStyleBackColor = False
         '
-        'Button3
+        'dashboard_but
         '
-        Me.Button3.BackColor = System.Drawing.Color.DodgerBlue
-        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(4, 18)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(161, 29)
-        Me.Button3.TabIndex = 14
-        Me.Button3.Text = "Dashboard"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.dashboard_but.BackColor = System.Drawing.Color.DodgerBlue
+        Me.dashboard_but.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.dashboard_but.FlatAppearance.BorderSize = 0
+        Me.dashboard_but.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.dashboard_but.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dashboard_but.ForeColor = System.Drawing.Color.White
+        Me.dashboard_but.Location = New System.Drawing.Point(4, 18)
+        Me.dashboard_but.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.dashboard_but.Name = "dashboard_but"
+        Me.dashboard_but.Size = New System.Drawing.Size(161, 29)
+        Me.dashboard_but.TabIndex = 14
+        Me.dashboard_but.Text = "Dashboard"
+        Me.dashboard_but.UseVisualStyleBackColor = False
         '
-        'Button1
+        'logut
         '
-        Me.Button1.BackColor = System.Drawing.Color.Crimson
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(4, 201)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(161, 29)
-        Me.Button1.TabIndex = 13
-        Me.Button1.Text = "Logout"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.logut.BackColor = System.Drawing.Color.Crimson
+        Me.logut.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.logut.FlatAppearance.BorderSize = 0
+        Me.logut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.logut.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.logut.ForeColor = System.Drawing.Color.White
+        Me.logut.Location = New System.Drawing.Point(4, 201)
+        Me.logut.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.logut.Name = "logut"
+        Me.logut.Size = New System.Drawing.Size(161, 29)
+        Me.logut.TabIndex = 13
+        Me.logut.Text = "Logout"
+        Me.logut.UseVisualStyleBackColor = False
         '
-        'Button4
+        'apply_leave
         '
-        Me.Button4.BackColor = System.Drawing.Color.SteelBlue
-        Me.Button4.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button4.FlatAppearance.BorderSize = 0
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.ForeColor = System.Drawing.Color.White
-        Me.Button4.Location = New System.Drawing.Point(4, 105)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(161, 29)
-        Me.Button4.TabIndex = 11
-        Me.Button4.Text = "Apply Leave"
-        Me.Button4.UseVisualStyleBackColor = False
+        Me.apply_leave.BackColor = System.Drawing.Color.SteelBlue
+        Me.apply_leave.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.apply_leave.FlatAppearance.BorderSize = 0
+        Me.apply_leave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.apply_leave.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.apply_leave.ForeColor = System.Drawing.Color.White
+        Me.apply_leave.Location = New System.Drawing.Point(4, 105)
+        Me.apply_leave.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.apply_leave.Name = "apply_leave"
+        Me.apply_leave.Size = New System.Drawing.Size(161, 29)
+        Me.apply_leave.TabIndex = 11
+        Me.apply_leave.Text = "Apply Leave"
+        Me.apply_leave.UseVisualStyleBackColor = False
         '
-        'Button2
+        'approve_leave
         '
-        Me.Button2.BackColor = System.Drawing.Color.SteelBlue
-        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(4, 59)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(161, 29)
-        Me.Button2.TabIndex = 12
-        Me.Button2.Text = "Approve Leave"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.approve_leave.BackColor = System.Drawing.Color.SteelBlue
+        Me.approve_leave.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.approve_leave.FlatAppearance.BorderSize = 0
+        Me.approve_leave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.approve_leave.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.approve_leave.ForeColor = System.Drawing.Color.White
+        Me.approve_leave.Location = New System.Drawing.Point(4, 59)
+        Me.approve_leave.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.approve_leave.Name = "approve_leave"
+        Me.approve_leave.Size = New System.Drawing.Size(161, 29)
+        Me.approve_leave.TabIndex = 12
+        Me.approve_leave.Text = "Approve Leave"
+        Me.approve_leave.UseVisualStyleBackColor = False
         '
         'GroupBox1
         '
@@ -181,7 +181,7 @@ Partial Class Director
         Me.user_profile.Name = "user_profile"
         Me.user_profile.Size = New System.Drawing.Size(115, 29)
         Me.user_profile.TabIndex = 9
-        Me.user_profile.Text = "Ayush"
+        Me.user_profile.Text = "Director"
         Me.user_profile.UseVisualStyleBackColor = False
         '
         'Label2
@@ -235,9 +235,9 @@ Partial Class Director
     Friend WithEvents user_profile As System.Windows.Forms.Button
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents Button6 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button4 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents my_leaves As System.Windows.Forms.Button
+    Friend WithEvents dashboard_but As System.Windows.Forms.Button
+    Friend WithEvents logut As System.Windows.Forms.Button
+    Friend WithEvents apply_leave As System.Windows.Forms.Button
+    Friend WithEvents approve_leave As System.Windows.Forms.Button
 End Class
