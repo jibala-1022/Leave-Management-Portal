@@ -33,7 +33,7 @@
         End If
     End Sub
 
-    Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
+    Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel2.Paint
 
     End Sub
 
@@ -44,6 +44,8 @@
     End Sub
 
     Private Sub dppc_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-
+        Panel2.Location = New Point((Me.ClientSize.Width - Panel2.Width) \ 2, (Me.ClientSize.Height - Panel2.Height) \ 2)
+        Dim role As String = Environment.GetEnvironmentVariable("role")
+        user_profile.Text = role.ToUpper
     End Sub
 End Class

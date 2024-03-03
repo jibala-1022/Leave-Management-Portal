@@ -1,7 +1,7 @@
 ﻿Public Class Director
 
     Private Sub Dashboard_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
+        Panel2.Location = New Point((Me.ClientSize.Width - Panel2.Width) \ 2, (Me.ClientSize.Height - Panel2.Height) \ 2)
     End Sub
 
     Sub switchPanel(ByVal panel As Form)
@@ -53,11 +53,6 @@
         'Dim userProfile As New UserProfile()
         'userProfile.Show()
         switchPanel(UserProfile)
-    End Sub
-
-    Private Sub Form1_Resize(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Resize
-        ' Calculate the new location of the panel when the form is resized
-        Panel2.Location = New Point((Me.ClientSize.Width - Panel2.Width) \ 2, (Me.ClientSize.Height - Panel2.Height) \ 2)
     End Sub
 
     Private Sub Dashboard_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
