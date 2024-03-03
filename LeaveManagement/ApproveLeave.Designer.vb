@@ -25,6 +25,7 @@ Partial Class ApproveLeave
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -33,6 +34,7 @@ Partial Class ApproveLeave
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.DataGridView2)
         Me.Panel1.Controls.Add(Me.DataGridView1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
@@ -68,6 +70,16 @@ Partial Class ApproveLeave
         Me.DataGridView1.Size = New System.Drawing.Size(564, 315)
         Me.DataGridView1.TabIndex = 0
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(13, 13)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(118, 13)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "No Leaves To Approve"
+        Me.Label1.Visible = False
+        '
         'ApproveLeave
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -80,6 +92,7 @@ Partial Class ApproveLeave
         Me.Text = "ApproveLeavePanel"
         Me.TransparencyKey = System.Drawing.SystemColors.Control
         Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -88,4 +101,5 @@ Partial Class ApproveLeave
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents DataGridView2 As System.Windows.Forms.DataGridView
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class

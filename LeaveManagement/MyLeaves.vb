@@ -42,18 +42,10 @@
 
 
                     If dataTable.Rows.Count = 0 Then
-                        Dim nodatalabel As New Label()
-                        nodatalabel.Text = "No leaves taken!!"
-                        nodatalabel.AutoSize = True
-                        nodatalabel.ForeColor = Color.Green
-                        nodatalabel.Font = New Font(nodatalabel.Font.FontFamily, 10)
-                        nodatalabel.Padding = New Padding(5)
-                        nodatalabel.TextAlign = ContentAlignment.MiddleCenter
-                        DataGridView1.Visible = True
-                        Me.Controls.Add(nodatalabel)
-                        nodatalabel.Top = Panel1.Top + 30
-                        nodatalabel.Left = DataGridView1.Left
+                        DataGridView1.Visible = False
+                        Label1.Visible = True
                     Else
+                        Label1.Visible = False
                         ' Display the fetched data in the GroupBox
                         DataGridView1.DataSource = dataTable
                         'DisplayRequestsInGroupBox(dataTable)

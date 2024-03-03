@@ -3,7 +3,7 @@
 
 
     Private Sub ApplyLeavePanel_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Dim query As String = "SELECT application_id as ID, type as Nature, from_date as 'From Date', to_date as 'To Date'  FROM requests " _
+        Dim query As String = "SELECT application_id as ID, applicant_email as Applicant, type as Nature, from_date as 'From Date', to_date as 'To Date'  FROM requests " _
                       & "WHERE approver_email = @email AND status = 'pending' " _
                       & "ORDER BY applied_date DESC"
 
@@ -22,18 +22,10 @@
                 DataGridView2.DataSource = dbDataset
 
                 If dbDataset.Rows.Count = 0 Then
-                    Dim nodatalabel As New Label()
-                    nodatalabel.Text = "No Pending Leaves!!"
-                    nodatalabel.AutoSize = True
-                    nodatalabel.ForeColor = Color.Green
-                    nodatalabel.Font = New Font(nodatalabel.Font.FontFamily, 10)
-                    nodatalabel.Padding = New Padding(5)
-                    nodatalabel.TextAlign = ContentAlignment.MiddleCenter
-                    DataGridView2.Visible = True
-                    Me.Controls.Add(nodatalabel)
-                    nodatalabel.Top = Panel1.Top + 30
-                    nodatalabel.Left = DataGridView2.Left
+                    DataGridView2.Visible = False
+                    Label1.Visible = True
                 Else
+                    Label1.Visible = False
                     ' Display the fetched data in the GroupBox
                     DataGridView2.DataSource = dbDataset
                     'DisplayRequestsInGroupBox(dataTable)
@@ -64,7 +56,7 @@
         End If
 
         Dim row As DataGridViewRow = DataGridView2.Rows(e.RowIndex)
-        RequestDetails.application_id = CInt(row.Cells("application_id").Value.ToString())
+        RequestDetails.application_id = CInt(row.Cells("ID").Value.ToString())
         RequestDetails.Button1.Visible = True
         RequestDetails.Button2.Visible = True
         Dim role As String = Environment.GetEnvironmentVariable("role")
