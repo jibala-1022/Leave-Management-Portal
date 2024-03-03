@@ -8,7 +8,14 @@
             Try
                 connection.Open()
 
-                Dim query As String = "SELECT * FROM students WHERE email = @email"
+                Dim query As String = ""
+                Dim role As String = Environment.GetEnvironmentVariable("role")
+
+                If role = "Faculty" Then
+                    query = "SELECT * FROM faculty WHERE email = @email"
+                Else
+                    query = "SELECT * FROM students WHERE email = @email"
+                End If
 
                 Dim command As New MySqlCommand(query, connection)
                 command.Parameters.AddWithValue("@email", UserEmail)
@@ -43,7 +50,7 @@
         Using connection As New MySqlConnection(My.Settings.connectionString)
             Try
 
-                Dim query As String = "SELECT type as Nature, from_date, to_date, reason, status FROM requests WHERE applicant_email = @email AND status = 'pending'"
+                Dim query As String = "SELECT application_id, type as Nature, from_date, to_date, reason, status FROM requests WHERE applicant_email = @email AND status = 'pending'"
 
                 Dim command As New MySqlCommand(query, connection)
                 command.Parameters.AddWithValue("@email", UserEmail)
@@ -52,7 +59,7 @@
 
                 Dim dataTable As New DataTable
                 dataAdapter.Fill(dataTable)
-
+                data_active_requests.DataSource = dataTable
                 If dataTable.Rows.Count = 0 Then
                     Dim nodatalabel As New Label()
                     nodatalabel.Text = "No Pending Leaves!!"
@@ -93,6 +100,22 @@
 
     Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
 
+    End Sub
+
+    Private Sub data_active_request_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles data_active_requests.CellContentClick
+        If e.RowIndex < 0 Then
+            Return
+        End If
+
+        Dim row As DataGridViewRow = data_active_requests.Rows(e.RowIndex)
+        RequestDetails.application_id = CInt(row.Cells("application_id").Value.ToString())
+        RequestDetails.Button3.Visible = True
+        Dim role As String = Environment.GetEnvironmentVariable("role")
+        If role = "Faculty" Then
+            faculty.switchPanel(RequestDetails)
+        Else
+            student.switchPanel(RequestDetails)
+        End If
     End Sub
 
 

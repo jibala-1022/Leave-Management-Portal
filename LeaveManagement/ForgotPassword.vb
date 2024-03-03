@@ -129,4 +129,8 @@ Public Class ForgotPassword
     Private Sub ForgotPassword_Load_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Sub ForgotPassword_Load_2(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

@@ -24,11 +24,7 @@ Partial Class faculty
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(faculty))
         Me.Button6 = New System.Windows.Forms.Button()
-        Me.label_leaves_left = New System.Windows.Forms.Label()
-        Me.data_active_requests = New System.Windows.Forms.DataGridView()
-        Me.active_requests = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.user_profile = New System.Windows.Forms.Button()
@@ -39,8 +35,6 @@ Partial Class faculty
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        CType(Me.data_active_requests, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -63,54 +57,13 @@ Partial Class faculty
         Me.Button6.Text = "My Leaves"
         Me.Button6.UseVisualStyleBackColor = False
         '
-        'label_leaves_left
-        '
-        Me.label_leaves_left.AutoSize = True
-        Me.label_leaves_left.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label_leaves_left.Location = New System.Drawing.Point(19, 197)
-        Me.label_leaves_left.Name = "label_leaves_left"
-        Me.label_leaves_left.Size = New System.Drawing.Size(103, 21)
-        Me.label_leaves_left.TabIndex = 5
-        Me.label_leaves_left.Text = "Leaves Left: "
-        '
-        'data_active_requests
-        '
-        Me.data_active_requests.BackgroundColor = System.Drawing.SystemColors.Control
-        Me.data_active_requests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.data_active_requests.Location = New System.Drawing.Point(20, 58)
-        Me.data_active_requests.Name = "data_active_requests"
-        Me.data_active_requests.Size = New System.Drawing.Size(535, 97)
-        Me.data_active_requests.TabIndex = 4
-        '
-        'active_requests
-        '
-        Me.active_requests.AutoSize = True
-        Me.active_requests.Font = New System.Drawing.Font("Microsoft YaHei", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.active_requests.Location = New System.Drawing.Point(18, 20)
-        Me.active_requests.Name = "active_requests"
-        Me.active_requests.Size = New System.Drawing.Size(221, 27)
-        Me.active_requests.TabIndex = 3
-        Me.active_requests.Text = "Active Leave Requests"
-        '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.TextBox1)
-        Me.Panel1.Controls.Add(Me.label_leaves_left)
-        Me.Panel1.Controls.Add(Me.data_active_requests)
-        Me.Panel1.Controls.Add(Me.active_requests)
         Me.Panel1.Location = New System.Drawing.Point(196, 75)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(575, 336)
         Me.Panel1.TabIndex = 14
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(112, 201)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(54, 20)
-        Me.TextBox1.TabIndex = 6
         '
         'Button3
         '
@@ -270,9 +223,6 @@ Partial Class faculty
         Me.Name = "faculty"
         Me.Text = "faculty"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        CType(Me.data_active_requests, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -282,11 +232,7 @@ Partial Class faculty
 
     End Sub
     Friend WithEvents Button6 As System.Windows.Forms.Button
-    Friend WithEvents label_leaves_left As System.Windows.Forms.Label
-    Friend WithEvents data_active_requests As System.Windows.Forms.DataGridView
-    Friend WithEvents active_requests As System.Windows.Forms.Label
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents user_profile As System.Windows.Forms.Button

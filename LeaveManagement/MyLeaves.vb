@@ -16,7 +16,7 @@
 
                 Dim UserEmail As String = Environment.GetEnvironmentVariable("userEmail")
                 ' Define the SQL query to fetch data
-                Dim query As String = "SELECT type as Nature, from_date, to_date, reason, status, reply_date " &
+                Dim query As String = "SELECT application_id, type as Nature, from_date, to_date, reason, status, reply_date " &
                                       "FROM requests " &
                                       "WHERE applicant_email = @UserEmail AND status IN ('approved', 'rejected')" &
                                       "ORDER BY reply_date DESC"

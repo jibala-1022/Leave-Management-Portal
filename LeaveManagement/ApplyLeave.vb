@@ -86,6 +86,7 @@
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
+        Return -1
     End Function
 
 
@@ -155,4 +156,7 @@
         End Using
     End Sub
 
+    Private Sub ApplyLeave_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class
