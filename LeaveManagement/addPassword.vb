@@ -1,4 +1,6 @@
-﻿Public Class ChangePassword
+﻿Public Class addPassword
+
+    Public setPassword As Boolean = False
 
     'a function that verifies if there is any upper case alphabet in the entered password
     Function ContainsUpperCase(ByVal inputString As String) As Boolean
@@ -49,6 +51,7 @@
         Return False
     End Function
 
+    'password strength check
     Private Function PasswordStrengthCheck(ByVal InputString As String) As Integer
         Dim checkVar As Integer = 0
         Dim message As String = "Password Strength Check:" & vbCrLf
@@ -103,6 +106,7 @@
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         Dim userEmail = Environment.GetEnvironmentVariable("userEmail")
+        Dim role = Environment.GetEnvironmentVariable("role")
 
         If TextBox1.Text <> TextBox2.Text Then
             MessageBox.Show("Passwords do no match", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -126,13 +130,14 @@
             Try
                 connection.Open()
 
-                Dim query As String = "UPDATE authentication SET passwd = SHA2(CONCAT(@email, @password), 256) WHERE email = @email"
+                Dim query As String = "INSERT INTO authentication (email, passwd, role) VALUES (@email, SHA2(CONCAT(@email, @password), 256), @role)"
 
                 Dim password As String = inputString
 
                 Dim command As New MySqlCommand(query, connection)
                 command.Parameters.AddWithValue("@email", userEmail)
                 command.Parameters.AddWithValue("@password", password)
+                command.Parameters.AddWithValue("@role", role)
 
                 command.ExecuteNonQuery()
 
@@ -140,16 +145,13 @@
                 connection.Close()
                 MessageBox.Show("Error: " & ex.Message)
             Finally
-                MessageBox.Show("Password updated successfully!!")
+                MessageBox.Show("Password added!")
+                setPassword = True
             End Try
         End Using
     End Sub
 
-    Private Sub ChangePassword_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
-    End Sub
-
-    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
+    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         MessageBox.Show("For stronger password please ensure that it has atleast 8 characters and to include atleast one uppercase letter, one lower case letter, one digit and one special character")
     End Sub
 
@@ -158,12 +160,16 @@
         TextBox2.UseSystemPasswordChar = CheckBox1.Checked
     End Sub
 
-    Sub switchPanel(ByVal panel As Form)
-        Panel1.Controls.Clear()
-        panel.TopLevel = False
-        panel.FormBorderStyle = Windows.Forms.FormBorderStyle.None
-        Panel1.Controls.Add(panel)
-        panel.Show()
+    Private Sub addPassword_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
+        If setPassword Then
+            Application.Exit()
+        Else
+            MessageBox.Show("please set your password!")
+            Return
+        End If
     End Sub
 
+    Private Sub addPassword_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

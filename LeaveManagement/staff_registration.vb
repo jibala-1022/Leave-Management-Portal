@@ -1,7 +1,7 @@
 ﻿Imports System.Net
 Imports System.Net.Mail
 
-Public Class faculty_registration
+Public Class staff_registration
 
     Dim randomCode As String
     Dim elapsedTime As Integer = 0 ' Track elapsed time in seconds
@@ -62,7 +62,7 @@ Public Class faculty_registration
             Conn.Open()
             cmd.Connection = Conn
 
-            cmd.CommandText = "SELECT * FROM faculty where email=@email "
+            cmd.CommandText = "SELECT * FROM staff where email=@email "
 
             ' Add parameters to the query to filter by user email
             cmd.Parameters.AddWithValue("@email", TextBox2.Text)
@@ -90,7 +90,7 @@ Public Class faculty_registration
             Conn.Open()
             cmd.Connection = Conn
 
-            cmd.CommandText = "INSERT INTO faculty(email, name, department, phone_number) " &
+            cmd.CommandText = "INSERT INTO staff(email, name, department, phone_number) " &
                 "VALUES (@email, @name, @department, @phone_number)"
 
             cmd.Parameters.AddWithValue("@email", TextBox2.Text)
@@ -100,7 +100,7 @@ Public Class faculty_registration
 
             MessageBox.Show("Registered Succesfully!" & Environment.NewLine & "Please create a password to proceed")
             Environment.SetEnvironmentVariable("UserEmail", TextBox2.Text)
-            Environment.SetEnvironmentVariable("role", "Faculty")
+            Environment.SetEnvironmentVariable("role", "Staff")
             switchPanel(addPassword)
 
             MessageBox.Show("Applied Succesfully")
@@ -230,5 +230,4 @@ Public Class faculty_registration
             Return
         End If
     End Sub
-
 End Class

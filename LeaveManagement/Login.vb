@@ -287,4 +287,30 @@
             originalControls.Clear()
         End If
     End Sub
+
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+
+        Dim popupForm As New RegisterDialog()
+        Dim result As DialogResult = popupForm.ShowDialog()
+
+        Dim user_role As String
+
+        If result = DialogResult.OK Then
+            user_role = popupForm.user_role
+
+            If user_role = "Student" Then
+                Dim studentReg As student_registration = New student_registration()
+                studentReg.Show()
+            ElseIf user_role = "Faculty" Then
+                Dim facultyReg As faculty_registration = New faculty_registration()
+                facultyReg.Show()
+            ElseIf user_role = "Staff" Then
+                Dim staffReg As staff_registration = New staff_registration()
+                staffReg.Show()
+            Else
+                Return
+            End If
+        End If
+
+    End Sub
 End Class
