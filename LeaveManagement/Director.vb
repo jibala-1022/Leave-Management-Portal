@@ -2,6 +2,7 @@
 
     Private Sub Dashboard_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Panel2.Location = New Point((Me.ClientSize.Width - Panel2.Width) \ 2, (Me.ClientSize.Height - Panel2.Height) \ 2)
+        switchPanel(Dashboard_authority)
     End Sub
 
     Sub switchPanel(ByVal panel As Form)
@@ -21,7 +22,6 @@
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles approve_leave.Click
-
         dashboard_but.BackColor = Color.SteelBlue
         my_leaves.BackColor = Color.SteelBlue
         approve_leave.BackColor = Color.DodgerBlue
@@ -42,7 +42,7 @@
         my_leaves.BackColor = Color.SteelBlue
         approve_leave.BackColor = Color.SteelBlue
         apply_leave.BackColor = Color.SteelBlue
-        switchPanel(Dashboard)
+        switchPanel(Dashboard_authority)
     End Sub
 
     Private Sub user_profile_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles user_profile.Click

@@ -34,16 +34,29 @@ Public Class RequestDetails
                 to_date = DateTimePicker2.Value
             End If
             reader.Close()
+            Dim role As String = Environment.GetEnvironmentVariable("role")
+            If role = "Faculty" Then
+                query = "SELECT * FROM faculty WHERE email = @applicant_email"
+            Else
 
-            query = "SELECT * FROM students WHERE email = @applicant_email"
+                query = "SELECT * FROM students WHERE email = @applicant_email"
+            End If
+
             command.CommandText = query
             command.Parameters.AddWithValue("@applicant_email", applicant_email)
 
             reader = command.ExecuteReader()
             If reader.Read() Then
                 TextBox1.Text = reader.GetString("name")
-                TextBox2.Text = reader.GetString("roll_number")
-                TextBox3.Text = reader.GetString("course")
+                If role = "Faculty" Then
+                    Label2.Visible = False
+                    Label3.Visible = False
+                    TextBox2.Visible = False
+                    TextBox3.Visible = False
+                Else
+                    TextBox2.Text = reader.GetString("roll_number")
+                    TextBox3.Text = reader.GetString("course")
+                End If
                 TextBox4.Text = reader.GetString("department")
                 TextBox5.Text = reader.GetString("phone_number")
             End If
@@ -84,9 +97,9 @@ Public Class RequestDetails
                 If Status = "approved" Then
                     mail.Subject = "LEAVE APPROVED"
                     mail.Body = "Your leave request from " & from_date.ToString() & " to " & to_date.ToString() & " has been approved."
-                ElseIf Status = "canceled" Then
+                ElseIf Status = "cancelled" Then
                     mail.Subject = "LEAVE CANCELLED"
-                    mail.Body = "You have cancelled your leave request from" & from_date.ToString() & " to " & to_date.ToString() & " successfully"
+                    mail.Body = "You have cancelled your leave request from " & from_date.ToString() & " to " & to_date.ToString() & " successfully"
                 Else
                     mail.Subject = "LEAVE REJECTED"
                     mail.Body = "Your leave request from " & from_date.ToString() & " to " & to_date.ToString() & " has been rejected."

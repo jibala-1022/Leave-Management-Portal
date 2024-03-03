@@ -47,5 +47,6 @@
         Panel2.Location = New Point((Me.ClientSize.Width - Panel2.Width) \ 2, (Me.ClientSize.Height - Panel2.Height) \ 2)
         Dim role As String = Environment.GetEnvironmentVariable("role")
         user_profile.Text = role.ToUpper
+        switchPanel(Dashboard_authority)
     End Sub
 End Class
