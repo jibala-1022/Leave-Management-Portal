@@ -98,6 +98,11 @@
                 dataAdapter.Fill(dataTable)
 
                 DataGridView1.DataSource = dataTable
+                DataGridView1.AllowUserToAddRows = False
+                DataGridView1.RowHeadersVisible = False
+                DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+                DataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
+                DataGridView1.ScrollBars = ScrollBars.Vertical
 
             Catch ex As MySqlException
                 MessageBox.Show("Error: " & ex.Message)
@@ -116,5 +121,9 @@
         Dim imagebmp As New Bitmap(DataGridView1.Width, DataGridView1.Height)
         DataGridView1.DrawToBitmap(imagebmp, New Rectangle(0, 0, DataGridView1.Width, DataGridView1.Height))
         e.Graphics.DrawImage(imagebmp, 0, 0)
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
     End Sub
 End Class

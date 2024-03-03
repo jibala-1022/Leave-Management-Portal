@@ -52,10 +52,9 @@ Partial Class MainApplication
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label2.Location = New System.Drawing.Point(195, 15)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Location = New System.Drawing.Point(260, 18)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(389, 31)
+        Me.Label2.Size = New System.Drawing.Size(485, 40)
         Me.Label2.TabIndex = 8
         Me.Label2.Text = "LEAVE MANAGEMENT SYSTEM"
         '
@@ -67,10 +66,10 @@ Partial Class MainApplication
         Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button6.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button6.ForeColor = System.Drawing.Color.White
-        Me.Button6.Location = New System.Drawing.Point(4, 155)
-        Me.Button6.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.Button6.Location = New System.Drawing.Point(5, 191)
+        Me.Button6.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(161, 29)
+        Me.Button6.Size = New System.Drawing.Size(215, 36)
         Me.Button6.TabIndex = 10
         Me.Button6.Text = "My Leaves"
         Me.Button6.UseVisualStyleBackColor = False
@@ -83,10 +82,10 @@ Partial Class MainApplication
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(4, 19)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.Button3.Location = New System.Drawing.Point(5, 23)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(161, 29)
+        Me.Button3.Size = New System.Drawing.Size(215, 36)
         Me.Button3.TabIndex = 8
         Me.Button3.Text = "Dashboard"
         Me.Button3.UseVisualStyleBackColor = False
@@ -99,10 +98,10 @@ Partial Class MainApplication
         Me.user_profile.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.user_profile.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.user_profile.ForeColor = System.Drawing.Color.White
-        Me.user_profile.Location = New System.Drawing.Point(626, 15)
-        Me.user_profile.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.user_profile.Location = New System.Drawing.Point(835, 18)
+        Me.user_profile.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.user_profile.Name = "user_profile"
-        Me.user_profile.Size = New System.Drawing.Size(115, 29)
+        Me.user_profile.Size = New System.Drawing.Size(153, 36)
         Me.user_profile.TabIndex = 9
         Me.user_profile.Text = "Ayush"
         Me.user_profile.UseVisualStyleBackColor = False
@@ -112,10 +111,10 @@ Partial Class MainApplication
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.Location = New System.Drawing.Point(4, 5)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.PictureBox1.Location = New System.Drawing.Point(5, 6)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(52, 52)
+        Me.PictureBox1.Size = New System.Drawing.Size(69, 64)
         Me.PictureBox1.TabIndex = 7
         Me.PictureBox1.TabStop = False
         '
@@ -128,11 +127,11 @@ Partial Class MainApplication
         Me.GroupBox2.Controls.Add(Me.Button4)
         Me.GroupBox2.Controls.Add(Me.Button2)
         Me.GroupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.GroupBox2.Location = New System.Drawing.Point(16, 73)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.GroupBox2.Location = New System.Drawing.Point(21, 90)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.GroupBox2.Size = New System.Drawing.Size(172, 338)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.GroupBox2.Size = New System.Drawing.Size(229, 416)
         Me.GroupBox2.TabIndex = 13
         Me.GroupBox2.TabStop = False
         '
@@ -144,10 +143,10 @@ Partial Class MainApplication
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(4, 198)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.Button1.Location = New System.Drawing.Point(5, 244)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(161, 29)
+        Me.Button1.Size = New System.Drawing.Size(215, 36)
         Me.Button1.TabIndex = 7
         Me.Button1.Text = "Logout"
         Me.Button1.UseVisualStyleBackColor = False
@@ -160,10 +159,10 @@ Partial Class MainApplication
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button4.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.ForeColor = System.Drawing.Color.White
-        Me.Button4.Location = New System.Drawing.Point(4, 106)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.Button4.Location = New System.Drawing.Point(5, 130)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(161, 29)
+        Me.Button4.Size = New System.Drawing.Size(215, 36)
         Me.Button4.TabIndex = 6
         Me.Button4.Text = "Apply Leave"
         Me.Button4.UseVisualStyleBackColor = False
@@ -176,10 +175,10 @@ Partial Class MainApplication
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(4, 60)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.Button2.Location = New System.Drawing.Point(5, 74)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(161, 29)
+        Me.Button2.Size = New System.Drawing.Size(215, 36)
         Me.Button2.TabIndex = 6
         Me.Button2.Text = "Approve Leave"
         Me.Button2.UseVisualStyleBackColor = False
@@ -190,11 +189,11 @@ Partial Class MainApplication
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.PictureBox1)
         Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.GroupBox1.Location = New System.Drawing.Point(16, 12)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.GroupBox1.Location = New System.Drawing.Point(21, 15)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.GroupBox1.Size = New System.Drawing.Size(757, 57)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.GroupBox1.Size = New System.Drawing.Size(1009, 70)
         Me.GroupBox1.TabIndex = 12
         Me.GroupBox1.TabStop = False
         '
@@ -202,9 +201,10 @@ Partial Class MainApplication
         '
         Me.active_requests.AutoSize = True
         Me.active_requests.Font = New System.Drawing.Font("Microsoft YaHei", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.active_requests.Location = New System.Drawing.Point(18, 20)
+        Me.active_requests.Location = New System.Drawing.Point(24, 25)
+        Me.active_requests.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.active_requests.Name = "active_requests"
-        Me.active_requests.Size = New System.Drawing.Size(221, 27)
+        Me.active_requests.Size = New System.Drawing.Size(279, 32)
         Me.active_requests.TabIndex = 3
         Me.active_requests.Text = "Active Leave Requests"
         '
@@ -212,18 +212,20 @@ Partial Class MainApplication
         '
         Me.data_active_requests.BackgroundColor = System.Drawing.SystemColors.Control
         Me.data_active_requests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.data_active_requests.Location = New System.Drawing.Point(20, 58)
+        Me.data_active_requests.Location = New System.Drawing.Point(27, 71)
+        Me.data_active_requests.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.data_active_requests.Name = "data_active_requests"
-        Me.data_active_requests.Size = New System.Drawing.Size(535, 97)
+        Me.data_active_requests.Size = New System.Drawing.Size(713, 119)
         Me.data_active_requests.TabIndex = 4
         '
         'label_leaves_left
         '
         Me.label_leaves_left.AutoSize = True
         Me.label_leaves_left.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label_leaves_left.Location = New System.Drawing.Point(19, 197)
+        Me.label_leaves_left.Location = New System.Drawing.Point(25, 242)
+        Me.label_leaves_left.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.label_leaves_left.Name = "label_leaves_left"
-        Me.label_leaves_left.Size = New System.Drawing.Size(103, 21)
+        Me.label_leaves_left.Size = New System.Drawing.Size(127, 27)
         Me.label_leaves_left.TabIndex = 5
         Me.label_leaves_left.Text = "Leaves Left: "
         '
@@ -233,18 +235,18 @@ Partial Class MainApplication
         Me.Panel1.Controls.Add(Me.label_leaves_left)
         Me.Panel1.Controls.Add(Me.data_active_requests)
         Me.Panel1.Controls.Add(Me.active_requests)
-        Me.Panel1.Location = New System.Drawing.Point(196, 75)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Location = New System.Drawing.Point(261, 92)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(575, 336)
+        Me.Panel1.Size = New System.Drawing.Size(767, 414)
         Me.Panel1.TabIndex = 14
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(112, 201)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox1.Location = New System.Drawing.Point(149, 247)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(54, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(71, 22)
         Me.TextBox1.TabIndex = 6
         '
         'Panel2
@@ -256,16 +258,17 @@ Partial Class MainApplication
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(792, 430)
+        Me.Panel2.Size = New System.Drawing.Size(1056, 529)
         Me.Panel2.TabIndex = 15
         '
         'MainApplication
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ClientSize = New System.Drawing.Size(792, 430)
+        Me.ClientSize = New System.Drawing.Size(1056, 529)
         Me.Controls.Add(Me.Panel2)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "MainApplication"
         Me.Text = "Dashboard"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized

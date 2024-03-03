@@ -156,6 +156,10 @@
                         Director.Show()
                     ElseIf role = "Faculty" Then
                         faculty.Show()
+                    ElseIf role = "Admin" Then
+                        AdminPage.Show()
+                    ElseIf role = "Hostel" Then
+                        HostelPage.Show()
                     Else
                         student.Show()
                     End If

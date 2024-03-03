@@ -23,6 +23,7 @@ Partial Class FacultyProfile
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -34,7 +35,6 @@ Partial Class FacultyProfile
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button4 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -57,6 +57,20 @@ Partial Class FacultyProfile
         Me.Panel1.Size = New System.Drawing.Size(870, 422)
         Me.Panel1.TabIndex = 15
         '
+        'Button4
+        '
+        Me.Button4.BackColor = System.Drawing.Color.LimeGreen
+        Me.Button4.FlatAppearance.BorderSize = 0
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.ForeColor = System.Drawing.Color.White
+        Me.Button4.Location = New System.Drawing.Point(523, 143)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(65, 31)
+        Me.Button4.TabIndex = 18
+        Me.Button4.Text = "Set"
+        Me.Button4.UseVisualStyleBackColor = False
+        '
         'Button3
         '
         Me.Button3.BackColor = System.Drawing.Color.Crimson
@@ -73,7 +87,7 @@ Partial Class FacultyProfile
         '
         'Button2
         '
-        Me.Button2.BackColor = System.Drawing.Color.Crimson
+        Me.Button2.BackColor = System.Drawing.Color.DodgerBlue
         Me.Button2.FlatAppearance.BorderSize = 0
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -178,20 +192,6 @@ Partial Class FacultyProfile
         Me.Label1.Size = New System.Drawing.Size(53, 20)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Name"
-        '
-        'Button4
-        '
-        Me.Button4.BackColor = System.Drawing.Color.LimeGreen
-        Me.Button4.FlatAppearance.BorderSize = 0
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.ForeColor = System.Drawing.Color.White
-        Me.Button4.Location = New System.Drawing.Point(523, 143)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(65, 31)
-        Me.Button4.TabIndex = 18
-        Me.Button4.Text = "Set"
-        Me.Button4.UseVisualStyleBackColor = False
         '
         'FacultyProfile
         '

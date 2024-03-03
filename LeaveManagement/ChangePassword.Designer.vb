@@ -67,10 +67,11 @@ Partial Class ChangePassword
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Button1.BackColor = System.Drawing.Color.LimeGreen
         Me.Button1.FlatAppearance.BorderSize = 0
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.Location = New System.Drawing.Point(107, 168)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(117, 34)
