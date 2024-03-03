@@ -31,6 +31,7 @@ Partial Class Login
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -108,15 +109,17 @@ Partial Class Login
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.BackColor = System.Drawing.Color.Transparent
         Me.CheckBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.CheckBox1.Checked = True
+        Me.CheckBox1.CheckState = System.Windows.Forms.CheckState.Checked
         Me.CheckBox1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.CheckBox1.Font = New System.Drawing.Font("Microsoft YaHei", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox1.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.CheckBox1.Location = New System.Drawing.Point(148, 290)
+        Me.CheckBox1.Location = New System.Drawing.Point(345, 239)
         Me.CheckBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(121, 21)
+        Me.CheckBox1.Size = New System.Drawing.Size(59, 21)
         Me.CheckBox1.TabIndex = 12
-        Me.CheckBox1.Text = "Hide Password"
+        Me.CheckBox1.Text = "Hide"
         Me.CheckBox1.UseVisualStyleBackColor = False
         '
         'Button5
@@ -143,6 +146,7 @@ Partial Class Login
         Me.Panel1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel1.AutoSize = True
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.Button3)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Button5)
@@ -158,6 +162,25 @@ Partial Class Login
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(544, 432)
         Me.Panel1.TabIndex = 14
+        '
+        'Button2
+        '
+        Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button2.BackColor = System.Drawing.Color.Transparent
+        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Microsoft YaHei", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.Button2.Location = New System.Drawing.Point(148, 287)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(127, 30)
+        Me.Button2.TabIndex = 16
+        Me.Button2.Text = "Register"
+        Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'Button3
         '
@@ -245,5 +268,6 @@ Partial Class Login
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 
 End Class

@@ -140,7 +140,7 @@
                 connection.Close()
                 MessageBox.Show("Error: " & ex.Message)
             Finally
-                Me.Close()
+                MessageBox.Show("Password updated successfully!!")
             End Try
         End Using
     End Sub

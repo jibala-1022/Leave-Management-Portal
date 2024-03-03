@@ -90,6 +90,12 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addPassword.Designer.vb">
+      <DependentUpon>addPassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="addPassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Admin.Designer.vb">
       <DependentUpon>Admin.vb</DependentUpon>
     </Compile>
@@ -174,6 +180,12 @@
     <Compile Include="HostelPage.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="RegisterDialog.Designer.vb">
+      <DependentUpon>RegisterDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Remarks.Designer.vb">
       <DependentUpon>Remarks.vb</DependentUpon>
     </Compile>
@@ -184,6 +196,12 @@
       <DependentUpon>StaffProfile.vb</DependentUpon>
     </Compile>
     <Compile Include="StaffProfile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="staff_registration.Designer.vb">
+      <DependentUpon>staff_registration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="staff_registration.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="student.Designer.vb">
@@ -252,6 +270,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="addPassword.resx">
+      <DependentUpon>addPassword.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.vb</DependentUpon>
     </EmbeddedResource>
@@ -303,6 +324,9 @@
     <EmbeddedResource Include="MyLeaves.resx">
       <DependentUpon>MyLeaves.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RegisterDialog.resx">
+      <DependentUpon>RegisterDialog.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Remarks.resx">
       <DependentUpon>Remarks.vb</DependentUpon>
     </EmbeddedResource>
@@ -320,6 +344,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StaffProfile.resx">
       <DependentUpon>StaffProfile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="staff_registration.resx">
+      <DependentUpon>staff_registration.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="student.resx">
       <DependentUpon>student.vb</DependentUpon>
