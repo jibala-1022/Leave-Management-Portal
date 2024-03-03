@@ -87,6 +87,8 @@
                     newColumn.Text = "Cancel"
                     newColumn.DefaultCellStyle.BackColor = Color.Crimson
                     newColumn.DefaultCellStyle.SelectionBackColor = Color.Crimson
+                    newColumn.DefaultCellStyle.ForeColor = Color.White
+                    newColumn.DefaultCellStyle.SelectionForeColor = Color.White
                     newColumn.FlatStyle = FlatStyle.Flat
                     data_active_requests.Columns.Add(newColumn)
                 End If

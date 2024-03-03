@@ -41,26 +41,26 @@ Partial Class Hostel
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(26, 164)
+        Me.DataGridView1.Location = New System.Drawing.Point(25, 124)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(891, 430)
+        Me.DataGridView1.Size = New System.Drawing.Size(891, 243)
         Me.DataGridView1.TabIndex = 0
         '
         'comboHostel
         '
         Me.comboHostel.FormattingEnabled = True
         Me.comboHostel.Items.AddRange(New Object() {"All", "Lohit", "Brahmaputra", "Kameng", "Manas", "Barak", "Umiam", "Kapili", "Siang", "Disang", "Dihing", "Maried Scholars"})
-        Me.comboHostel.Location = New System.Drawing.Point(119, 33)
+        Me.comboHostel.Location = New System.Drawing.Point(119, 15)
         Me.comboHostel.Name = "comboHostel"
-        Me.comboHostel.Size = New System.Drawing.Size(183, 24)
+        Me.comboHostel.Size = New System.Drawing.Size(139, 24)
         Me.comboHostel.TabIndex = 2
         Me.comboHostel.Text = "All"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(33, 36)
+        Me.Label1.Location = New System.Drawing.Point(33, 18)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(48, 17)
         Me.Label1.TabIndex = 3
@@ -69,7 +69,7 @@ Partial Class Hostel
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(33, 66)
+        Me.Label2.Location = New System.Drawing.Point(33, 48)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(48, 17)
         Me.Label2.TabIndex = 3
@@ -77,12 +77,17 @@ Partial Class Hostel
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(763, 39)
+        Me.Button1.BackColor = System.Drawing.Color.DodgerBlue
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(317, 66)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(169, 44)
+        Me.Button1.Size = New System.Drawing.Size(133, 36)
         Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Print"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.Text = "PRINT"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'PrintPreviewDialog1
         '
@@ -100,7 +105,7 @@ Partial Class Hostel
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(33, 96)
+        Me.Label3.Location = New System.Drawing.Point(33, 78)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(40, 17)
         Me.Label3.TabIndex = 3
@@ -109,7 +114,7 @@ Partial Class Hostel
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(376, 36)
+        Me.Label4.Location = New System.Drawing.Point(314, 18)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(84, 17)
         Me.Label4.TabIndex = 3
@@ -119,9 +124,9 @@ Partial Class Hostel
         '
         Me.comboStatus.FormattingEnabled = True
         Me.comboStatus.Items.AddRange(New Object() {"All", "Pending", "Approved", "Rejected"})
-        Me.comboStatus.Location = New System.Drawing.Point(119, 63)
+        Me.comboStatus.Location = New System.Drawing.Point(119, 45)
         Me.comboStatus.Name = "comboStatus"
-        Me.comboStatus.Size = New System.Drawing.Size(183, 24)
+        Me.comboStatus.Size = New System.Drawing.Size(139, 24)
         Me.comboStatus.TabIndex = 2
         Me.comboStatus.Text = "All"
         '
@@ -129,9 +134,9 @@ Partial Class Hostel
         '
         Me.comboDateRange.FormattingEnabled = True
         Me.comboDateRange.Items.AddRange(New Object() {"All", "Today", "This Week", "This Month", "This Year"})
-        Me.comboDateRange.Location = New System.Drawing.Point(478, 36)
+        Me.comboDateRange.Location = New System.Drawing.Point(416, 18)
         Me.comboDateRange.Name = "comboDateRange"
-        Me.comboDateRange.Size = New System.Drawing.Size(183, 24)
+        Me.comboDateRange.Size = New System.Drawing.Size(142, 24)
         Me.comboDateRange.TabIndex = 2
         Me.comboDateRange.Text = "All"
         '
@@ -139,9 +144,9 @@ Partial Class Hostel
         '
         Me.comboType.FormattingEnabled = True
         Me.comboType.Items.AddRange(New Object() {"All", "Casual Leave", "Medical Leave", "Academic Leave", "On Duty Leave", "Maternity Leave"})
-        Me.comboType.Location = New System.Drawing.Point(119, 96)
+        Me.comboType.Location = New System.Drawing.Point(119, 78)
         Me.comboType.Name = "comboType"
-        Me.comboType.Size = New System.Drawing.Size(183, 24)
+        Me.comboType.Size = New System.Drawing.Size(139, 24)
         Me.comboType.TabIndex = 2
         Me.comboType.Text = "All"
         '
@@ -149,7 +154,7 @@ Partial Class Hostel
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(944, 620)
+        Me.ClientSize = New System.Drawing.Size(944, 406)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)

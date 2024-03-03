@@ -1,5 +1,9 @@
 ﻿Public Class authority
 
+    Private Sub dppc_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Panel2.Location = New Point((Me.ClientSize.Width - Panel2.Width) \ 2, (Me.ClientSize.Height - Panel2.Height) \ 2)
+    End Sub
+
     Sub switchPanel(ByVal panel As Form)
         Panel1.Controls.Clear()
         panel.TopLevel = False
@@ -33,17 +37,9 @@
         End If
     End Sub
 
-    Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
-
-    End Sub
-
     Private Sub Button2_Click_1(sender As System.Object, e As System.EventArgs) Handles Button2.Click
         Button3.BackColor = Color.SteelBlue
         Button2.BackColor = Color.DodgerBlue
         switchPanel(ApproveLeave)
-    End Sub
-
-    Private Sub dppc_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-
     End Sub
 End Class

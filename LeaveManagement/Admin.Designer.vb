@@ -114,12 +114,17 @@ Partial Class Admin
         '
         'Change
         '
-        Me.Change.Location = New System.Drawing.Point(351, 448)
+        Me.Change.BackColor = System.Drawing.Color.LimeGreen
+        Me.Change.FlatAppearance.BorderSize = 0
+        Me.Change.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Change.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Change.ForeColor = System.Drawing.Color.White
+        Me.Change.Location = New System.Drawing.Point(277, 476)
         Me.Change.Name = "Change"
-        Me.Change.Size = New System.Drawing.Size(171, 46)
+        Me.Change.Size = New System.Drawing.Size(153, 37)
         Me.Change.TabIndex = 2
-        Me.Change.Text = "Update"
-        Me.Change.UseVisualStyleBackColor = True
+        Me.Change.Text = "UPDATE"
+        Me.Change.UseVisualStyleBackColor = False
         '
         'groupHOD
         '
@@ -128,7 +133,7 @@ Partial Class Admin
         Me.groupHOD.Controls.Add(Me.Label3)
         Me.groupHOD.Location = New System.Drawing.Point(13, 8)
         Me.groupHOD.Name = "groupHOD"
-        Me.groupHOD.Size = New System.Drawing.Size(827, 81)
+        Me.groupHOD.Size = New System.Drawing.Size(520, 81)
         Me.groupHOD.TabIndex = 3
         Me.groupHOD.TabStop = False
         Me.groupHOD.Tag = "hod"
@@ -139,7 +144,7 @@ Partial Class Admin
         Me.groupDean.Controls.Add(Me.Label2)
         Me.groupDean.Controls.Add(Me.txtDosa)
         Me.groupDean.Controls.Add(Me.Label1)
-        Me.groupDean.Location = New System.Drawing.Point(20, 18)
+        Me.groupDean.Location = New System.Drawing.Point(38, 12)
         Me.groupDean.Name = "groupDean"
         Me.groupDean.Size = New System.Drawing.Size(331, 94)
         Me.groupDean.TabIndex = 4
@@ -152,7 +157,7 @@ Partial Class Admin
         Me.groupDUPC.Controls.Add(Me.Label6)
         Me.groupDUPC.Location = New System.Drawing.Point(13, 109)
         Me.groupDUPC.Name = "groupDUPC"
-        Me.groupDUPC.Size = New System.Drawing.Size(827, 81)
+        Me.groupDUPC.Size = New System.Drawing.Size(520, 81)
         Me.groupDUPC.TabIndex = 5
         Me.groupDUPC.TabStop = False
         Me.groupDUPC.Tag = "dupc"
@@ -192,7 +197,7 @@ Partial Class Admin
         Me.groupDPPC.Controls.Add(Me.Label8)
         Me.groupDPPC.Location = New System.Drawing.Point(13, 218)
         Me.groupDPPC.Name = "groupDPPC"
-        Me.groupDPPC.Size = New System.Drawing.Size(827, 81)
+        Me.groupDPPC.Size = New System.Drawing.Size(520, 81)
         Me.groupDPPC.TabIndex = 6
         Me.groupDPPC.TabStop = False
         Me.groupDPPC.Tag = "dppc"
@@ -230,9 +235,9 @@ Partial Class Admin
         Me.groupDept.Controls.Add(Me.groupDPPC)
         Me.groupDept.Controls.Add(Me.groupDUPC)
         Me.groupDept.Controls.Add(Me.groupHOD)
-        Me.groupDept.Location = New System.Drawing.Point(9, 128)
+        Me.groupDept.Location = New System.Drawing.Point(27, 122)
         Me.groupDept.Name = "groupDept"
-        Me.groupDept.Size = New System.Drawing.Size(865, 320)
+        Me.groupDept.Size = New System.Drawing.Size(636, 320)
         Me.groupDept.TabIndex = 7
         Me.groupDept.TabStop = False
         '
@@ -240,7 +245,7 @@ Partial Class Admin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(899, 557)
+        Me.ClientSize = New System.Drawing.Size(717, 557)
         Me.Controls.Add(Me.groupDept)
         Me.Controls.Add(Me.groupDean)
         Me.Controls.Add(Me.Change)

@@ -149,7 +149,11 @@
         Catch ex As Exception
             MessageBox.Show("Error updating phone number: " & ex.Message)
         End Try
-
+        Button4.Hide()
+        Button1.Text = "Change"
+        TextBox6.ReadOnly = True
+        TextBox6.BorderStyle = BorderStyle.None
+        TextBox6.Top = TextBox6.Location.Y + 5
         phonenumber = newPhoneNumber
     End Sub
 End Class

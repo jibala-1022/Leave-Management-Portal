@@ -82,3 +82,5 @@ S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManage
 S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.Hostel.resources
 S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.StaffProfile.resources
 S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.student.resources
+S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.AdminPage.resources
+S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.HostelPage.resources

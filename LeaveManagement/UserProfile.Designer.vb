@@ -37,10 +37,10 @@ Partial Class UserProfile
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -180,7 +180,7 @@ Partial Class UserProfile
         '
         'Button2
         '
-        Me.Button2.BackColor = System.Drawing.Color.Crimson
+        Me.Button2.BackColor = System.Drawing.Color.DodgerBlue
         Me.Button2.FlatAppearance.BorderSize = 0
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -217,6 +217,20 @@ Partial Class UserProfile
         Me.Panel1.Size = New System.Drawing.Size(870, 422)
         Me.Panel1.TabIndex = 14
         '
+        'Button4
+        '
+        Me.Button4.BackColor = System.Drawing.Color.LimeGreen
+        Me.Button4.FlatAppearance.BorderSize = 0
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.ForeColor = System.Drawing.Color.White
+        Me.Button4.Location = New System.Drawing.Point(523, 254)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(65, 31)
+        Me.Button4.TabIndex = 17
+        Me.Button4.Text = "Set"
+        Me.Button4.UseVisualStyleBackColor = False
+        '
         'TextBox7
         '
         Me.TextBox7.BorderStyle = System.Windows.Forms.BorderStyle.None
@@ -250,20 +264,6 @@ Partial Class UserProfile
         Me.Button3.TabIndex = 14
         Me.Button3.Text = "Go Back"
         Me.Button3.UseVisualStyleBackColor = False
-        '
-        'Button4
-        '
-        Me.Button4.BackColor = System.Drawing.Color.LimeGreen
-        Me.Button4.FlatAppearance.BorderSize = 0
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.ForeColor = System.Drawing.Color.White
-        Me.Button4.Location = New System.Drawing.Point(523, 254)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(65, 31)
-        Me.Button4.TabIndex = 17
-        Me.Button4.Text = "Set"
-        Me.Button4.UseVisualStyleBackColor = False
         '
         'UserProfile
         '
