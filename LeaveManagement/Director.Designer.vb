@@ -46,17 +46,18 @@ Partial Class Director
         Me.Panel2.Controls.Add(Me.Panel1)
         Me.Panel2.Controls.Add(Me.GroupBox2)
         Me.Panel2.Controls.Add(Me.GroupBox1)
-        Me.Panel2.Location = New System.Drawing.Point(23, 12)
+        Me.Panel2.Location = New System.Drawing.Point(31, 15)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(792, 430)
+        Me.Panel2.Size = New System.Drawing.Size(1056, 529)
         Me.Panel2.TabIndex = 0
         '
         'Panel1
         '
-        Me.Panel1.Location = New System.Drawing.Point(200, 75)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.Panel1.Location = New System.Drawing.Point(267, 92)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(575, 336)
+        Me.Panel1.Size = New System.Drawing.Size(767, 414)
         Me.Panel1.TabIndex = 32
         '
         'GroupBox2
@@ -67,11 +68,11 @@ Partial Class Director
         Me.GroupBox2.Controls.Add(Me.logut)
         Me.GroupBox2.Controls.Add(Me.apply_leave)
         Me.GroupBox2.Controls.Add(Me.approve_leave)
-        Me.GroupBox2.Location = New System.Drawing.Point(19, 73)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.GroupBox2.Location = New System.Drawing.Point(25, 90)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.GroupBox2.Size = New System.Drawing.Size(172, 338)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.GroupBox2.Size = New System.Drawing.Size(229, 416)
         Me.GroupBox2.TabIndex = 31
         Me.GroupBox2.TabStop = False
         '
@@ -83,10 +84,10 @@ Partial Class Director
         Me.my_leaves.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.my_leaves.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.my_leaves.ForeColor = System.Drawing.Color.White
-        Me.my_leaves.Location = New System.Drawing.Point(4, 154)
-        Me.my_leaves.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.my_leaves.Location = New System.Drawing.Point(5, 190)
+        Me.my_leaves.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.my_leaves.Name = "my_leaves"
-        Me.my_leaves.Size = New System.Drawing.Size(161, 29)
+        Me.my_leaves.Size = New System.Drawing.Size(215, 36)
         Me.my_leaves.TabIndex = 15
         Me.my_leaves.Text = "My Leaves"
         Me.my_leaves.UseVisualStyleBackColor = False
@@ -99,10 +100,10 @@ Partial Class Director
         Me.dashboard_but.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.dashboard_but.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dashboard_but.ForeColor = System.Drawing.Color.White
-        Me.dashboard_but.Location = New System.Drawing.Point(4, 18)
-        Me.dashboard_but.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.dashboard_but.Location = New System.Drawing.Point(5, 22)
+        Me.dashboard_but.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.dashboard_but.Name = "dashboard_but"
-        Me.dashboard_but.Size = New System.Drawing.Size(161, 29)
+        Me.dashboard_but.Size = New System.Drawing.Size(215, 36)
         Me.dashboard_but.TabIndex = 14
         Me.dashboard_but.Text = "Dashboard"
         Me.dashboard_but.UseVisualStyleBackColor = False
@@ -115,10 +116,10 @@ Partial Class Director
         Me.logut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.logut.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.logut.ForeColor = System.Drawing.Color.White
-        Me.logut.Location = New System.Drawing.Point(4, 201)
-        Me.logut.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.logut.Location = New System.Drawing.Point(5, 247)
+        Me.logut.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.logut.Name = "logut"
-        Me.logut.Size = New System.Drawing.Size(161, 29)
+        Me.logut.Size = New System.Drawing.Size(215, 36)
         Me.logut.TabIndex = 13
         Me.logut.Text = "Logout"
         Me.logut.UseVisualStyleBackColor = False
@@ -131,10 +132,10 @@ Partial Class Director
         Me.apply_leave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.apply_leave.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.apply_leave.ForeColor = System.Drawing.Color.White
-        Me.apply_leave.Location = New System.Drawing.Point(4, 105)
-        Me.apply_leave.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.apply_leave.Location = New System.Drawing.Point(5, 129)
+        Me.apply_leave.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.apply_leave.Name = "apply_leave"
-        Me.apply_leave.Size = New System.Drawing.Size(161, 29)
+        Me.apply_leave.Size = New System.Drawing.Size(215, 36)
         Me.apply_leave.TabIndex = 11
         Me.apply_leave.Text = "Apply Leave"
         Me.apply_leave.UseVisualStyleBackColor = False
@@ -147,10 +148,10 @@ Partial Class Director
         Me.approve_leave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.approve_leave.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.approve_leave.ForeColor = System.Drawing.Color.White
-        Me.approve_leave.Location = New System.Drawing.Point(4, 59)
-        Me.approve_leave.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.approve_leave.Location = New System.Drawing.Point(5, 73)
+        Me.approve_leave.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.approve_leave.Name = "approve_leave"
-        Me.approve_leave.Size = New System.Drawing.Size(161, 29)
+        Me.approve_leave.Size = New System.Drawing.Size(215, 36)
         Me.approve_leave.TabIndex = 12
         Me.approve_leave.Text = "Approve Leave"
         Me.approve_leave.UseVisualStyleBackColor = False
@@ -160,11 +161,11 @@ Partial Class Director
         Me.GroupBox1.Controls.Add(Me.user_profile)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.PictureBox1)
-        Me.GroupBox1.Location = New System.Drawing.Point(19, 7)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.GroupBox1.Location = New System.Drawing.Point(25, 9)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.GroupBox1.Size = New System.Drawing.Size(757, 61)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.GroupBox1.Size = New System.Drawing.Size(1009, 75)
         Me.GroupBox1.TabIndex = 30
         Me.GroupBox1.TabStop = False
         '
@@ -176,10 +177,10 @@ Partial Class Director
         Me.user_profile.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.user_profile.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.user_profile.ForeColor = System.Drawing.Color.White
-        Me.user_profile.Location = New System.Drawing.Point(626, 14)
-        Me.user_profile.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.user_profile.Location = New System.Drawing.Point(835, 17)
+        Me.user_profile.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.user_profile.Name = "user_profile"
-        Me.user_profile.Size = New System.Drawing.Size(115, 29)
+        Me.user_profile.Size = New System.Drawing.Size(153, 36)
         Me.user_profile.TabIndex = 9
         Me.user_profile.Text = "Director"
         Me.user_profile.UseVisualStyleBackColor = False
@@ -189,10 +190,9 @@ Partial Class Director
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label2.Location = New System.Drawing.Point(195, 16)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Location = New System.Drawing.Point(260, 20)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(389, 31)
+        Me.Label2.Size = New System.Drawing.Size(485, 40)
         Me.Label2.TabIndex = 8
         Me.Label2.Text = "LEAVE MANAGEMENT SYSTEM"
         '
@@ -201,22 +201,23 @@ Partial Class Director
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.Location = New System.Drawing.Point(4, 5)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.PictureBox1.Location = New System.Drawing.Point(5, 6)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(52, 52)
+        Me.PictureBox1.Size = New System.Drawing.Size(69, 64)
         Me.PictureBox1.TabIndex = 7
         Me.PictureBox1.TabStop = False
         '
         'Director
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.LeaveManagement.My.Resources.Resources.iitg_jpeg
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(858, 499)
+        Me.ClientSize = New System.Drawing.Size(1144, 614)
         Me.Controls.Add(Me.Panel2)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.DoubleBuffered = True
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Director"
         Me.Text = "Director"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized

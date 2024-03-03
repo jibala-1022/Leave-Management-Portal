@@ -177,10 +177,11 @@ Partial Class AdminPage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImage = Global.LeaveManagement.My.Resources.Resources.iitg_jpeg
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1228, 737)
         Me.Controls.Add(Me.Panel2)
+        Me.DoubleBuffered = True
         Me.Name = "AdminPage"
         Me.Text = "AdminPage"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized

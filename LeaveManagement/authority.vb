@@ -11,6 +11,7 @@
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
         Button3.BackColor = Color.DodgerBlue
         Button2.BackColor = Color.SteelBlue
+        Dim Dashboard_authority As Dashboard_authority = New Dashboard_authority()
         switchPanel(Dashboard_authority)
     End Sub
 
@@ -40,6 +41,7 @@
     Private Sub Button2_Click_1(sender As System.Object, e As System.EventArgs) Handles Button2.Click
         Button3.BackColor = Color.SteelBlue
         Button2.BackColor = Color.DodgerBlue
+        Dim ApproveLeave As ApproveLeave = New ApproveLeave()
         switchPanel(ApproveLeave)
     End Sub
 
@@ -47,6 +49,7 @@
         Panel2.Location = New Point((Me.ClientSize.Width - Panel2.Width) \ 2, (Me.ClientSize.Height - Panel2.Height) \ 2)
         Dim role As String = Environment.GetEnvironmentVariable("role")
         user_profile.Text = role.ToUpper
+        Dim Dashboard_authority As Dashboard_authority = New Dashboard_authority()
         switchPanel(Dashboard_authority)
     End Sub
 End Class

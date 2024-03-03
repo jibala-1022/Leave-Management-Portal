@@ -1,7 +1,10 @@
 ﻿Public Class Dashboard
 
     Private Sub Dashboard_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        load_dashboard()
+    End Sub
 
+    Public Sub load_dashboard()
         Dim UserEmail As String = Environment.GetEnvironmentVariable("userEmail")
 
         Using connection As New MySqlConnection(My.Settings.connectionString)
@@ -97,7 +100,6 @@
                 MessageBox.Show("Error: " & ex.Message)
             End Try
         End Using
-
     End Sub
 
     Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
@@ -114,9 +116,12 @@
         RequestDetails.Button3.Visible = True
         Dim role As String = Environment.GetEnvironmentVariable("role")
         If role = "Faculty" Then
-            faculty.switchPanel(RequestDetails)
+            ' Dim RequestDetails As RequestDetails = New RequestDetails()
+            ' faculty.switchPanel(RequestDetails)
+            RequestDetails.Show()
         Else
-            student.switchPanel(RequestDetails)
+            ' student.switchPanel(RequestDetails)
+            RequestDetails.Show()
         End If
     End Sub
 

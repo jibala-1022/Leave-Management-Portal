@@ -144,13 +144,19 @@ Public Class RequestDetails
                         "Academic : " & academic & vbCrLf &
                         "On Duty : " & on_duty & vbCrLf &
                         "Maternity : " & maternity & vbCrLf
+                    Me.Hide()
+                    MessageBox.Show("Leave Approved")
                 ElseIf Status = "cancelled" Then
                     mail.Subject = "LEAVE CANCELLED"
                     mail.Body = "You have cancelled your leave request from " & from_date.ToString() & " to " & to_date.ToString() & " successfully."
+                    Me.Hide()
+                    MessageBox.Show("Leave Cancelled")
                 Else
                     mail.Subject = "LEAVE REJECTED"
                     mail.Body = "Your leave request from " & from_date.ToString() & " to " & to_date.ToString() & " has been rejected." & vbCrLf &
                         "Remarks : " & vbCrLf & rejection_remarks
+                    Me.Hide()
+                    MessageBox.Show("Leave Rejected")
                 End If
 
                 SmtpServer.Port = 587
@@ -159,7 +165,7 @@ Public Class RequestDetails
 
                 Try
                     SmtpServer.Send(mail)
-                    MessageBox.Show("Mail sent to respective student")
+                    MessageBox.Show("Mail sent")
                 Catch ex As Exception
                     MessageBox.Show("Error occured sending code :", ex.Message)
                 End Try

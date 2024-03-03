@@ -2,6 +2,7 @@
     Private originalControls As New List(Of Control)
 
     Private Sub Login_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
         Button3.Hide()
     End Sub
 
@@ -151,16 +152,22 @@
                     Environment.SetEnvironmentVariable("role", role)
 
                     If role = "DUPC" Or role = "DPPC" Or role = "DOSA" Or role = "DOFA" Or role = "HOD" Then
+                        Dim authority As authority = New authority()
                         authority.Show()
                     ElseIf role = "Director" Then
+                        Dim director As Director = New Director()
                         Director.Show()
                     ElseIf role = "Faculty" Then
+                        Dim faculty As faculty = New faculty()
                         faculty.Show()
                     ElseIf role = "Admin" Then
+                        Dim Adminpage As AdminPage = New AdminPage()
                         AdminPage.Show()
                     ElseIf role = "Hostel" Then
+                        Dim Hostelpage As HostelPage = New HostelPage()
                         HostelPage.Show()
                     Else
+                        Dim student As student = New student()
                         student.Show()
                     End If
                     Me.Hide()

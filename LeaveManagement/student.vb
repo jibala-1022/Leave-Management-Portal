@@ -32,11 +32,14 @@
         End Using
     End Sub
 
+
+
     Sub switchPanel(ByVal panel As Form)
         Panel1.Controls.Clear()
         panel.TopLevel = False
         panel.FormBorderStyle = Windows.Forms.FormBorderStyle.None
         Panel1.Controls.Add(panel)
+
         panel.Show()
     End Sub
 
@@ -44,6 +47,7 @@
         Button3.BackColor = Color.SteelBlue
         Button6.BackColor = Color.DodgerBlue
         Button4.BackColor = Color.SteelBlue
+        Dim MyLeaves As MyLeaves = New MyLeaves()
         switchPanel(MyLeaves)
     End Sub
 
@@ -51,6 +55,7 @@
         Button3.BackColor = Color.SteelBlue
         Button6.BackColor = Color.SteelBlue
         Button4.BackColor = Color.DodgerBlue
+        Dim ApplyLeave As ApplyLeave = New ApplyLeave()
         switchPanel(ApplyLeave)
     End Sub
 
@@ -58,6 +63,7 @@
         Button3.BackColor = Color.DodgerBlue
         Button6.BackColor = Color.SteelBlue
         Button4.BackColor = Color.SteelBlue
+        Dim Dashboard As Dashboard = New Dashboard()
         switchPanel(Dashboard)
     End Sub
 

@@ -1,14 +1,14 @@
 ﻿Public Class MyLeaves
 
     Public Sub leaves_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        loadForm()
+        load_myLeaves()
     End Sub
 
     Private Sub DataGridView1_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
     End Sub
 
-    Private Sub loadForm()
+    Public Sub load_myLeaves()
         Try
             ' Establish a connection to the MySQL database
             Using connection As New MySqlConnection(My.Settings.connectionString)
@@ -64,7 +64,7 @@
     End Sub
 
     Public Function GetPanelComponents() As Control()
-        loadForm()
+        load_myLeaves()
         Dim components As New List(Of Control)
 
         For Each ctrl As Control In Panel1.Controls

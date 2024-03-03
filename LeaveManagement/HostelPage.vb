@@ -14,7 +14,7 @@
             Case "dihing_off@iitg.ac.in"
                 hostel = "Dihing"
             Case "disang_off@iitg.ac.in"
-                hostel = "lohit"
+                hostel = "Disang"
             Case "kameng_off@iitg.ac.in"
                 hostel = "Brahmaputra"
             Case "kapili_off@iitg.ac.in"
@@ -57,6 +57,7 @@
                 command.Connection = connection
 
                 Dim hostel As String = getHostelName()
+                user_profile.Text = hostel
 
                 command.CommandText = "SELECT * FROM requests "
 
@@ -183,5 +184,9 @@
             Dim loginForm As New Login()
             loginForm.Show()
         End If
+    End Sub
+
+    Private Sub Panel2_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel2.Paint
+
     End Sub
 End Class

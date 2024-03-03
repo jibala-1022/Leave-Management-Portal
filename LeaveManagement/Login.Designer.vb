@@ -203,7 +203,7 @@ Partial Class Login
         'Panel2
         '
         Me.Panel2.Location = New System.Drawing.Point(48, 34)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(0, 0)
         Me.Panel2.TabIndex = 15
@@ -220,6 +220,7 @@ Partial Class Login
         Me.ClientSize = New System.Drawing.Size(995, 543)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
+        Me.DoubleBuffered = True
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Login"
         Me.Text = "Login"

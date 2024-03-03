@@ -47,6 +47,7 @@
         Button6.BackColor = Color.DodgerBlue
         Button2.BackColor = Color.SteelBlue
         Button4.BackColor = Color.SteelBlue
+        Dim MyLeaves As MyLeaves = New MyLeaves()
         switchPanel(MyLeaves)
     End Sub
 
@@ -56,6 +57,7 @@
         Button6.BackColor = Color.SteelBlue
         Button2.BackColor = Color.DodgerBlue
         Button4.BackColor = Color.SteelBlue
+        Dim ApproveLeave As ApproveLeave = New ApproveLeave()
         switchPanel(ApproveLeave)
     End Sub
 
@@ -64,6 +66,7 @@
         Button6.BackColor = Color.SteelBlue
         Button2.BackColor = Color.SteelBlue
         Button4.BackColor = Color.DodgerBlue
+        Dim ApplyLeave As ApplyLeave = New ApplyLeave()
         switchPanel(ApplyLeave)
     End Sub
 
@@ -72,6 +75,7 @@
         Button6.BackColor = Color.SteelBlue
         Button2.BackColor = Color.SteelBlue
         Button4.BackColor = Color.SteelBlue
+        Dim Dashboard As Dashboard = New Dashboard()
         switchPanel(Dashboard)
     End Sub
 

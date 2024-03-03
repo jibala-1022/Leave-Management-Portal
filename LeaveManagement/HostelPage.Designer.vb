@@ -34,12 +34,12 @@ Partial Class HostelPage
         Me.comboStatus = New System.Windows.Forms.ComboBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.user_profile = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -69,7 +69,7 @@ Partial Class HostelPage
         Me.Panel1.Controls.Add(Me.DataGridView1)
         Me.Panel1.Location = New System.Drawing.Point(24, 98)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1005, 460)
+        Me.Panel1.Size = New System.Drawing.Size(1005, 477)
         Me.Panel1.TabIndex = 13
         '
         'Button1
@@ -149,7 +149,7 @@ Partial Class HostelPage
         Me.DataGridView1.Location = New System.Drawing.Point(34, 99)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(939, 331)
+        Me.DataGridView1.Size = New System.Drawing.Size(939, 348)
         Me.DataGridView1.TabIndex = 5
         '
         'GroupBox1
@@ -167,6 +167,22 @@ Partial Class HostelPage
         Me.GroupBox1.TabIndex = 12
         Me.GroupBox1.TabStop = False
         '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.Crimson
+        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Location = New System.Drawing.Point(872, 19)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(113, 36)
+        Me.Button2.TabIndex = 10
+        Me.Button2.Text = "Logout"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
         'user_profile
         '
         Me.user_profile.BackColor = System.Drawing.Color.Navy
@@ -180,7 +196,6 @@ Partial Class HostelPage
         Me.user_profile.Name = "user_profile"
         Me.user_profile.Size = New System.Drawing.Size(153, 36)
         Me.user_profile.TabIndex = 9
-        Me.user_profile.Text = "Ayush"
         Me.user_profile.UseVisualStyleBackColor = False
         '
         'Label2
@@ -219,28 +234,15 @@ Partial Class HostelPage
         Me.PrintPreviewDialog1.Name = "PrintPreviewDialog1"
         Me.PrintPreviewDialog1.Visible = False
         '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.Crimson
-        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(872, 19)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(113, 36)
-        Me.Button2.TabIndex = 10
-        Me.Button2.Text = "Logout"
-        Me.Button2.UseVisualStyleBackColor = False
-        '
         'HostelPage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.LeaveManagement.My.Resources.Resources.iitg_jpeg
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1113, 653)
         Me.Controls.Add(Me.Panel2)
+        Me.DoubleBuffered = True
         Me.Name = "HostelPage"
         Me.Text = "HostelPage"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized

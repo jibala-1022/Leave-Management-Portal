@@ -18,6 +18,7 @@
         my_leaves.BackColor = Color.DodgerBlue
         approve_leave.BackColor = Color.SteelBlue
         apply_leave.BackColor = Color.SteelBlue
+        Dim MyLeaves As MyLeaves = New MyLeaves()
         switchPanel(MyLeaves)
     End Sub
 
@@ -26,6 +27,7 @@
         my_leaves.BackColor = Color.SteelBlue
         approve_leave.BackColor = Color.DodgerBlue
         apply_leave.BackColor = Color.SteelBlue
+        Dim ApproveLeave As ApproveLeave = New ApproveLeave()
         switchPanel(ApproveLeave)
     End Sub
 
@@ -34,6 +36,7 @@
         my_leaves.BackColor = Color.SteelBlue
         approve_leave.BackColor = Color.SteelBlue
         apply_leave.BackColor = Color.DodgerBlue
+        Dim ApplyLeave As ApplyLeave = New ApplyLeave()
         switchPanel(ApplyLeave)
     End Sub
 
@@ -42,6 +45,7 @@
         my_leaves.BackColor = Color.SteelBlue
         approve_leave.BackColor = Color.SteelBlue
         apply_leave.BackColor = Color.SteelBlue
+        Dim Dashboard_authority As Dashboard_authority = New Dashboard_authority()
         switchPanel(Dashboard_authority)
     End Sub
 
