@@ -6,6 +6,7 @@ Public Class RequestDetails
     Dim applicant_email As String
     Dim from_date As Date
     Dim to_date As Date
+    Dim leave_type As String
 
     Private Sub RequestInfo_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
@@ -30,6 +31,7 @@ Public Class RequestDetails
                 DateTimePicker2.Value = reader.GetDateTime("to_date")
                 DateTimePicker3.Value = reader.GetDateTime("applied_date")
                 TextBox9.Text = reader.GetString("reason")
+                leave_type = TextBox6.Text
                 from_date = DateTimePicker1.Value
                 to_date = DateTimePicker2.Value
             End If
@@ -72,6 +74,17 @@ Public Class RequestDetails
         Dim button As Button = sender
         Dim Status As String = button.Tag
 
+        Dim rejection_remarks As String = ""
+
+        If Status = "rejected" Then
+            Dim popupForm As New Remarks()
+            Dim result As DialogResult = popupForm.ShowDialog()
+
+            If result = DialogResult.OK Then
+                rejection_remarks = popupForm.remarks
+            End If
+        End If
+
         Dim connection As New MySqlConnection(My.Settings.connectionString)
         Dim command As New MySqlCommand()
 
@@ -80,10 +93,22 @@ Public Class RequestDetails
 
             command.Connection = connection
 
-            Dim query As String = "UPDATE requests SET status = @status, reply_date = CURRENT_TIMESTAMP WHERE application_id = @applicationId"
+            Dim query As String = "UPDATE requests SET status = @status, remarks = @remarks, reply_date = CURRENT_TIMESTAMP WHERE application_id = @applicationId"
             command.CommandText = query
             command.Parameters.AddWithValue("@status", Status)
+            command.Parameters.AddWithValue("@remarks", rejection_remarks)
             command.Parameters.AddWithValue("@applicationId", application_id)
+
+            command.ExecuteNonQuery()
+
+            If Status = "approved" Then
+                command.CommandText = "UPDATE students " &
+                    "SET " & leave_type & " = (" & leave_type & " - DATEDIFF(@to_date, @from_date) + 1) " &
+                    "WHERE email = @applicant_email"
+                command.Parameters.AddWithValue("@from_date", from_date)
+                command.Parameters.AddWithValue("@to_date", to_date)
+                command.Parameters.AddWithValue("@applicant_email", applicant_email)
+            End If
 
             command.ExecuteNonQuery()
 
@@ -95,14 +120,37 @@ Public Class RequestDetails
                 mail.To.Add(applicant_email)
 
                 If Status = "approved" Then
+                    command.CommandText = "SELECT * FROM students where email = @applicant_email"
+                    Dim casual As Integer = 0
+                    Dim medical As Integer = 0
+                    Dim academic As Integer = 0
+                    Dim on_duty As Integer = 0
+                    Dim maternity As Integer = 0
+                    Dim reader As MySqlDataReader = command.ExecuteReader()
+                    If reader.Read() Then
+                        casual = reader.GetInt32("casual")
+                        medical = reader.GetInt32("medical")
+                        academic = reader.GetInt32("academic")
+                        on_duty = reader.GetInt32("on_duty")
+                        maternity = reader.GetInt32("maternity")
+                    End If
+                    reader.Close()
+
                     mail.Subject = "LEAVE APPROVED"
-                    mail.Body = "Your leave request from " & from_date.ToString() & " to " & to_date.ToString() & " has been approved."
+                    mail.Body = "Your leave request from " & from_date.ToString() & " to " & to_date.ToString() & " has been approved." & vbCrLf &
+                        "Leaves left: " & vbCrLf &
+                        "Casual : " & casual & vbCrLf &
+                        "Medical : " & medical & vbCrLf &
+                        "Academic : " & academic & vbCrLf &
+                        "On Duty : " & on_duty & vbCrLf &
+                        "Maternity : " & maternity & vbCrLf
                 ElseIf Status = "cancelled" Then
                     mail.Subject = "LEAVE CANCELLED"
-                    mail.Body = "You have cancelled your leave request from " & from_date.ToString() & " to " & to_date.ToString() & " successfully"
+                    mail.Body = "You have cancelled your leave request from " & from_date.ToString() & " to " & to_date.ToString() & " successfully."
                 Else
                     mail.Subject = "LEAVE REJECTED"
-                    mail.Body = "Your leave request from " & from_date.ToString() & " to " & to_date.ToString() & " has been rejected."
+                    mail.Body = "Your leave request from " & from_date.ToString() & " to " & to_date.ToString() & " has been rejected." & vbCrLf &
+                        "Remarks : " & vbCrLf & rejection_remarks
                 End If
 
                 SmtpServer.Port = 587
