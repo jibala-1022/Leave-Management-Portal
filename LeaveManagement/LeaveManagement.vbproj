@@ -96,6 +96,12 @@
     <Compile Include="Admin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AdminPage.Designer.vb">
+      <DependentUpon>AdminPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ApplyLeave.Designer.vb">
       <DependentUpon>ApplyLeave.vb</DependentUpon>
     </Compile>
@@ -154,6 +160,12 @@
       <DependentUpon>Hostel.vb</DependentUpon>
     </Compile>
     <Compile Include="Hostel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HostelPage.Designer.vb">
+      <DependentUpon>HostelPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HostelPage.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Remarks.Designer.vb">
@@ -231,6 +243,9 @@
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminPage.resx">
+      <DependentUpon>AdminPage.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ApplyLeave.resx">
       <DependentUpon>ApplyLeave.vb</DependentUpon>
     </EmbeddedResource>
@@ -260,6 +275,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Hostel.resx">
       <DependentUpon>Hostel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HostelPage.resx">
+      <DependentUpon>HostelPage.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainApplication.resx">
       <DependentUpon>MainApplication.vb</DependentUpon>
