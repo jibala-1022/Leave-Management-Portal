@@ -49,16 +49,6 @@
         switchPanel(Dashboard_authority)
     End Sub
 
-    Private Sub user_profile_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles user_profile.Click
-        dashboard_but.BackColor = Color.SteelBlue
-        my_leaves.BackColor = Color.SteelBlue
-        approve_leave.BackColor = Color.SteelBlue
-        apply_leave.BackColor = Color.SteelBlue
-        'Dim userProfile As New UserProfile()
-        'userProfile.Show()
-        switchPanel(UserProfile)
-    End Sub
-
     Private Sub Dashboard_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
         Application.Exit()
     End Sub

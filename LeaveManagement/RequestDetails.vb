@@ -36,7 +36,15 @@ Public Class RequestDetails
                 to_date = DateTimePicker2.Value
             End If
             reader.Close()
-            Dim role As String = Environment.GetEnvironmentVariable("role")
+            Dim role As String = ""
+            query = "SELECT * FROM authentication WHERE email = @applicant_email"
+            command.CommandText = query
+            command.Parameters.AddWithValue("@applicant_email", applicant_email)
+            reader = command.ExecuteReader()
+            If reader.Read() Then
+                role = reader.GetString("role")
+            End If
+            reader.Close()
             If role = "Faculty" Then
                 query = "SELECT * FROM faculty WHERE email = @applicant_email"
             ElseIf role = "Staff" Then
@@ -46,7 +54,7 @@ Public Class RequestDetails
             End If
 
             command.CommandText = query
-            command.Parameters.AddWithValue("@applicant_email", applicant_email)
+
 
             reader = command.ExecuteReader()
             If reader.Read() Then
@@ -184,8 +192,6 @@ Public Class RequestDetails
             Catch ex As Exception
                 MessageBox.Show(ex.Message)
             End Try
-
-
             Me.Close()
 
         Catch ex As Exception

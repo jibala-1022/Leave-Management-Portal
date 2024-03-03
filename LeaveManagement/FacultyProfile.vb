@@ -7,7 +7,7 @@ Public Class FacultyProfile
     Private Sub FacultyProfile_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Button3.Hide()
         Button4.Hide()
-        Dim FacultyEmail = Environment.GetEnvironmentVariable("FacultyEmail")
+        Dim FacultyEmail = Environment.GetEnvironmentVariable("userEmail")
 
         Using connection As New MySqlConnection(My.Settings.connectionString)
             Try

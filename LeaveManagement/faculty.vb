@@ -86,7 +86,8 @@
         Button4.BackColor = Color.SteelBlue
         'Dim userProfile As New UserProfile()
         'userProfile.Show()
-        switchPanel(UserProfile)
+        Dim FacultyProfile As FacultyProfile = New FacultyProfile()
+        switchPanel(FacultyProfile)
     End Sub
 
     Private Sub Form1_Resize(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Resize
