@@ -15,16 +15,26 @@
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
         Button3.BackColor = Color.DodgerBlue
         Button2.BackColor = Color.SteelBlue
+        Button4.BackColor = Color.SteelBlue
 
         switchPanel(Hostel)
     End Sub
 
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
-        Button2.BackColor = Color.DodgerBlue
         Button3.BackColor = Color.SteelBlue
+        Button2.BackColor = Color.DodgerBlue
+        Button4.BackColor = Color.SteelBlue
         Dim admin As Admin = New Admin()
         switchPanel(admin)
+    End Sub
+
+    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
+        Button3.BackColor = Color.SteelBlue
+        Button2.BackColor = Color.SteelBlue
+        Button4.BackColor = Color.DodgerBlue
+        Dim ApproveLeave As ApproveLeave = New ApproveLeave()
+        switchPanel(ApproveLeave)
     End Sub
 
     Private Sub Admin_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
@@ -50,4 +60,9 @@
         ' Calculate the new location of the panel when the form is resized
         Panel2.Location = New Point((Me.ClientSize.Width - Panel2.Width) \ 2, (Me.ClientSize.Height - Panel2.Height) \ 2)
     End Sub
+
+    Private Sub Panel2_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel2.Paint
+
+    End Sub
+
 End Class
