@@ -16,6 +16,8 @@
 
                 If role = "Faculty" Then
                     query = "SELECT * FROM faculty WHERE email = @email"
+                ElseIf role = "Staff" Then
+                    query = "SELECT * FROM staff WHERE email = @email"
                 Else
                     query = "SELECT * FROM students WHERE email = @email"
                 End If

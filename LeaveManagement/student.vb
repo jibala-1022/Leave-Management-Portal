@@ -8,13 +8,15 @@
         Next
         switchPanel(Dashboard)
         Dim userEmail As String = Environment.GetEnvironmentVariable("userEmail")
-
+        Dim role As String = Environment.GetEnvironmentVariable("role")
         Using connection As New MySqlConnection(My.Settings.connectionString)
             Try
                 connection.Open()
 
                 Dim query As String = "SELECT * FROM students WHERE email=@email"
-
+                If role = "Staff" Then
+                    query = "SELECT * FROM staff WHERE email=@email"
+                End If
                 Dim command As New MySqlCommand(query, connection)
                 command.Parameters.AddWithValue("@email", userEmail)
 
@@ -73,7 +75,12 @@
         Button4.BackColor = Color.SteelBlue
         'Dim userProfile As New UserProfile()
         'userProfile.Show()
-        switchPanel(UserProfile)
+        Dim role As String = Environment.GetEnvironmentVariable("role")
+        If role = "Staff" Then
+            switchPanel(StaffProfile)
+        Else
+            switchPanel(UserProfile)
+        End If
     End Sub
 
     Private Sub Form1_Resize(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Resize
