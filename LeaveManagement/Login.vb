@@ -122,6 +122,7 @@
                             command.CommandText = "select email from hod " &
                             "where department = (select department from faculty where faculty.email = @email) and " &
                             "faculty_email <> @email and " &
+                            "(select count(*) from dean where dean.faculty_email = @email) = 0 and " &
                             "(select on_leave from faculty where faculty.email = hod.faculty_email) = 0"
                             approver = Convert.ToString(command.ExecuteScalar())
                         End If
@@ -130,6 +131,7 @@
                             command.CommandText = "select email from dean " &
                             "where role = 'dofa' and " &
                             "faculty_email <> @email and " &
+                            "(select count(*) from dean where dean.faculty_email = @email) = 0 and " &
                             "(select on_leave from faculty where faculty.email = dean.faculty_email) = 0"
                             approver = Convert.ToString(command.ExecuteScalar())
                         End If
