@@ -14,7 +14,6 @@ C:\Users\sidda\OneDrive - Indian Institute of Technology Guwahati\Documents\Soft
 C:\Users\sidda\OneDrive - Indian Institute of Technology Guwahati\Documents\Software Engineering Lab\LeaveManagement\LeaveManagement\bin\Debug\LeaveManagement.xml
 C:\Users\sidda\OneDrive - Indian Institute of Technology Guwahati\Documents\Software Engineering Lab\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.Login.resources
 C:\Users\sidda\OneDrive - Indian Institute of Technology Guwahati\Documents\Software Engineering Lab\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.Resources.resources
-C:\Users\sidda\OneDrive - Indian Institute of Technology Guwahati\Documents\Software Engineering Lab\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.template.resources
 C:\Users\sidda\OneDrive - Indian Institute of Technology Guwahati\Documents\Software Engineering Lab\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.vbproj.GenerateResource.Cache
 C:\Users\Balaji\OneDrive - Indian Institute of Technology Guwahati\Desktop\SoftEngg\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.ApplyLeave.resources
 C:\Users\Balaji\OneDrive - Indian Institute of Technology Guwahati\Desktop\SoftEngg\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.Login.resources
@@ -26,23 +25,66 @@ C:\Users\Balaji\OneDrive - Indian Institute of Technology Guwahati\Desktop\SoftE
 C:\Users\Balaji\OneDrive - Indian Institute of Technology Guwahati\Desktop\SoftEngg\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.RequestDetails.resources
 C:\Users\Balaji\OneDrive - Indian Institute of Technology Guwahati\Desktop\SoftEngg\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.UserProfile.resources
 C:\Users\Balaji\OneDrive - Indian Institute of Technology Guwahati\Desktop\SoftEngg\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.ChangePassword.resources
-C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\bin\Debug\LeaveManagement.exe.config
-C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.exe
-C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.xml
-C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.pdb
-C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\bin\Debug\LeaveManagement.exe
-C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\bin\Debug\LeaveManagement.pdb
-C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\bin\Debug\LeaveManagement.xml
-C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.ApplyLeave.resources
-C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.ApproveLeave.resources
-C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.ChangePassword.resources
-C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.Form1.resources
-C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.Form2.resources
-C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.MainApplication.resources
-C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.Dashboard.resources
-C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.MyLeaves.resources
-C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.RequestDetails.resources
-C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.Login.resources
-C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.Resources.resources
-C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.UserProfile.resources
-C:\Users\banav\OneDrive\Documents\Visual Studio 2010\Projects\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.vbproj.GenerateResource.Cache
+S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\bin\Debug\LeaveManagement.exe.config
+S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.exe
+S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.xml
+S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.pdb
+S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\bin\Debug\LeaveManagement.exe
+S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\bin\Debug\LeaveManagement.pdb
+S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\bin\Debug\LeaveManagement.xml
+S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.ApplyLeave.resources
+S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.ApproveLeave.resources
+S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.ChangePassword.resources
+S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.MainApplication.resources
+S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.Dashboard.resources
+S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.MyLeaves.resources
+S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.RequestDetails.resources
+S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.Login.resources
+S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.Resources.resources
+S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.UserProfile.resources
+S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.vbproj.GenerateResource.Cache
+S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.ForgotPassword.resources
+C:\Users\sidda\OneDrive - Indian Institute of Technology Guwahati\Documents\Software Engineering Lab\LeaveManagement\LeaveManagement\bin\Debug\LeaveManagement.exe.config
+C:\Users\sidda\OneDrive - Indian Institute of Technology Guwahati\Documents\Software Engineering Lab\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.ApplyLeave.resources
+C:\Users\sidda\OneDrive - Indian Institute of Technology Guwahati\Documents\Software Engineering Lab\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.ApproveLeave.resources
+C:\Users\sidda\OneDrive - Indian Institute of Technology Guwahati\Documents\Software Engineering Lab\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.ChangePassword.resources
+C:\Users\sidda\OneDrive - Indian Institute of Technology Guwahati\Documents\Software Engineering Lab\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.ForgotPassword.resources
+C:\Users\sidda\OneDrive - Indian Institute of Technology Guwahati\Documents\Software Engineering Lab\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.MainApplication.resources
+C:\Users\sidda\OneDrive - Indian Institute of Technology Guwahati\Documents\Software Engineering Lab\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.Dashboard.resources
+C:\Users\sidda\OneDrive - Indian Institute of Technology Guwahati\Documents\Software Engineering Lab\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.MyLeaves.resources
+C:\Users\sidda\OneDrive - Indian Institute of Technology Guwahati\Documents\Software Engineering Lab\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.RequestDetails.resources
+C:\Users\sidda\OneDrive - Indian Institute of Technology Guwahati\Documents\Software Engineering Lab\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.UserProfile.resources
+C:\Users\sidda\OneDrive - Indian Institute of Technology Guwahati\Documents\Software Engineering Lab\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.Admin.resources
+C:\Users\sidda\OneDrive - Indian Institute of Technology Guwahati\Documents\Software Engineering Lab\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.FacultyProfile.resources
+C:\Users\sidda\OneDrive - Indian Institute of Technology Guwahati\Documents\Software Engineering Lab\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.StaffProfile.resources
+C:\Users\sidda\OneDrive - Indian Institute of Technology Guwahati\Documents\Software Engineering Lab\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.Hostel.resources
+C:\Users\sidda\OneDrive - Indian Institute of Technology Guwahati\Documents\Software Engineering Lab\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.Dashboard_authority.resources
+C:\Users\sidda\OneDrive - Indian Institute of Technology Guwahati\Documents\Software Engineering Lab\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.Director.resources
+C:\Users\sidda\OneDrive - Indian Institute of Technology Guwahati\Documents\Software Engineering Lab\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.authority.resources
+C:\Users\sidda\OneDrive - Indian Institute of Technology Guwahati\Documents\Software Engineering Lab\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.faculty.resources
+C:\Users\sidda\OneDrive - Indian Institute of Technology Guwahati\Documents\Software Engineering Lab\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.student.resources
+C:\Users\Balaji\OneDrive - Indian Institute of Technology Guwahati\Desktop\SoftEngg\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.Admin.resources
+C:\Users\Balaji\OneDrive - Indian Institute of Technology Guwahati\Desktop\SoftEngg\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.Dashboard_authority.resources
+C:\Users\Balaji\OneDrive - Indian Institute of Technology Guwahati\Desktop\SoftEngg\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.Director.resources
+C:\Users\Balaji\OneDrive - Indian Institute of Technology Guwahati\Desktop\SoftEngg\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.authority.resources
+C:\Users\Balaji\OneDrive - Indian Institute of Technology Guwahati\Desktop\SoftEngg\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.faculty.resources
+C:\Users\Balaji\OneDrive - Indian Institute of Technology Guwahati\Desktop\SoftEngg\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.FacultyProfile.resources
+C:\Users\Balaji\OneDrive - Indian Institute of Technology Guwahati\Desktop\SoftEngg\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.ForgotPassword.resources
+C:\Users\Balaji\OneDrive - Indian Institute of Technology Guwahati\Desktop\SoftEngg\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.Hostel.resources
+C:\Users\Balaji\OneDrive - Indian Institute of Technology Guwahati\Desktop\SoftEngg\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.StaffProfile.resources
+C:\Users\Balaji\OneDrive - Indian Institute of Technology Guwahati\Desktop\SoftEngg\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.student.resources
+S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.Admin.resources
+S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.Dashboard_authority.resources
+S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.Director.resources
+S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.authority.resources
+S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.faculty.resources
+S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.FacultyProfile.resources
+S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.Hostel.resources
+S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.StaffProfile.resources
+S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.student.resources
+C:\Users\Balaji\OneDrive - Indian Institute of Technology Guwahati\Desktop\SoftEngg\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.Remarks.resources
+S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.AdminPage.resources
+S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.HostelPage.resources
+S:\SATHWIK\IIT GUWAHATI\SEMISTERS\SEM6\CS346(SE lab)\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.Remarks.resources
+C:\Users\Balaji\OneDrive - Indian Institute of Technology Guwahati\Desktop\SoftEngg\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.AdminPage.resources
+C:\Users\Balaji\OneDrive - Indian Institute of Technology Guwahati\Desktop\SoftEngg\LeaveManagement\LeaveManagement\obj\x86\Debug\LeaveManagement.HostelPage.resources

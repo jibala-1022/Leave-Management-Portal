@@ -90,6 +90,18 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin.Designer.vb">
+      <DependentUpon>Admin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPage.Designer.vb">
+      <DependentUpon>AdminPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ApplyLeave.Designer.vb">
       <DependentUpon>ApplyLeave.vb</DependentUpon>
     </Compile>
@@ -108,16 +120,70 @@
     <Compile Include="ChangePassword.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="student_registration.Designer.vb">
-      <DependentUpon>student_registration.vb</DependentUpon>
+    <Compile Include="Dashboard_authority.Designer.vb">
+      <DependentUpon>Dashboard_authority.vb</DependentUpon>
     </Compile>
-    <Compile Include="student_registration.vb">
+    <Compile Include="Dashboard_authority.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="faculty_registration.Designer.vb">
-      <DependentUpon>faculty_registration.vb</DependentUpon>
+    <Compile Include="Director.Designer.vb">
+      <DependentUpon>Director.vb</DependentUpon>
     </Compile>
-    <Compile Include="faculty_registration.vb">
+    <Compile Include="Director.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="authority.Designer.vb">
+      <DependentUpon>authority.vb</DependentUpon>
+    </Compile>
+    <Compile Include="authority.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="faculty.Designer.vb">
+      <DependentUpon>faculty.vb</DependentUpon>
+    </Compile>
+    <Compile Include="faculty.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FacultyProfile.Designer.vb">
+      <DependentUpon>FacultyProfile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FacultyProfile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.Designer.vb">
+      <DependentUpon>ForgotPassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hostel.Designer.vb">
+      <DependentUpon>Hostel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Hostel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HostelPage.Designer.vb">
+      <DependentUpon>HostelPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HostelPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Remarks.Designer.vb">
+      <DependentUpon>Remarks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Remarks.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffProfile.Designer.vb">
+      <DependentUpon>StaffProfile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StaffProfile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="student.Designer.vb">
+      <DependentUpon>student.vb</DependentUpon>
+    </Compile>
+    <Compile Include="student.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UserProfile.Designer.vb">
@@ -174,6 +240,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPage.resx">
+      <DependentUpon>AdminPage.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ApplyLeave.resx">
       <DependentUpon>ApplyLeave.vb</DependentUpon>
     </EmbeddedResource>
@@ -183,11 +255,29 @@
     <EmbeddedResource Include="ChangePassword.resx">
       <DependentUpon>ChangePassword.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="student_registration.resx">
-      <DependentUpon>student_registration.vb</DependentUpon>
+    <EmbeddedResource Include="Dashboard_authority.resx">
+      <DependentUpon>Dashboard_authority.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="faculty_registration.resx">
-      <DependentUpon>faculty_registration.vb</DependentUpon>
+    <EmbeddedResource Include="Director.resx">
+      <DependentUpon>Director.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="authority.resx">
+      <DependentUpon>authority.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="faculty.resx">
+      <DependentUpon>faculty.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FacultyProfile.resx">
+      <DependentUpon>FacultyProfile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPassword.resx">
+      <DependentUpon>ForgotPassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hostel.resx">
+      <DependentUpon>Hostel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HostelPage.resx">
+      <DependentUpon>HostelPage.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainApplication.resx">
       <DependentUpon>MainApplication.vb</DependentUpon>
@@ -197,6 +287,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyLeaves.resx">
       <DependentUpon>MyLeaves.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Remarks.resx">
+      <DependentUpon>Remarks.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RequestDetails.resx">
       <DependentUpon>RequestDetails.vb</DependentUpon>
@@ -210,12 +303,20 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="StaffProfile.resx">
+      <DependentUpon>StaffProfile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="student.resx">
+      <DependentUpon>student.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserProfile.resx">
       <DependentUpon>UserProfile.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -247,6 +348,9 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iitg.jpeg.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
