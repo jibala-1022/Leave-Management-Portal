@@ -6,7 +6,7 @@
             ' Set the Anchor property to None
             ctrl.Anchor = AnchorStyles.None
         Next
-
+        switchPanel(Dashboard)
         Dim userEmail As String = Environment.GetEnvironmentVariable("userEmail")
 
         Using connection As New MySqlConnection(My.Settings.connectionString)
@@ -19,39 +19,14 @@
                 command.Parameters.AddWithValue("@email", userEmail)
 
                 Dim name As String = "Error:"
-                Dim leaves_left As Integer = 0
 
                 Dim reader As MySqlDataReader = command.ExecuteReader()
                 If reader.Read() Then
                     name = reader.GetString("name")
-                    leaves_left = reader.GetInt32("leaves_left")
                 End If
                 reader.Close()
-
                 user_profile.Text = name
-                TextBox1.Text = leaves_left.ToString
-
             Catch ex As Exception
-                MessageBox.Show("Error: " & ex.Message)
-            End Try
-        End Using
-
-        Using connection As New MySqlConnection(My.Settings.connectionString)
-            Try
-                connection.Open()
-
-                Dim query As String = "SELECT * FROM requests WHERE applicant_email = @email AND status = 'pending'"
-
-                Dim command As New MySqlCommand(query, connection)
-                command.Parameters.AddWithValue("@email", userEmail)
-
-                Dim dataAdapter As New MySqlDataAdapter(command)
-
-                Dim dataTable As New DataTable
-                dataAdapter.Fill(dataTable)
-                data_active_requests.DataSource = dataTable
-
-            Catch ex As MySqlException
                 MessageBox.Show("Error: " & ex.Message)
             End Try
         End Using

@@ -55,7 +55,7 @@ Public Class RequestDetails
     End Sub
 
 
-    Private Sub Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click, Button2.Click
+    Private Sub Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click, Button2.Click, Button3.Click
         Dim button As Button = sender
         Dim Status As String = button.Tag
 
@@ -109,5 +109,4 @@ Public Class RequestDetails
             MessageBox.Show("Error: " & ex.Message)
         End Try
     End Sub
-
 End Class
