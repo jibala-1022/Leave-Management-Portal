@@ -150,6 +150,12 @@
     <Compile Include="FacultyProfile.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="faculty_registration.Designer.vb">
+      <DependentUpon>faculty_registration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="faculty_registration.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ForgotPassword.Designer.vb">
       <DependentUpon>ForgotPassword.vb</DependentUpon>
     </Compile>
@@ -184,6 +190,12 @@
       <DependentUpon>student.vb</DependentUpon>
     </Compile>
     <Compile Include="student.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="student_registration.Designer.vb">
+      <DependentUpon>student_registration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="student_registration.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UserProfile.Designer.vb">
@@ -270,6 +282,9 @@
     <EmbeddedResource Include="FacultyProfile.resx">
       <DependentUpon>FacultyProfile.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="faculty_registration.resx">
+      <DependentUpon>faculty_registration.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ForgotPassword.resx">
       <DependentUpon>ForgotPassword.vb</DependentUpon>
     </EmbeddedResource>
@@ -308,6 +323,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="student.resx">
       <DependentUpon>student.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="student_registration.resx">
+      <DependentUpon>student_registration.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserProfile.resx">
       <DependentUpon>UserProfile.vb</DependentUpon>
