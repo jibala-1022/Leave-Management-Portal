@@ -7,7 +7,7 @@ Public Class StaffProfile
     Private Sub StaffProfile_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Button3.Hide()
         Button4.Hide()
-        Dim staffEmail = Environment.GetEnvironmentVariable("staffEmail")
+        Dim staffEmail = Environment.GetEnvironmentVariable("userEmail")
 
         Using connection As New MySqlConnection(My.Settings.connectionString)
             Try

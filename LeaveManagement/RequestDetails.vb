@@ -39,8 +39,9 @@ Public Class RequestDetails
             Dim role As String = Environment.GetEnvironmentVariable("role")
             If role = "Faculty" Then
                 query = "SELECT * FROM faculty WHERE email = @applicant_email"
+            ElseIf role = "Staff" Then
+                query = "SELECT * FROM staff WHERE email = @applicant_email"
             Else
-
                 query = "SELECT * FROM students WHERE email = @applicant_email"
             End If
 
@@ -50,7 +51,7 @@ Public Class RequestDetails
             reader = command.ExecuteReader()
             If reader.Read() Then
                 TextBox1.Text = reader.GetString("name")
-                If role = "Faculty" Then
+                If role = "Faculty" Or role = "Staff" Then
                     Label2.Visible = False
                     Label3.Visible = False
                     TextBox2.Visible = False
