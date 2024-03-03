@@ -26,11 +26,15 @@ Partial Class Hostel
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.comboHostel = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.comboStatus = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.comboStatus = New System.Windows.Forms.ComboBox()
+        Me.comboDateRange = New System.Windows.Forms.ComboBox()
+        Me.comboType = New System.Windows.Forms.ComboBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -62,16 +66,6 @@ Partial Class Hostel
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Hostel"
         '
-        'comboStatus
-        '
-        Me.comboStatus.FormattingEnabled = True
-        Me.comboStatus.Items.AddRange(New Object() {"All", "pending", "approved", "rejected"})
-        Me.comboStatus.Location = New System.Drawing.Point(119, 63)
-        Me.comboStatus.Name = "comboStatus"
-        Me.comboStatus.Size = New System.Drawing.Size(183, 24)
-        Me.comboStatus.TabIndex = 2
-        Me.comboStatus.Text = "All"
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -83,7 +77,7 @@ Partial Class Hostel
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(695, 42)
+        Me.Button1.Location = New System.Drawing.Point(763, 39)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(169, 44)
         Me.Button1.TabIndex = 4
@@ -103,14 +97,66 @@ Partial Class Hostel
         'PrintDocument1
         '
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(33, 96)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(40, 17)
+        Me.Label3.TabIndex = 3
+        Me.Label3.Text = "Type"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(376, 36)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(84, 17)
+        Me.Label4.TabIndex = 3
+        Me.Label4.Text = "Date Range"
+        '
+        'comboStatus
+        '
+        Me.comboStatus.FormattingEnabled = True
+        Me.comboStatus.Items.AddRange(New Object() {"All", "Pending", "Approved", "Rejected"})
+        Me.comboStatus.Location = New System.Drawing.Point(119, 63)
+        Me.comboStatus.Name = "comboStatus"
+        Me.comboStatus.Size = New System.Drawing.Size(183, 24)
+        Me.comboStatus.TabIndex = 2
+        Me.comboStatus.Text = "All"
+        '
+        'comboDateRange
+        '
+        Me.comboDateRange.FormattingEnabled = True
+        Me.comboDateRange.Items.AddRange(New Object() {"All", "Today", "This Week", "This Month", "This Year"})
+        Me.comboDateRange.Location = New System.Drawing.Point(478, 36)
+        Me.comboDateRange.Name = "comboDateRange"
+        Me.comboDateRange.Size = New System.Drawing.Size(183, 24)
+        Me.comboDateRange.TabIndex = 2
+        Me.comboDateRange.Text = "All"
+        '
+        'comboType
+        '
+        Me.comboType.FormattingEnabled = True
+        Me.comboType.Items.AddRange(New Object() {"All", "Casual Leave", "Medical Leave", "Academic Leave", "On Duty Leave", "Maternity Leave"})
+        Me.comboType.Location = New System.Drawing.Point(119, 96)
+        Me.comboType.Name = "comboType"
+        Me.comboType.Size = New System.Drawing.Size(183, 24)
+        Me.comboType.TabIndex = 2
+        Me.comboType.Text = "All"
+        '
         'Hostel
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(944, 620)
         Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.comboType)
+        Me.Controls.Add(Me.comboDateRange)
         Me.Controls.Add(Me.comboStatus)
         Me.Controls.Add(Me.comboHostel)
         Me.Controls.Add(Me.DataGridView1)
@@ -124,9 +170,13 @@ Partial Class Hostel
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents comboHostel As System.Windows.Forms.ComboBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents comboStatus As System.Windows.Forms.ComboBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents PrintPreviewDialog1 As System.Windows.Forms.PrintPreviewDialog
     Friend WithEvents PrintDocument1 As System.Drawing.Printing.PrintDocument
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents comboStatus As System.Windows.Forms.ComboBox
+    Friend WithEvents comboDateRange As System.Windows.Forms.ComboBox
+    Friend WithEvents comboType As System.Windows.Forms.ComboBox
 End Class

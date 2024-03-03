@@ -11,25 +11,33 @@
                 Dim command As New MySqlCommand()
                 command.Connection = connection
 
-                command.CommandText = "SELECT faculty_email FROM dean " &
-                    "WHERE role = 'dosa'"
-                txtDosa.Text = Convert.ToString(command.ExecuteScalar())
+                For Each ctrl As Control In groupDean.Controls
+                    If TypeOf ctrl Is TextBox Then
+                        Dim textBox As TextBox = DirectCast(ctrl, TextBox)
+                        Dim role As String = Convert.ToString(textBox.Tag)
+                        command.CommandText = "SELECT faculty_email FROM dean WHERE role = @role"
+                        command.Parameters.Clear()
+                        command.Parameters.AddWithValue("@role", role)
+                        textBox.Text = Convert.ToString(command.ExecuteScalar())
+                    End If
+                Next
 
-                command.CommandText = "SELECT faculty_email FROM dean " &
-                    "WHERE role = 'dofa'"
-                txtDofa.Text = Convert.ToString(command.ExecuteScalar())
-
-                command.CommandText = "SELECT faculty_email FROM hod " &
-                    "WHERE department = 'CSE'"
-                txtHodCse.Text = Convert.ToString(command.ExecuteScalar())
-
-                command.CommandText = "SELECT faculty_email FROM dupc " &
-                    "WHERE department = 'CSE'"
-                txtDupcCse.Text = Convert.ToString(command.ExecuteScalar())
-
-                command.CommandText = "SELECT faculty_email FROM dppc " &
-                    "WHERE department = 'CSE'"
-                txtDppcCse.Text = Convert.ToString(command.ExecuteScalar())
+                For Each ctrlGrp As Control In groupDept.Controls
+                    If TypeOf ctrlGrp Is GroupBox Then
+                        Dim grpBox As GroupBox = DirectCast(ctrlGrp, GroupBox)
+                        Dim table As String = Convert.ToString(grpBox.Tag)
+                        For Each ctrl As Control In grpBox.Controls
+                            If TypeOf ctrl Is TextBox Then
+                                Dim textBox As TextBox = DirectCast(ctrl, TextBox)
+                                Dim dept As String = Convert.ToString(textBox.Tag)
+                                command.CommandText = "SELECT faculty_email FROM " & table & " WHERE department = @dept"
+                                command.Parameters.Clear()
+                                command.Parameters.AddWithValue("@dept", dept)
+                                textBox.Text = Convert.ToString(command.ExecuteScalar())
+                            End If
+                        Next
+                    End If
+                Next
 
             Catch ex As MySqlException
                 connection.Close()
@@ -38,41 +46,60 @@
         End Using
     End Sub
 
-    Private Sub Update_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Update.Click
+    Private Sub Change_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Change.Click
         Using connection As New MySqlConnection(My.Settings.connectionString)
             Try
                 connection.Open()
                 Dim command As New MySqlCommand()
                 command.Connection = connection
 
-                command.CommandText =
-                    "UPDATE dean " &
-                    "SET faculty_email = @dosa " &
-                    "WHERE role = 'dosa';" &
-                    "UPDATE dean " &
-                    "SET faculty_email = @dofa " &
-                    "WHERE role = 'dofa';" &
-                    "UPDATE hod " &
-                    "SET faculty_email = @hodcse " &
-                    "WHERE department = 'CSE';" &
-                    "UPDATE dupc " &
-                    "SET faculty_email = @dupccse " &
-                    "WHERE department = 'CSE';" &
-                    "UPDATE dppc " &
-                    "SET faculty_email = @dppccse " &
-                    "WHERE department = 'CSE';"
-                command.Parameters.AddWithValue("@dosa", txtDosa.Text)
-                command.Parameters.AddWithValue("@dofa", txtDofa.Text)
-                command.Parameters.AddWithValue("@hodcse", txtHodCse.Text)
-                command.Parameters.AddWithValue("@dupccse", txtDupcCse.Text)
-                command.Parameters.AddWithValue("@dppccse", txtDppcCse.Text)
+                For Each ctrl As Control In groupDean.Controls
+                    If TypeOf ctrl Is TextBox Then
+                        Dim textBox As TextBox = DirectCast(ctrl, TextBox)
+                        Dim role As String = Convert.ToString(textBox.Tag)
+                        command.Parameters.Clear()
+                        command.Parameters.AddWithValue("@faculty_email", textBox.Text)
+                        command.Parameters.AddWithValue("@role", role)
+                        command.CommandText = "SELECT COUNT(*) FROM faculty WHERE email = @faculty_email"
+                        If Convert.ToInt32(command.ExecuteScalar()) = 0 Then
+                            Throw New Exception("Email " & textBox.Text & " does not exists")
+                        End If
+                        command.CommandText = "UPDATE dean SET faculty_email = @faculty_email WHERE role = @role"
+                        command.ExecuteNonQuery()
+                    End If
+                Next
 
-                command.ExecuteNonQuery()
+                For Each ctrlGrp As Control In groupDept.Controls
+                    If TypeOf ctrlGrp Is GroupBox Then
+                        Dim grpBox As GroupBox = DirectCast(ctrlGrp, GroupBox)
+                        Dim table As String = Convert.ToString(grpBox.Tag)
+                        For Each ctrl As Control In grpBox.Controls
+                            If TypeOf ctrl Is TextBox Then
+                                Dim textBox As TextBox = DirectCast(ctrl, TextBox)
+                                Dim dept As String = Convert.ToString(textBox.Tag)
+                                command.Parameters.Clear()
+                                command.Parameters.AddWithValue("@faculty_email", textBox.Text)
+                                command.Parameters.AddWithValue("@dept", dept)
+                                command.CommandText = "SELECT COUNT(*) FROM faculty WHERE email = @faculty_email"
+                                If Convert.ToInt32(command.ExecuteScalar()) = 0 Then
+                                    Throw New Exception("Email " & textBox.Text & " does not exists")
+                                End If
+                                command.CommandText = "UPDATE " & table & " SET faculty_email = @faculty_email WHERE department = @dept"
+                                command.ExecuteNonQuery()
+                            End If
+                        Next
+                    End If
+                Next
 
             Catch ex As MySqlException
+                connection.Close()
+                MessageBox.Show("Error: " & ex.Message)
+            Catch ex As Exception
                 connection.Close()
                 MessageBox.Show("Error: " & ex.Message)
             End Try
         End Using
     End Sub
+
+
 End Class
